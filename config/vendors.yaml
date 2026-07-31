@@ -1,0 +1,160 @@
+# Vendors under test.
+#
+# Closed division: we take the platform's OUT-OF-THE-BOX
+# defaults, exactly as a new signup gets them. Leaving model/stt/tts as `null`
+# means "accept whatever the vendor chose and record it" -- the defaults ARE the
+# product being measured. Pinning them measures orchestration with the stack
+# held equal, which is a different question and cannot include
+# vertically-integrated vendors at all.
+#
+# Every vendor runs the SAME agent: the fictional Northwind Internet support
+# prompt from data/voice-bench/ttfab_scenarios.json, which is also where the
+# caller's questions and their expected keywords come from. Fictional facts
+# mean answers must come from the prompt rather than world knowledge, and
+# unique values make each answer checkable from the transcript.
+#
+# Adding a vendor: write vendors/<name>.py, add a block here, pass the contract
+# test. Nothing else in the codebase changes.
+
+telnyx:
+  adapter: telnyx
+  # Telnyx -- vertically integrated (STT + LLM + TTS +
+  # orchestration in-house). Reached over Plivo like every other vendor: the
+  # bench never routes a vendor's call over that vendor's own network
+  # Pinned by id so a second assistant in the
+  # account cannot silently become the thing under test.
+  assistant_id: assistant-0e01469e-4458-441b-be3d-a4f97e6ff2d0
+  # number: omitted -- discovered from the numbers attached to the assistant's
+  # own TeXML app, or set TELNYX_VENDOR_NUMBER in .env to override.
+  agent:
+    # Must match the assistant's live greeting byte for byte, and the scenarios
+    # file's turn_1.agent_expected. The bench refuses to run on a mismatch, so
+    # the published receipt is provably the configuration that ran.
+    greeting: "Thanks for calling Northwind Internet. How can I help you today?"
+    system_prompt_from_scenarios: data/voice-bench/ttfab_scenarios.json
+    model: null   # accept + record the vendor default
+    stt: null
+    tts: null
+
+vapi:
+  adapter: vapi
+  # Vapi AI assistant -- the orchestrator case: Vapi owns turn-taking and the
+  # speaking plans, but STT/LLM/TTS are whichever providers the assistant names.
+  # The structural opposite of Telnyx, measured identically: out-of-the-box
+  # defaults, as a new signup gets them.
+  #
+  # Pinned by id, like the telnyx block above and for the same reason: an
+  # account with more than one assistant gives an unpinned adapter no way to
+  # tell which is under test, so it refuses rather than guess. The bench never
+  # creates it (read-only contract); tools/setup_vapi_agent.py does.
+  assistant_id: 9d66d943-e554-42a7-ac08-6327680dade9
+  # number: omitted -- discovered from the account's numbers whose assistantId
+  # is this assistant, or set VAPI_PHONE_NUMBER in .env to override.
+  #
+  # Dashboard checklist before the first run:
+  #   1. Assistants > Create; paste the Northwind prompt as the (single) system
+  #      message and the greeting below as First Message.
+  #   2. First Message Mode = "assistant-speaks-first" (the other two modes
+  #      leave live VAD with no greeting to wait for, or a greeting that differs
+  #      every call).
+  #   3. Phone Numbers > create a free US number > Inbound: this assistant.
+  agent:
+    greeting: "Thanks for calling Northwind Internet. How can I help you today?"
+    system_prompt_from_scenarios: data/voice-bench/ttfab_scenarios.json
+    model: null   # accept + record the vendor default
+    stt: null
+    tts: null
+
+retell:
+  adapter: retell
+  # Retell AI -- the two-object case: the agent holds voice and turn-taking, and
+  # its response_engine points at a separate retell-llm holding the prompt and
+  # greeting. An agent id alone does not identify a configuration here, so the
+  # receipt carries both objects and both version numbers.
+  #
+  # Pinned by id, like the telnyx and vapi blocks: an account with more than
+  # one agent gives an unpinned adapter no way to tell which is under test, so
+  # it refuses rather than guess. The bench never creates it (read-only
+  # contract); tools/setup_retell_agent.py does.
+  agent_id: agent_0ffe15ecf1e57f2503b34658ac
+  # number: omitted -- discovered from the numbers whose INBOUND agent is this
+  # agent (the bench dials in), or set RETELL_PHONE_NUMBER in .env.
+  #
+  # Dashboard checklist before the first run:
+  #   1. Create a single-prompt agent; paste the Northwind prompt as the general
+  #      prompt and the greeting below as Begin Message.
+  #   2. Who speaks first = agent. The blank template ships start_speaker="user",
+  #      which would leave live VAD with no greeting to wait for.
+  #   3. Phone Numbers > bind a number's INBOUND agent to this agent.
+  agent:
+    greeting: "Thanks for calling Northwind Internet. How can I help you today?"
+    system_prompt_from_scenarios: data/voice-bench/ttfab_scenarios.json
+    model: null   # accept + record the vendor default
+    stt: null     # not pinnable here at all -- see unsupported in the receipt
+    tts: null
+
+bland:
+  adapter: bland
+  # Bland AI -- the number IS the agent. There is no agent object behind an
+  # inbound call: prompt, first_sentence, voice and the interruption knobs live
+  # on the phone number itself (POST /v1/inbound/{number} takes them inline and
+  # accepts no agent_id). So this vendor is pinned by number, not by agent id.
+  #
+  # Cost note, because it changes what "ready to bench" means here: a Bland
+  # inbound number is a $15/month subscription. Vapi's is free and Retell's is
+  # ~$2, so this is the one platform with no way to hold a verifiable agent
+  # without an active paid number.
+  #
+  # number: omitted -- set BLAND_PHONE_NUMBER in .env, or pin it here. With
+  # exactly one inbound number on the account the adapter uses it; with more than
+  # one it refuses rather than guess which is under test.
+  #
+  # Checklist before the first run (tools/setup_bland_agent.py does 2 and 3):
+  #   1. Own an inbound number ($15/mo, or BYO via Bland's Twilio flow).
+  #   2. Set its prompt to the Northwind prompt.
+  #   3. Set first_sentence to the greeting below. Without it Bland lets the model
+  #      open the call, so the greeting differs every call and live VAD has no
+  #      fixed utterance to wait for.
+  agent:
+    greeting: "Thanks for calling Northwind Internet. How can I help you today?"
+    system_prompt_from_scenarios: data/voice-bench/ttfab_scenarios.json
+    model: null   # a Bland tier ("enhanced"), not an LLM identity
+    stt: null     # not exposed at all -- see unsupported in the receipt
+    tts: null
+
+elevenlabs:
+  adapter: elevenlabs
+  # ElevenLabs -- the most transparent platform here: it names
+  # its LLM, its ASR provider and its TTS model, and exposes LLM temperature. Its
+  # receipt's `unsupported` list is empty, which is the direct comparison to
+  # Bland's three entries rather than a footnote.
+  #
+  # Everything the bench reads is nested under conversation_config:
+  #   agent.first_message, agent.prompt.prompt, asr.*, tts.*, turn.*
+  #
+  # Pinned by id, like every other block: an account with more than one agent
+  # gives an unpinned adapter no way to tell which is under test.
+  agent_id: agent_1101kyt41p3hft4aaepgwt7rc4sj
+  # number: omitted -- discovered from the agent's assignment. The number in use
+  # is a TWILIO number imported into ElevenLabs, which keeps the vendor leg off
+  # the bench's own carrier. ElevenLabs SELLS NO NUMBERS. Inbound arrives over a number
+  # imported from Twilio, Exotel or your own SIP trunk, so unlike the other
+  # vendors there is no purchase path and this one cannot be made dialable by
+  # spending money alone.
+  #
+  # Checklist before the first run (tools/setup_elevenlabs_agent.py does 1 and 2):
+  #   1. Set agent.prompt.prompt to the Northwind prompt.
+  #   2. Set agent.first_message to the greeting below; empty means the agent
+  #      waits for the caller and there is no greeting to detect.
+  #   3. Disable turn.soft_timeout_config (timeout_seconds: -1). Armed, the agent
+  #      speaks a stall phrase when the LLM is slow -- that filler becomes the
+  #      first audio, so TTFAB would time the "hmm" rather than the answer, and it
+  #      is long enough to pass the analyzer's content guard. The bench refuses to
+  #      run with it on.
+  #   4. Import and assign a number (see above).
+  agent:
+    greeting: "Thanks for calling Northwind Internet. How can I help you today?"
+    system_prompt_from_scenarios: data/voice-bench/ttfab_scenarios.json
+    model: null   # accept + record the vendor default
+    stt: null
+    tts: null

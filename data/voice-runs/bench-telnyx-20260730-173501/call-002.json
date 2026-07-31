@@ -1,0 +1,211 @@
+{
+  "result": {
+    "analyzer_version": "2.3.0",
+    "call_id": "call-002",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "near_utterances=4",
+      "t1_crosscheck=106.0ms"
+    ],
+    "greeting_end_ms": 3228.0,
+    "greeting_onset_ms": 506.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -72.24719895935549,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-telnyx-20260730-173501",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 6272.0,
+    "t1_ms": 7934.0,
+    "t2_ms": 9808.0,
+    "ttfab_content_ms": 1874.0,
+    "ttfab_onset_ms": 1874.0,
+    "ttfg_ms": 506.0,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=106.0ms",
+          "case=speed-basic",
+          "answer_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 6272.0,
+        "t1_ms": 7934.0,
+        "t2_ms": 9808.0,
+        "ttfab_content_ms": 1874.0,
+        "ttfab_onset_ms": 1874.0,
+        "vad_disagreement_ms": 8.0,
+        "vad_disagreement_signed_ms": 8.0,
+        "vendor_response_duration_ms": 3506.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=82.0ms",
+          "case=free-trial",
+          "answer_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 16412.0,
+        "t1_ms": 17738.0,
+        "t2_ms": 19346.0,
+        "ttfab_content_ms": 1608.0,
+        "ttfab_onset_ms": 1608.0,
+        "vad_disagreement_ms": 6.0,
+        "vad_disagreement_signed_ms": 6.0,
+        "vendor_response_duration_ms": 454.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=58.0ms",
+          "case=router-rental",
+          "answer_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 25256.0,
+        "t1_ms": 27602.0,
+        "t2_ms": 29150.0,
+        "ttfab_content_ms": 1548.0,
+        "ttfab_onset_ms": 1548.0,
+        "vad_disagreement_ms": 10.0,
+        "vad_disagreement_signed_ms": 10.0,
+        "vendor_response_duration_ms": 2132.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=34.0ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 34412.0,
+        "t1_ms": 36306.0,
+        "t2_ms": 36836.0,
+        "ttfab_content_ms": 530.0,
+        "ttfab_onset_ms": 530.0,
+        "vad_disagreement_ms": 16.0,
+        "vad_disagreement_signed_ms": 16.0,
+        "vendor_response_duration_ms": 2576.0
+      }
+    ],
+    "vad_disagreement_ms": 8.0,
+    "vendor": "telnyx",
+    "vendor_response_duration_ms": 3506.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-002",
+    "run_id": "bench-telnyx-20260730-173501",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "telnyx",
+    "carrier": "plivo",
+    "vendor_config_sha256": "5277d96e7b0c2e5c95641a0f276bba058fb43354f778e89fe7392c8cb839a876",
+    "caller_config_sha256": "05d1ee64731a522aff4ef470b008429b5c6aded13cedd439efdac5cd691e4c4c",
+    "caller_plan_sha256": "e57b86c1036f7edd76c68167c4bf20ffa075f41e525751fbe4a6ffe029138c04",
+    "call_sid": "467b2f4d-433a-4831-861f-b6c7ced43395",
+    "call_control_id": "467b2f4d-433a-4831-861f-b6c7ced43395",
+    "verify_skipped": false,
+    "cases": [
+      "speed-basic",
+      "free-trial",
+      "router-rental"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "thanks for calling Northwind internet how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "How fast is the Basic plan?",
+        "case_id": "speed-basic",
+        "expect_keywords": [
+          "300"
+        ],
+        "spoken": true,
+        "transcript": "the basic plan includes download speeds of 300 megabits per second",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "Do you offer a free trial?",
+        "case_id": "free-trial",
+        "expect_keywords": [
+          "14"
+        ],
+        "spoken": true,
+        "transcript": "yes new customers get a 14-day free trial",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "How much does it cost to rent a router from you?",
+        "case_id": "router-rental",
+        "expect_keywords": [
+          "8"
+        ],
+        "spoken": true,
+        "transcript": "router rental costs 8 dollars per month",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "",
+        "answer_verified": null,
+        "reply_timed_out": null
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    }
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-telnyx-20260730-173501/call-002.wav",
+    "sha256": "22334c586ff963114e57308641595cd3b1a1bec83edc9e2ebf97b41bd6e36ce4",
+    "bytes": 1265324,
+    "source": "recording_raw.wav"
+  },
+  "cost": {
+    "vendor_call_id": "2c15dbee-a1ec-4f5c-aece-1db95d9af47f",
+    "cost": 0.05,
+    "currency": "USD",
+    "duration_s": 40.0,
+    "billed_s": 60.0,
+    "source": "GET /v2/detail_records[ai-voice-assistant] .cost",
+    "notes": [
+      "cost is the ai-voice-assistant detail record; a separate PSTN leg may be billed under another record type",
+      "billed 60s for a 40s call (Telnyx bills a 60-second minimum)"
+    ]
+  }
+}

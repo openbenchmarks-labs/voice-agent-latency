@@ -1,0 +1,222 @@
+{
+  "run_id": "bench-bland-20260730-180615",
+  "vendor": "bland",
+  "attempts": 10,
+  "usable": 10,
+  "turns_per_call": 4,
+  "turn_attempts": 40,
+  "turns_usable": 40,
+  "per_turn": {
+    "1": {
+      "attempts": 10,
+      "usable": 10,
+      "n": 10,
+      "p50": 1512.0,
+      "p90": 2320.2,
+      "p95": 2834.1
+    },
+    "2": {
+      "attempts": 10,
+      "usable": 10,
+      "n": 10,
+      "p50": 1715.0,
+      "p90": 2100.6,
+      "p95": 2130.3
+    },
+    "3": {
+      "attempts": 10,
+      "usable": 10,
+      "n": 10,
+      "p50": 1497.0,
+      "p90": 1551.2,
+      "p95": 1574.6
+    },
+    "4": {
+      "attempts": 10,
+      "usable": 10,
+      "n": 10,
+      "p50": 1443.0,
+      "p90": 1515.6,
+      "p95": 1522.8
+    }
+  },
+  "discards": {},
+  "ttfab_onset_ms": {
+    "p50": 1493.0,
+    "p90": 1951.8,
+    "p95": 2162.3,
+    "p99": 2902.6
+  },
+  "ttfab_onset_n": 40,
+  "ttfab_content_ms": {
+    "p50": 1493.0,
+    "p95": 2228.1
+  },
+  "ttfab_content_n": 40,
+  "ttfg_from_recording_start_ms": {
+    "p50": 468.0,
+    "p95": 615.4
+  },
+  "negative_ttfab_count": 0,
+  "vendor_config_sha256": "e82a64ec97b1a8362db4c9d1a59ed73cc9eb1fbfbac8d4736ae7baaf5e9e4451",
+  "vendor_defaults_used": {
+    "model_tier": "enhanced",
+    "temperature": 0,
+    "voice": null,
+    "voice_settings": null,
+    "language": "ENG",
+    "background_track": null,
+    "noise_cancellation": true,
+    "endpointing": {
+      "interruption_threshold": 500,
+      "block_interruptions": null,
+      "reduce_latency": null,
+      "interruptibility": null,
+      "resumption_speed": null,
+      "keywords": null
+    },
+    "silence_end_message": null,
+    "max_duration_min": 30,
+    "record": false,
+    "tools": [],
+    "pathway_id": null,
+    "phone_number": "+***REDACTED***",
+    "created_at": "2026-07-30T18:00:14.148Z"
+  },
+  "vendor_unsupported": [
+    "llm_identity",
+    "stt_provider",
+    "config_version"
+  ],
+  "consistency_p95_over_p50": 1.448,
+  "beyond_2x_median_fraction": 0.025,
+  "buffering_correlation_r": 0.006,
+  "buffering_n": 40,
+  "mode": "scripted_dialog",
+  "caller_config": {
+    "voice": "Polly.Joanna",
+    "language": "en-US",
+    "speech_end_timeout": 2,
+    "execution_timeout": 30,
+    "greeting_timeout_s": 20.0,
+    "scenarios_version": "voice-ttfab",
+    "tts": "plivo-speak",
+    "turn_kinds": [
+      "case",
+      "case",
+      "case",
+      "t3_goodbye"
+    ],
+    "rotation_length": 10,
+    "calls": [
+      {
+        "call_index": 0,
+        "cases": [
+          "price-basic",
+          "data-cap",
+          "installation-fee"
+        ],
+        "sha256": "ac98a217825823fcb9344dfff9811478efbbf55037359c6ad3b3893852b93a0b"
+      },
+      {
+        "call_index": 1,
+        "cases": [
+          "price-premium",
+          "contract",
+          "support-hours"
+        ],
+        "sha256": "2208568220723cd9a30cd53c0b6c27d26d6d539874c368c2a0ed7b2ecf6c14db"
+      },
+      {
+        "call_index": 2,
+        "cases": [
+          "speed-basic",
+          "free-trial",
+          "router-rental"
+        ],
+        "sha256": "05d1ee64731a522aff4ef470b008429b5c6aded13cedd439efdac5cd691e4c4c"
+      },
+      {
+        "call_index": 3,
+        "cases": [
+          "speed-premium",
+          "cancellation-fee",
+          "static-ip"
+        ],
+        "sha256": "dc7d7e91875ed752773ba1b6d6806567f4ac9d8643409b12dd3654ead7ef32ec"
+      },
+      {
+        "call_index": 4,
+        "cases": [
+          "price-business",
+          "money-back",
+          "late-fee"
+        ],
+        "sha256": "0d7cc5157a29fdf85806475b092b36e0b7fb58d01ecc9bdcbf49dff86436bf20"
+      },
+      {
+        "call_index": 5,
+        "cases": [
+          "service-area",
+          "student-discount",
+          "reschedule"
+        ],
+        "sha256": "8bcd9e1b920578d22b66c5b620893bb8751068d19ae2871e5541ceedef65e85f"
+      },
+      {
+        "call_index": 6,
+        "cases": [
+          "company-history",
+          "payment-methods",
+          "gamer-boost"
+        ],
+        "sha256": "81c954a5d0bd88131d104de6a3876efe3a249106f402488ad237eb2b983976c9"
+      },
+      {
+        "call_index": 7,
+        "cases": [
+          "not-in-facts",
+          "promotion",
+          "equipment-return"
+        ],
+        "sha256": "8ed6aedf53937de38e411666d531be5a8b3bbbe5988737e233c55c82acf917d8"
+      },
+      {
+        "call_index": 8,
+        "cases": [
+          "installation-time",
+          "wifi-extender",
+          "phone-line"
+        ],
+        "sha256": "f5f92eddf44fde7c307728b95e8778ffd4daac1c84800cae2c80353017eac897"
+      },
+      {
+        "call_index": 9,
+        "cases": [
+          "support-email",
+          "outage-credit",
+          "senior-discount"
+        ],
+        "sha256": "05d101de4d4ccc92be9a46eb57e2a8719486f0fbe6ee55cbe8bebe3ad154ce4c"
+      }
+    ],
+    "sha256": "e57b86c1036f7edd76c68167c4bf20ffa075f41e525751fbe4a6ffe029138c04"
+  },
+  "channel_map_provisional": false,
+  "not_yet_publishable": [
+    "The instrument is UNCHARACTERISED for this measurement path. Characterising it means measuring against a far end that answers after a known delay, and a characterisation is only valid for the host, carrier and audio path it was measured on -- so no overhead figure is quoted here and none is subtracted. Recording-path overhead sits inside every number below, unmeasured. Every figure here is therefore an upper bound on the platform's own contribution.",
+    "t1 -- the end of our own speech -- is found by a speech detector on the near channel, not by matching a known waveform. It is accurate to roughly a few tens of ms rather than sample-exact, so small differences between vendors are not resolvable; the per-turn error budget is the one Gate A measures on synthetic dialogs.",
+    "Turn-taking is Plivo's speech endpointing, not ours. It decides when the conversation moves on, never when a measurement starts or ends: both endpoints of every TTFAB are read off the recording afterwards. Eager or slow endpointing therefore costs discarded turns, not shifted numbers.",
+    "Our speech is Polly.Joanna text-to-speech reading a fixed script, not a human recording (TTS endings trip endpointing differently). It is re-rendered per call rather than played from one committed file, so the stimulus is identical in wording across vendors but not byte-identical across calls; t1 is measured from each call's own tape, so this costs no accuracy.",
+    "Answer accuracy is a keyword match against the carrier's transcript of the vendor's reply -- a coarse check that the agent answered from its prompt, reported alongside latency and never mixed into it.",
+    "A platform's own reported latency reads about 490 ms lower than what we measure from the same calls' audio (bench-retell-20260730-181628, n=10 calls, sd 78 ms). It is measured at the platform's edge, not at the caller's ear. Read vendor-reported latency with that in mind.",
+    "n=10 usable call(s). The method wants n>=100 spread over >=5 days and 4 time-of-day buckets; this is a sample, not a distribution.",
+    "The turn curve has as few as n=10 measurements at some turn indices. Pooled figures are the sturdier read; per-turn percentiles (especially p95) are directional until each index has many more."
+  ],
+  "instrument": {
+    "mode": "scripted_dialog",
+    "valid": false,
+    "note": "no delay-sweep characterisation exists for this measurement path; recording-path overhead and instrument noise are unmeasured here",
+    "path_overhead_subtracted": false
+  }
+}

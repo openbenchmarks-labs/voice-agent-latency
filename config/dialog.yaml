@@ -1,0 +1,105 @@
+# The caller side of every bench call.
+#
+# The caller is not a vendor and not an LLM: it is Plivo's own TTS reading a
+# fixed script, with Plivo's own speech endpointing deciding when to move on.
+# That makes it deterministic in wording but NOT byte-identical in audio --
+# Polly re-renders per call. t1 is measured from the recording on every call,
+# so this costs nothing in accuracy; pre-rendering each line to a WAV and
+# <Play>-ing it is the tracked follow-up that would also remove the small
+# stimulus variance the vendor's endpointer sees.
+#
+# Everything here is hashed into the caller receipt (caller_config.json,
+# bench.json.caller_config) because the caller is part of the instrument now.
+
+# Amazon Polly voice, via Plivo <Speak voice=...>. Fixed across vendors: a
+# different voice is a different stimulus and the cells stop being comparable.
+voice: Polly.Joanna
+language: en-US
+
+# Plivo's endpointing: how many seconds of silence end the vendor's turn
+# (2-10, or "auto").
+#
+# NOT "auto". The prototype validated auto against an echo bot whose replies
+# were one short clause; against a real agent it cuts mid-sentence. Measured
+# 2026-07-30 (bench-telnyx-20260730-111843, call-001): the greeting "Thanks for
+# calling Northwind Internet. How can I help you today?" was ended by auto
+# after "thanks for calling" -- the natural pause was enough -- so we started
+# our first question over the top of "...Internet. How can I help you today?".
+# That call lost 2 of 4 turns and reported a negative TTFAB on a third.
+#
+# A fixed value demands real silence before we speak, which costs a couple of
+# seconds of call time per turn and buys back the discards. Raise it if a
+# vendor pauses mid-answer; the analyzer catches any barge post-hoc
+# (double_talk / barged_reply), so this trades discard rate, never correctness.
+speech_end_timeout: 2
+
+# Ceiling on one listen (Plivo range 5-60 s). Must exceed the slowest vendor
+# reply we are willing to wait for; a turn that hits it is measured as
+# no_response rather than retried.
+execution_timeout: 30
+
+# How long the FIRST listen waits for the vendor's greeting before we speak
+# anyway (Plivo range 5-60).
+#
+# Generous on purpose. Vendors greet "on connect", but connect is not instant:
+# measured 2026-07-30, the Telnyx assistant's greeting lands at 9-10 s on most
+# calls and at 1.4 s on a good one. A 6 s window meant we began asking
+# questions before it had greeted on six of seven calls, and every one of those
+# calls degraded -- the agent's endpointer never saw a clean turn boundary and
+# started answering our questions in batches.
+#
+# This only fires when the greeting has NOT arrived; a vendor that greets
+# returns the listener the moment it stops talking. So a long value costs
+# nothing on a healthy call and rescues an unhealthy one. Raise it further for
+# a platform that is slower to come up.
+greeting_timeout: 20
+
+# Whether the fixed greeting ("Hi there.") and goodbye turns bookend the case
+# questions. Both are measured turns like any other.
+#
+# Keep the greeting turn unless you have a reason not to. It is where a call's
+# first-response cost lands -- cold start, first inference, connection warmup --
+# and it is reliably the slowest turn (measured 2026-07-30: 2072 ms against
+# 1304/1214 ms for the turns after it). Dropping it does not remove that cost,
+# it moves it onto your first case question, which then reads slower than the
+# identical question asked second. Changing either flag changes the caller
+# receipt's sha256, so runs with and without are visibly different instruments.
+include_greeting_turn: false
+include_goodbye_turn: true
+
+# What each call asks. Call i takes entry (i mod len), so a 10-call run covers
+# all ten exactly once and an 11th call starts over. Ids from
+# data/voice-bench/ttfab_scenarios.json (33 defined, 30 used here -- autopay,
+# referral and moving are the spare set).
+#
+# ROTATED, NOT SAMPLED. Both give variation across calls; only a rotation gives
+# every vendor the SAME variation. Call 3 asks the same three questions whoever
+# is being measured and asks them again on a re-run -- which matters because
+# answers differ in length, and a platform that buffers its TTS starts speaking
+# later on longer ones. A vendor that happened to draw short questions would
+# otherwise look faster for a reason that is not about the platform.
+#
+# Why rotate at all, rather than repeat one set: three questions asked fifty
+# times measures three questions. The rotation spreads over answer shapes
+# (bare number, yes/no, number with a unit, a sentence, a list-ish answer) so
+# the figure is a property of the agent rather than of one lucky question.
+#
+# Entry 8 is the negative control: the answer is NOT in the agent's facts, so a
+# correct agent uses its fallback line. It measures how fast a platform says
+# "I don't know", which is a real conversational path and the one most likely
+# to be handled differently.
+#
+# --cases overrides all of this and makes every call identical (debugging).
+# Editing this list changes the caller receipt's sha256, so a run asked
+# different questions is visibly a different instrument.
+case_rotation:
+  - [price-basic, data-cap, installation-fee]        # number / yes-no / number
+  - [price-premium, contract, support-hours]         # number / yes-no / range
+  - [speed-basic, free-trial, router-rental]         # unit / number / number
+  - [speed-premium, cancellation-fee, static-ip]     # unit / negative / number
+  - [price-business, money-back, late-fee]           # number / number / number
+  - [service-area, student-discount, reschedule]     # list / percent / duration
+  - [company-history, payment-methods, gamer-boost]  # sentence / list / number
+  - [not-in-facts, promotion, equipment-return]      # fallback / sentence / number
+  - [installation-time, wifi-extender, phone-line]   # duration / number / yes-no+number
+  - [support-email, outage-credit, senior-discount]  # address / conditional / percent

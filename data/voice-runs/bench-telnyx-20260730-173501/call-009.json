@@ -1,0 +1,213 @@
+{
+  "result": {
+    "analyzer_version": "2.3.0",
+    "call_id": "call-009",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "recording_started_mid_speech",
+      "near_utterances=4",
+      "t1_crosscheck=46.0ms"
+    ],
+    "greeting_end_ms": 560.0,
+    "greeting_onset_ms": 8.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -72.24719895935549,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-telnyx-20260730-173501",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 3274.0,
+    "t1_ms": 4986.0,
+    "t2_ms": 5926.0,
+    "ttfab_content_ms": 940.0,
+    "ttfab_onset_ms": 940.0,
+    "ttfg_ms": null,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=46.0ms",
+          "case=support-email",
+          "answer_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 3274.0,
+        "t1_ms": 4986.0,
+        "t2_ms": 5926.0,
+        "ttfab_content_ms": 940.0,
+        "ttfab_onset_ms": 940.0,
+        "vad_disagreement_ms": 6.0,
+        "vad_disagreement_signed_ms": 6.0,
+        "vendor_response_duration_ms": 2640.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=18.0ms",
+          "case=outage-credit",
+          "answer_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 12862.0,
+        "t1_ms": 15482.0,
+        "t2_ms": 16682.0,
+        "ttfab_content_ms": 1200.0,
+        "ttfab_onset_ms": 1200.0,
+        "vad_disagreement_ms": 2.0,
+        "vad_disagreement_signed_ms": 2.0,
+        "vendor_response_duration_ms": 412.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=34.0ms",
+          "case=senior-discount",
+          "answer_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 23616.0,
+        "t1_ms": 25006.0,
+        "t2_ms": 26524.0,
+        "ttfab_content_ms": 2134.0,
+        "ttfab_onset_ms": 1518.0,
+        "vad_disagreement_ms": 4.0,
+        "vad_disagreement_signed_ms": 4.0,
+        "vendor_response_duration_ms": 376.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=34.0ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 33652.0,
+        "t1_ms": 35546.0,
+        "t2_ms": 36524.0,
+        "ttfab_content_ms": 978.0,
+        "ttfab_onset_ms": 978.0,
+        "vad_disagreement_ms": 4.0,
+        "vad_disagreement_signed_ms": 4.0,
+        "vendor_response_duration_ms": 2348.0
+      }
+    ],
+    "vad_disagreement_ms": 6.0,
+    "vendor": "telnyx",
+    "vendor_response_duration_ms": 2640.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-009",
+    "run_id": "bench-telnyx-20260730-173501",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "telnyx",
+    "carrier": "plivo",
+    "vendor_config_sha256": "5277d96e7b0c2e5c95641a0f276bba058fb43354f778e89fe7392c8cb839a876",
+    "caller_config_sha256": "05d101de4d4ccc92be9a46eb57e2a8719486f0fbe6ee55cbe8bebe3ad154ce4c",
+    "caller_plan_sha256": "e57b86c1036f7edd76c68167c4bf20ffa075f41e525751fbe4a6ffe029138c04",
+    "call_sid": "0f22bab7-557b-4337-8446-9345e6ea9f3b",
+    "call_control_id": "0f22bab7-557b-4337-8446-9345e6ea9f3b",
+    "verify_skipped": false,
+    "cases": [
+      "support-email",
+      "outage-credit",
+      "senior-discount"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "What's your support email address?",
+        "case_id": "support-email",
+        "expect_keywords": [
+          "northwind"
+        ],
+        "spoken": true,
+        "transcript": "the support email is help at Northwind internet.com",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "Do I get anything back if my internet goes out?",
+        "case_id": "outage-credit",
+        "expect_keywords": [
+          "5",
+          "credit"
+        ],
+        "spoken": true,
+        "transcript": "yes you receive a 5 dollar bill credit for each full day of service outage",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "Do seniors get a discount?",
+        "case_id": "senior-discount",
+        "expect_keywords": [
+          "12"
+        ],
+        "spoken": true,
+        "transcript": "yes seniors aged 65 and over get a 12% discount",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "",
+        "answer_verified": null,
+        "reply_timed_out": null
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    }
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-telnyx-20260730-173501/call-009.wav",
+    "sha256": "54eb5361eb121e9874f49c3e154ab56fafa7611874ea33c2710f00b07f91f642",
+    "bytes": 1251884,
+    "source": "recording_raw.wav"
+  },
+  "cost": {
+    "vendor_call_id": "0d8ea89e-e3f3-45a5-8813-fb10498cde93",
+    "cost": 0.05,
+    "currency": "USD",
+    "duration_s": 42.0,
+    "billed_s": 60.0,
+    "source": "GET /v2/detail_records[ai-voice-assistant] .cost",
+    "notes": [
+      "cost is the ai-voice-assistant detail record; a separate PSTN leg may be billed under another record type",
+      "billed 60s for a 42s call (Telnyx bills a 60-second minimum)"
+    ]
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "result": {
+    "analyzer_version": "2.3.0",
+    "call_id": "call-004",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "near_utterances=4",
+      "t1_crosscheck=110.0ms"
+    ],
+    "greeting_end_ms": 3218.0,
+    "greeting_onset_ms": 456.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -72.24719895935549,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-retell-20260730-181628",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 6432.0,
+    "t1_ms": 7930.0,
+    "t2_ms": 9494.0,
+    "ttfab_content_ms": 1564.0,
+    "ttfab_onset_ms": 1564.0,
+    "ttfg_ms": 456.0,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=110.0ms",
+          "case=price-business",
+          "answer_not_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 6432.0,
+        "t1_ms": 7930.0,
+        "t2_ms": 9494.0,
+        "ttfab_content_ms": 1564.0,
+        "ttfab_onset_ms": 1564.0,
+        "vad_disagreement_ms": 14.0,
+        "vad_disagreement_signed_ms": 14.0,
+        "vendor_response_duration_ms": 3610.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=68.0ms",
+          "case=money-back",
+          "answer_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 16986.0,
+        "t1_ms": 18612.0,
+        "t2_ms": 20212.0,
+        "ttfab_content_ms": 1600.0,
+        "ttfab_onset_ms": 1600.0,
+        "vad_disagreement_ms": 8.0,
+        "vad_disagreement_signed_ms": -8.0,
+        "vendor_response_duration_ms": 440.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=8.0ms",
+          "case=late-fee",
+          "answer_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 26312.0,
+        "t1_ms": 28088.0,
+        "t2_ms": 29192.0,
+        "ttfab_content_ms": 1104.0,
+        "ttfab_onset_ms": 1104.0,
+        "vad_disagreement_ms": 12.0,
+        "vad_disagreement_signed_ms": 12.0,
+        "vendor_response_duration_ms": 1388.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=74.0ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 36312.0,
+        "t1_ms": 38206.0,
+        "t2_ms": 41324.0,
+        "ttfab_content_ms": 3118.0,
+        "ttfab_onset_ms": 3118.0,
+        "vad_disagreement_ms": 4.0,
+        "vad_disagreement_signed_ms": 4.0,
+        "vendor_response_duration_ms": 2298.0
+      }
+    ],
+    "vad_disagreement_ms": 14.0,
+    "vendor": "retell",
+    "vendor_response_duration_ms": 3610.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-004",
+    "run_id": "bench-retell-20260730-181628",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "retell",
+    "carrier": "plivo",
+    "vendor_config_sha256": "3fbe40adfec2aeea3e8100517811faedc8837c2ac17564bfcc995281b1256e0a",
+    "caller_config_sha256": "0d7cc5157a29fdf85806475b092b36e0b7fb58d01ecc9bdcbf49dff86436bf20",
+    "caller_plan_sha256": "e57b86c1036f7edd76c68167c4bf20ffa075f41e525751fbe4a6ffe029138c04",
+    "call_sid": "cf0685c4-391a-4d77-8bd3-aea116d0d189",
+    "call_control_id": "cf0685c4-391a-4d77-8bd3-aea116d0d189",
+    "verify_skipped": false,
+    "cases": [
+      "price-business",
+      "money-back",
+      "late-fee"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "thanks for calling Northwind internet how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "How much is the Business plan?",
+        "case_id": "price-business",
+        "expect_keywords": [
+          "129"
+        ],
+        "spoken": true,
+        "transcript": "the business plan costs $29 per month",
+        "answer_verified": false,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "Do you have a money-back guarantee?",
+        "case_id": "money-back",
+        "expect_keywords": [
+          "30"
+        ],
+        "spoken": true,
+        "transcript": "yes new customers have a 30-day money back guarantee",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "What happens if I pay my bill late?",
+        "case_id": "late-fee",
+        "expect_keywords": [
+          "9"
+        ],
+        "spoken": true,
+        "transcript": "if you pay your bill late there is a $9 fee after a 15-day grace period",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "goodbye and thanks for choosing Northwind internet",
+        "answer_verified": null,
+        "reply_timed_out": false
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    }
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-retell-20260730-181628/call-004.wav",
+    "sha256": "c9668d7df525303ba54ffd1a5b835c7a3d249bfc566a77d7fe40eedfa533b625",
+    "bytes": 1513644,
+    "source": "recording_raw.wav"
+  },
+  "cost": {
+    "vendor_call_id": "call_cd6d70e79aeeb4b07c8afdd0fb4",
+    "cost": 0.107000016,
+    "currency": "USD",
+    "duration_s": 47.673,
+    "billed_s": 48,
+    "source": "POST /v2/list-calls .call_cost.product_costs (telephony excluded)",
+    "notes": [
+      "combined_cost is reported in cents; divided by 100",
+      "telephony excluded (0.0120 USD): the PSTN leg is the bench's own carrier cost, and no other platform's figure includes one"
+    ]
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "benchmark": "voice-ttfab",
+  "description": "TTFAB (time-to-first-audio-byte) scenarios. Every case shares the same T1 greeting and T3 goodbye; T2 varies. The vendor agent under test runs the shared system_prompt, which contains a fact answering every T2 question. Facts are fictional so answers must come from the prompt, and every fact carries a unique value so transcript verification is unambiguous.",
+  "conversation_structure": {
+    "turn_1": {
+      "caller_says": "Hi there.",
+      "agent_expected": "Thanks for calling Northwind Internet. How can I help you today?",
+      "measure": "TTFAB of agent greeting after call is answered"
+    },
+    "turn_2": {
+      "caller_says": "<case.question>",
+      "agent_expected": "One-sentence answer containing <case.expect_keywords>",
+      "measure": "TTFAB from caller end-of-speech to first audio byte of the answer (primary metric)"
+    },
+    "turn_3": {
+      "caller_says": "That's all I needed. Goodbye.",
+      "agent_expected": "Goodbye, and thanks for choosing Northwind Internet.",
+      "measure": "TTFAB of goodbye (secondary)"
+    }
+  },
+  "system_prompt": "You are a customer support voice agent for Northwind Internet, a fictional residential internet provider. You are on a phone call, so keep every reply to one short spoken sentence. Never read lists; answer only the specific question asked, using only the facts below. If a question is not covered by these facts, say exactly: \"I don't have that information, but I can connect you to a specialist.\"\n\nGreeting rule: your first words on every call must be exactly: \"Thanks for calling Northwind Internet. How can I help you today?\"\nGoodbye rule: when the caller says goodbye or indicates they are done, reply exactly: \"Goodbye, and thanks for choosing Northwind Internet.\" and end the call.\n\nCOMPANY FACTS:\n- The Basic plan costs 39 dollars per month and includes download speeds of 300 megabits per second.\n- The Premium plan costs 74 dollars per month and includes download speeds of 2 gigabits per second.\n- The Business plan costs 129 dollars per month.\n- All plans have unlimited data with no data caps.\n- There are no annual contracts; all plans are month-to-month.\n- There is no cancellation fee.\n- New customers get a 14-day free trial.\n- The one-time professional installation fee is 85 dollars.\n- Standard installation appointments are available within 4 business days.\n- Router rental costs 8 dollars per month.\n- A Wi-Fi extender is a one-time purchase of 49 dollars.\n- A static IP address add-on costs 11 dollars per month.\n- A home phone line add-on costs 17 dollars per month.\n- Customer support is open from 6 AM to 10 PM Pacific time, seven days a week.\n- The support email is help at northwind internet dot com.\n- New customers have a 30-day money-back guarantee.\n- Customers receive a 5-dollar bill credit for each full day of service outage.\n- Students get a 20 percent discount with a valid student ID.\n- Seniors aged 65 and over get a 12 percent discount.\n- Referring a friend earns a 60-dollar bill credit.\n- Enrolling in autopay saves 4 dollars per month.\n- Late payments incur a 9-dollar fee after a 15-day grace period.\n- Accepted payment methods are credit card, bank transfer, and PayPal.\n- Technician appointments can be rescheduled up to 2 hours before the appointment.\n- Rental equipment must be returned within 21 days of cancellation.\n- Moving your service to a new address is free with 10 business days notice.\n- Northwind Internet was founded in 2011 and is headquartered in Portland, Oregon.\n- Service is available in Oregon, Idaho, and Nevada.\n- The current promotion is 3 months of free router rental for new Premium plan customers.\n- Gamer Boost, a low-latency routing add-on, costs 13 dollars per month.",
+  "cases": [
+    {
+      "id": "price-basic",
+      "question": "How much does the Basic plan cost per month?",
+      "alt_phrasings": ["What's the monthly price of your cheapest plan?", "What do you charge for the Basic plan?"],
+      "expect_keywords": ["39"]
+    },
+    {
+      "id": "price-premium",
+      "question": "What does the Premium plan cost?",
+      "alt_phrasings": ["How much is Premium every month?", "What's the price on the Premium tier?"],
+      "expect_keywords": ["74"]
+    },
+    {
+      "id": "price-business",
+      "question": "How much is the Business plan?",
+      "alt_phrasings": ["What would a business account run me per month?"],
+      "expect_keywords": ["129"]
+    },
+    {
+      "id": "speed-basic",
+      "question": "How fast is the Basic plan?",
+      "alt_phrasings": ["What download speed comes with Basic?"],
+      "expect_keywords": ["300"]
+    },
+    {
+      "id": "speed-premium",
+      "question": "What speeds do I get on Premium?",
+      "alt_phrasings": ["How fast is the Premium plan's download speed?"],
+      "expect_keywords": ["2", "gigabit"]
+    },
+    {
+      "id": "data-cap",
+      "question": "Is there a data cap on your plans?",
+      "alt_phrasings": ["Do you limit how much data I can use?"],
+      "expect_keywords": ["unlimited"]
+    },
+    {
+      "id": "contract",
+      "question": "Do I have to sign an annual contract?",
+      "alt_phrasings": ["Am I locked into a yearly agreement?"],
+      "expect_keywords": ["month-to-month"]
+    },
+    {
+      "id": "cancellation-fee",
+      "question": "Is there a fee if I cancel my service?",
+      "alt_phrasings": ["What does it cost to cancel?"],
+      "expect_keywords": ["no", "cancellation"]
+    },
+    {
+      "id": "free-trial",
+      "question": "Do you offer a free trial?",
+      "alt_phrasings": ["Can I try the service before paying?"],
+      "expect_keywords": ["14"]
+    },
+    {
+      "id": "installation-fee",
+      "question": "How much is professional installation?",
+      "alt_phrasings": ["What's the setup fee for a technician install?"],
+      "expect_keywords": ["85"]
+    },
+    {
+      "id": "installation-time",
+      "question": "How soon can someone come install my internet?",
+      "alt_phrasings": ["How long until an installation appointment?"],
+      "expect_keywords": ["4", "business days"]
+    },
+    {
+      "id": "router-rental",
+      "question": "How much does it cost to rent a router from you?",
+      "alt_phrasings": ["What's the monthly router fee?"],
+      "expect_keywords": ["8"]
+    },
+    {
+      "id": "wifi-extender",
+      "question": "How much is a Wi-Fi extender?",
+      "alt_phrasings": ["What do you charge for a range extender?"],
+      "expect_keywords": ["49"]
+    },
+    {
+      "id": "static-ip",
+      "question": "What does a static IP address cost?",
+      "alt_phrasings": ["How much extra is a fixed IP?"],
+      "expect_keywords": ["11"]
+    },
+    {
+      "id": "phone-line",
+      "question": "Can I add a home phone line, and how much is it?",
+      "alt_phrasings": ["What does the phone add-on cost per month?"],
+      "expect_keywords": ["17"]
+    },
+    {
+      "id": "support-hours",
+      "question": "What are your customer support hours?",
+      "alt_phrasings": ["When can I reach support?"],
+      "expect_keywords": ["6", "10"]
+    },
+    {
+      "id": "support-email",
+      "question": "What's your support email address?",
+      "alt_phrasings": ["Where can I email you for help?"],
+      "expect_keywords": ["northwind"]
+    },
+    {
+      "id": "money-back",
+      "question": "Do you have a money-back guarantee?",
+      "alt_phrasings": ["Can I get a refund if I don't like the service?"],
+      "expect_keywords": ["30"]
+    },
+    {
+      "id": "outage-credit",
+      "question": "Do I get anything back if my internet goes out?",
+      "alt_phrasings": ["Is there compensation for outages?"],
+      "expect_keywords": ["5", "credit"]
+    },
+    {
+      "id": "student-discount",
+      "question": "Is there a student discount?",
+      "alt_phrasings": ["Do students get a deal?"],
+      "expect_keywords": ["20"]
+    },
+    {
+      "id": "senior-discount",
+      "question": "Do seniors get a discount?",
+      "alt_phrasings": ["Is there a discount for people over sixty-five?"],
+      "expect_keywords": ["12"]
+    },
+    {
+      "id": "referral",
+      "question": "What do I get for referring a friend?",
+      "alt_phrasings": ["Is there a referral bonus?"],
+      "expect_keywords": ["60"]
+    },
+    {
+      "id": "autopay",
+      "question": "Do I save anything by enrolling in autopay?",
+      "alt_phrasings": ["Is there an autopay discount?"],
+      "expect_keywords": ["4"]
+    },
+    {
+      "id": "late-fee",
+      "question": "What happens if I pay my bill late?",
+      "alt_phrasings": ["Is there a late payment fee?"],
+      "expect_keywords": ["9"]
+    },
+    {
+      "id": "payment-methods",
+      "question": "What payment methods do you accept?",
+      "alt_phrasings": ["Can I pay with PayPal?"],
+      "expect_keywords": ["PayPal"]
+    },
+    {
+      "id": "reschedule",
+      "question": "How late can I reschedule a technician appointment?",
+      "alt_phrasings": ["Can I move my install appointment last minute?"],
+      "expect_keywords": ["2 hours"]
+    },
+    {
+      "id": "equipment-return",
+      "question": "How long do I have to return the router after canceling?",
+      "alt_phrasings": ["What's the equipment return window?"],
+      "expect_keywords": ["21"]
+    },
+    {
+      "id": "moving",
+      "question": "I'm moving. Can I take my service with me?",
+      "alt_phrasings": ["What's the process to transfer service to a new address?"],
+      "expect_keywords": ["free", "10"]
+    },
+    {
+      "id": "company-history",
+      "question": "When was Northwind Internet founded and where are you based?",
+      "alt_phrasings": ["How long has the company been around?"],
+      "expect_keywords": ["2011", "Portland"]
+    },
+    {
+      "id": "service-area",
+      "question": "Which states do you serve?",
+      "alt_phrasings": ["Is your service available in Nevada?"],
+      "expect_keywords": ["Oregon", "Idaho", "Nevada"]
+    },
+    {
+      "id": "promotion",
+      "question": "Are you running any promotions right now?",
+      "alt_phrasings": ["Any current deals for new customers?"],
+      "expect_keywords": ["3 months", "router"]
+    },
+    {
+      "id": "gamer-boost",
+      "question": "What is Gamer Boost and how much does it cost?",
+      "alt_phrasings": ["Do you have anything for lowering game latency?"],
+      "expect_keywords": ["13"]
+    },
+    {
+      "id": "not-in-facts",
+      "question": "Do you offer satellite TV packages?",
+      "alt_phrasings": ["Can I bundle cable television?"],
+      "expect_keywords": ["specialist"],
+      "note": "Negative control: answer is NOT in the facts; agent should use the exact fallback line. Catches prompts that hallucinate."
+    }
+  ]
+}

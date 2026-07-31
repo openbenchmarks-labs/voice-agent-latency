@@ -1,0 +1,210 @@
+{
+  "result": {
+    "analyzer_version": "2.3.0",
+    "call_id": "call-001",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "recording_started_mid_speech",
+      "near_utterances=4",
+      "t1_crosscheck=22.0ms"
+    ],
+    "greeting_end_ms": 2522.0,
+    "greeting_onset_ms": 102.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -58.89462825153855,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-vapi-20260730-183425",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 5432.0,
+    "t1_ms": 7118.0,
+    "t2_ms": 8768.0,
+    "ttfab_content_ms": 1650.0,
+    "ttfab_onset_ms": 1650.0,
+    "ttfg_ms": null,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=22.0ms",
+          "case=price-premium",
+          "answer_not_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 5432.0,
+        "t1_ms": 7118.0,
+        "t2_ms": 8768.0,
+        "ttfab_content_ms": 1650.0,
+        "ttfab_onset_ms": 1650.0,
+        "vad_disagreement_ms": 8.0,
+        "vad_disagreement_signed_ms": 8.0,
+        "vendor_response_duration_ms": 2016.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=30.0ms",
+          "case=contract",
+          "answer_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 18184.0,
+        "t1_ms": 20210.0,
+        "t2_ms": 21830.0,
+        "ttfab_content_ms": 1620.0,
+        "ttfab_onset_ms": 1620.0,
+        "vad_disagreement_ms": 10.0,
+        "vad_disagreement_signed_ms": -10.0,
+        "vendor_response_duration_ms": 2774.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=28.0ms",
+          "case=support-hours",
+          "answer_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 27430.0,
+        "t1_ms": 29148.0,
+        "t2_ms": 30822.0,
+        "ttfab_content_ms": 1674.0,
+        "ttfab_onset_ms": 1674.0,
+        "vad_disagreement_ms": 2.0,
+        "vad_disagreement_signed_ms": 2.0,
+        "vendor_response_duration_ms": 1396.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=94.0ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 39312.0,
+        "t1_ms": 41206.0,
+        "t2_ms": 41764.0,
+        "ttfab_content_ms": 1750.0,
+        "ttfab_onset_ms": 558.0,
+        "vad_disagreement_ms": 4.0,
+        "vad_disagreement_signed_ms": 4.0,
+        "vendor_response_duration_ms": 100.125
+      }
+    ],
+    "vad_disagreement_ms": 8.0,
+    "vendor": "vapi",
+    "vendor_response_duration_ms": 2016.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-001",
+    "run_id": "bench-vapi-20260730-183425",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "vapi",
+    "carrier": "plivo",
+    "vendor_config_sha256": "4b8a525c1f804d6a7ea1c1c86784c7bcad0cb253c151a039a7301c5135c18595",
+    "caller_config_sha256": "2208568220723cd9a30cd53c0b6c27d26d6d539874c368c2a0ed7b2ecf6c14db",
+    "caller_plan_sha256": "e57b86c1036f7edd76c68167c4bf20ffa075f41e525751fbe4a6ffe029138c04",
+    "call_sid": "2abf2488-a77d-47c6-8a29-4db86bc0ef71",
+    "call_control_id": "2abf2488-a77d-47c6-8a29-4db86bc0ef71",
+    "verify_skipped": false,
+    "cases": [
+      "price-premium",
+      "contract",
+      "support-hours"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "thanks for calling Northwind internet uh how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "What does the Premium plan cost?",
+        "case_id": "price-premium",
+        "expect_keywords": [
+          "74"
+        ],
+        "spoken": true,
+        "transcript": "the Premium plan costs $44 per month and includes download speeds of 2 gigabits per second",
+        "answer_verified": false,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "Do I have to sign an annual contract?",
+        "case_id": "contract",
+        "expect_keywords": [
+          "month-to-month"
+        ],
+        "spoken": true,
+        "transcript": "no all our plans are month-to-month and there are no annual contracts",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "What are your customer support hours?",
+        "case_id": "support-hours",
+        "expect_keywords": [
+          "6",
+          "10"
+        ],
+        "spoken": true,
+        "transcript": "customer support is open from 6:00 a.m. to 10:00 p.m. Pacific Time 7 days a week",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "goodbye goodbye and thanks for choosing Northwind internet",
+        "answer_verified": null,
+        "reply_timed_out": false
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    }
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-vapi-20260730-183425/call-001.wav",
+    "sha256": "67658b66ee03c9311121e1518157648c04f269989fdeb3a1d5479f85855f557b",
+    "bytes": 1548204,
+    "source": "recording_raw.wav"
+  },
+  "cost": {
+    "vendor_call_id": "019fb5cf-d20d-7aa2-b7b1-5d073a96c0df",
+    "cost": 0.0699,
+    "currency": "USD",
+    "duration_s": 49.11800003051758,
+    "billed_s": null,
+    "source": "GET /call .cost",
+    "notes": []
+  }
+}

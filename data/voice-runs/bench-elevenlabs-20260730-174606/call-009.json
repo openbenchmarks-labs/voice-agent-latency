@@ -1,0 +1,212 @@
+{
+  "result": {
+    "analyzer_version": "2.3.0",
+    "call_id": "call-009",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "near_utterances=4",
+      "t1_crosscheck=46.0ms"
+    ],
+    "greeting_end_ms": 2796.0,
+    "greeting_onset_ms": 370.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -72.24719895935549,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-elevenlabs-20260730-174606",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 6034.0,
+    "t1_ms": 7746.0,
+    "t2_ms": 8904.0,
+    "ttfab_content_ms": 1158.0,
+    "ttfab_onset_ms": 1158.0,
+    "ttfg_ms": 370.0,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=46.0ms",
+          "case=support-email",
+          "answer_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 6034.0,
+        "t1_ms": 7746.0,
+        "t2_ms": 8904.0,
+        "ttfab_content_ms": 1158.0,
+        "ttfab_onset_ms": 1158.0,
+        "vad_disagreement_ms": 16.0,
+        "vad_disagreement_signed_ms": -16.0,
+        "vendor_response_duration_ms": 2036.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=18.0ms",
+          "case=outage-credit",
+          "answer_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 13962.0,
+        "t1_ms": 16582.0,
+        "t2_ms": 18212.0,
+        "ttfab_content_ms": 1630.0,
+        "ttfab_onset_ms": 1630.0,
+        "vad_disagreement_ms": 12.0,
+        "vad_disagreement_signed_ms": 12.0,
+        "vendor_response_duration_ms": 3346.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=34.0ms",
+          "case=senior-discount",
+          "answer_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 24056.0,
+        "t1_ms": 25446.0,
+        "t2_ms": 27010.0,
+        "ttfab_content_ms": 1564.0,
+        "ttfab_onset_ms": 1564.0,
+        "vad_disagreement_ms": 10.0,
+        "vad_disagreement_signed_ms": -10.0,
+        "vendor_response_duration_ms": 3196.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=34.0ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 32872.0,
+        "t1_ms": 34766.0,
+        "t2_ms": 36092.0,
+        "ttfab_content_ms": 1326.0,
+        "ttfab_onset_ms": 1326.0,
+        "vad_disagreement_ms": 12.0,
+        "vad_disagreement_signed_ms": 12.0,
+        "vendor_response_duration_ms": 2154.0
+      }
+    ],
+    "vad_disagreement_ms": 16.0,
+    "vendor": "elevenlabs",
+    "vendor_response_duration_ms": 2036.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-009",
+    "run_id": "bench-elevenlabs-20260730-174606",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "elevenlabs",
+    "carrier": "plivo",
+    "vendor_config_sha256": "2b1388f045e0cb39adbb254a08b4cc662f79b433954fc847b222763f3f42a96e",
+    "caller_config_sha256": "05d101de4d4ccc92be9a46eb57e2a8719486f0fbe6ee55cbe8bebe3ad154ce4c",
+    "caller_plan_sha256": "e57b86c1036f7edd76c68167c4bf20ffa075f41e525751fbe4a6ffe029138c04",
+    "call_sid": "0bf4d5d2-a036-4971-b12e-1af39fe7b7b9",
+    "call_control_id": "0bf4d5d2-a036-4971-b12e-1af39fe7b7b9",
+    "verify_skipped": false,
+    "cases": [
+      "support-email",
+      "outage-credit",
+      "senior-discount"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "thanks for calling Northwind internet how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "What's your support email address?",
+        "case_id": "support-email",
+        "expect_keywords": [
+          "northwind"
+        ],
+        "spoken": true,
+        "transcript": "it's helped at Northwind internet.com",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "Do I get anything back if my internet goes out?",
+        "case_id": "outage-credit",
+        "expect_keywords": [
+          "5",
+          "credit"
+        ],
+        "spoken": true,
+        "transcript": "yes you get a 5 dollar bill credit for each full day of service outage",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "Do seniors get a discount?",
+        "case_id": "senior-discount",
+        "expect_keywords": [
+          "12"
+        ],
+        "spoken": true,
+        "transcript": "yes seniors aged 65 and over get a 12% discount",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "goodbye and thanks for choosing Northwind internet",
+        "answer_verified": null,
+        "reply_timed_out": false
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    }
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-elevenlabs-20260730-174606/call-009.wav",
+    "sha256": "fb26ecc226223de5a56e72a0cb6d81bf150c6e844acd302b0ca50149aadd1071",
+    "bytes": 1318444,
+    "source": "recording_raw.wav"
+  },
+  "cost": {
+    "vendor_call_id": "conv_2701kyttmx45f47v28xsxh8v7nkh",
+    "cost": 0.046467580904457864,
+    "currency": "USD",
+    "duration_s": 42,
+    "billed_s": null,
+    "source": "GET /v1/convai/conversations/{id} .metadata.cost_fiat",
+    "notes": [
+      "cost_fiat is the USD figure; `cost` is in credits",
+      "account tier is 'free' -- cost_fiat is the list-price equivalent, not an amount billed"
+    ]
+  }
+}

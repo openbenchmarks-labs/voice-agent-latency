@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# Env / secrets — never commit real keys; only .env.example is tracked
+.env
+.env.local
+
+# Run output. The bench writes runs/<run_id>/ with the carrier's stereo WAVs;
+# those are host-local. What gets published is the slim per-call JSON under
+# data/voice-runs/, with the audio referenced by URL + sha256.
+#
+# Also load-bearing for privacy: runs/*/applied_config.json holds each platform's
+# raw config echo, and some platforms include the account holder's name and email
+# in it (ElevenLabs returns creator_name / creator_email). See
+# data/voice-runs/README.md before publishing your own runs.
+runs/
+logs/
+state.sqlite
+state.sqlite-journal
+.cache/
+
+# Editor / OS
+.DS_Store
+*.swp
+.idea/
+.vscode/

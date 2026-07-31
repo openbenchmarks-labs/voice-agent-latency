@@ -1,0 +1,214 @@
+{
+  "result": {
+    "analyzer_version": "2.3.0",
+    "call_id": "call-005",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "recording_started_mid_speech",
+      "near_utterances=4",
+      "t1_crosscheck=22.0ms"
+    ],
+    "greeting_end_ms": 1410.0,
+    "greeting_onset_ms": 414.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -72.24719895935549,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-retell-20260730-181628",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 4332.0,
+    "t1_ms": 5718.0,
+    "t2_ms": 7102.0,
+    "ttfab_content_ms": 1384.0,
+    "ttfab_onset_ms": 1384.0,
+    "ttfg_ms": null,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=22.0ms",
+          "case=service-area",
+          "answer_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 4332.0,
+        "t1_ms": 5718.0,
+        "t2_ms": 7102.0,
+        "ttfab_content_ms": 1384.0,
+        "ttfab_onset_ms": 1384.0,
+        "vad_disagreement_ms": 2.0,
+        "vad_disagreement_signed_ms": 2.0,
+        "vendor_response_duration_ms": 2718.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=78.0ms",
+          "case=student-discount",
+          "answer_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 13232.0,
+        "t1_ms": 14522.0,
+        "t2_ms": 16188.0,
+        "ttfab_content_ms": 1666.0,
+        "ttfab_onset_ms": 1666.0,
+        "vad_disagreement_ms": 8.0,
+        "vad_disagreement_signed_ms": 8.0,
+        "vendor_response_duration_ms": 412.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=0.0ms",
+          "case=reschedule",
+          "answer_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 23414.0,
+        "t1_ms": 25840.0,
+        "t2_ms": 27326.0,
+        "ttfab_content_ms": 1486.0,
+        "ttfab_onset_ms": 1486.0,
+        "vad_disagreement_ms": 6.0,
+        "vad_disagreement_signed_ms": 6.0,
+        "vendor_response_duration_ms": 3818.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=54.0ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 34112.0,
+        "t1_ms": 36006.0,
+        "t2_ms": 36598.0,
+        "ttfab_content_ms": 1922.0,
+        "ttfab_onset_ms": 592.0,
+        "vad_disagreement_ms": 2.0,
+        "vad_disagreement_signed_ms": -2.0,
+        "vendor_response_duration_ms": 280.0
+      }
+    ],
+    "vad_disagreement_ms": 2.0,
+    "vendor": "retell",
+    "vendor_response_duration_ms": 2718.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-005",
+    "run_id": "bench-retell-20260730-181628",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "retell",
+    "carrier": "plivo",
+    "vendor_config_sha256": "3fbe40adfec2aeea3e8100517811faedc8837c2ac17564bfcc995281b1256e0a",
+    "caller_config_sha256": "8bcd9e1b920578d22b66c5b620893bb8751068d19ae2871e5541ceedef65e85f",
+    "caller_plan_sha256": "e57b86c1036f7edd76c68167c4bf20ffa075f41e525751fbe4a6ffe029138c04",
+    "call_sid": "0754a44a-00a0-474e-9582-fe7bf5cb019d",
+    "call_control_id": "0754a44a-00a0-474e-9582-fe7bf5cb019d",
+    "verify_skipped": false,
+    "cases": [
+      "service-area",
+      "student-discount",
+      "reschedule"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "Which states do you serve?",
+        "case_id": "service-area",
+        "expect_keywords": [
+          "Oregon",
+          "Idaho",
+          "Nevada"
+        ],
+        "spoken": true,
+        "transcript": "we provide service in Oregon Idaho and Nevada",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "Is there a student discount?",
+        "case_id": "student-discount",
+        "expect_keywords": [
+          "20"
+        ],
+        "spoken": true,
+        "transcript": "yes students get a 20% discount with a valid student ID",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "How late can I reschedule a technician appointment?",
+        "case_id": "reschedule",
+        "expect_keywords": [
+          "2 hours"
+        ],
+        "spoken": true,
+        "transcript": "you can reschedule a technician appointment up to 2 hours before the appointment",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "goodbye goodbye and thanks for choosing Northwind internet",
+        "answer_verified": null,
+        "reply_timed_out": false
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    }
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-retell-20260730-181628/call-005.wav",
+    "sha256": "3a26386bde23e7340a420ed316f9dfb7a2854928b51de651f4ccba9bc1b59831",
+    "bytes": 1388844,
+    "source": "recording_raw.wav"
+  },
+  "cost": {
+    "vendor_call_id": "call_086ec9b8eebc7f6a777f75cbd39",
+    "cost": 0.10316668200000001,
+    "currency": "USD",
+    "duration_s": 45.672,
+    "billed_s": 46,
+    "source": "POST /v2/list-calls .call_cost.product_costs (telephony excluded)",
+    "notes": [
+      "combined_cost is reported in cents; divided by 100",
+      "telephony excluded (0.0115 USD): the PSTN leg is the bench's own carrier cost, and no other platform's figure includes one"
+    ]
+  }
+}

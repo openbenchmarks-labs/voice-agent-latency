@@ -1,0 +1,572 @@
+{
+  "schema_version": 1,
+  "dataset_slug": "voice-2026-q3",
+  "dataset_name": "OpenBenchmarks Voice Agent Latency - 2026 Q3",
+  "generated_at": "2026-07-31T20:06:50+00:00",
+  "analyzer_versions": [
+    "2.3.0"
+  ],
+  "live_benchmark": "https://openbenchmarks.com/voice-agent-latency",
+  "json_api": "https://openbenchmarks.com/api/benchmarks/voice-agent-latency",
+  "leaderboard": [
+    {
+      "rank": 1,
+      "provider_slug": "telnyx",
+      "provider_name": "Telnyx",
+      "ttfab_onset_p50_ms": 1270.0,
+      "ttfab_onset_p95_ms": 2014.7,
+      "cost_per_billed_minute": 0.05,
+      "cost_currency": "USD",
+      "turns_usable": 40,
+      "turn_attempts": 40,
+      "latest_run_id": "bench-telnyx-20260730-173501"
+    },
+    {
+      "rank": 2,
+      "provider_slug": "elevenlabs",
+      "provider_name": "ElevenLabs",
+      "ttfab_onset_p50_ms": 1362.0,
+      "ttfab_onset_p95_ms": 1632.5,
+      "cost_per_billed_minute": 0.067367,
+      "cost_currency": "USD",
+      "turns_usable": 40,
+      "turn_attempts": 40,
+      "latest_run_id": "bench-elevenlabs-20260730-174606"
+    },
+    {
+      "rank": 3,
+      "provider_slug": "bland",
+      "provider_name": "Bland AI",
+      "ttfab_onset_p50_ms": 1493.0,
+      "ttfab_onset_p95_ms": 2162.3,
+      "cost_per_billed_minute": 0.140658,
+      "cost_currency": "USD",
+      "turns_usable": 40,
+      "turn_attempts": 40,
+      "latest_run_id": "bench-bland-20260730-180615"
+    },
+    {
+      "rank": 4,
+      "provider_slug": "vapi",
+      "provider_name": "Vapi",
+      "ttfab_onset_p50_ms": 1508.0,
+      "ttfab_onset_p95_ms": 1911.6,
+      "cost_per_billed_minute": 0.084097,
+      "cost_currency": "USD",
+      "turns_usable": 37,
+      "turn_attempts": 40,
+      "latest_run_id": "bench-vapi-20260730-183425"
+    },
+    {
+      "rank": 5,
+      "provider_slug": "retell",
+      "provider_name": "Retell AI",
+      "ttfab_onset_p50_ms": 1814.0,
+      "ttfab_onset_p95_ms": 2328.7,
+      "cost_per_billed_minute": 0.133947,
+      "cost_currency": "USD",
+      "turns_usable": 38,
+      "turn_attempts": 39,
+      "latest_run_id": "bench-retell-20260730-181628"
+    }
+  ],
+  "runs": [
+    {
+      "run_id": "bench-bland-20260730-180615",
+      "vendor": "bland",
+      "calls": 10,
+      "turns_usable": 40,
+      "turn_attempts": 40,
+      "vendor_config_sha256": "e82a64ec97b1a8362db4c9d1a59ed73cc9eb1fbfbac8d4736ae7baaf5e9e4451",
+      "caller_config_sha256": "e57b86c1036f7edd76c68167c4bf20ffa075f41e525751fbe4a6ffe029138c04"
+    },
+    {
+      "run_id": "bench-elevenlabs-20260730-174606",
+      "vendor": "elevenlabs",
+      "calls": 10,
+      "turns_usable": 40,
+      "turn_attempts": 40,
+      "vendor_config_sha256": "2b1388f045e0cb39adbb254a08b4cc662f79b433954fc847b222763f3f42a96e",
+      "caller_config_sha256": "e57b86c1036f7edd76c68167c4bf20ffa075f41e525751fbe4a6ffe029138c04"
+    },
+    {
+      "run_id": "bench-retell-20260730-181628",
+      "vendor": "retell",
+      "calls": 10,
+      "turns_usable": 38,
+      "turn_attempts": 39,
+      "vendor_config_sha256": "3fbe40adfec2aeea3e8100517811faedc8837c2ac17564bfcc995281b1256e0a",
+      "caller_config_sha256": "e57b86c1036f7edd76c68167c4bf20ffa075f41e525751fbe4a6ffe029138c04"
+    },
+    {
+      "run_id": "bench-telnyx-20260730-173501",
+      "vendor": "telnyx",
+      "calls": 10,
+      "turns_usable": 40,
+      "turn_attempts": 40,
+      "vendor_config_sha256": "5277d96e7b0c2e5c95641a0f276bba058fb43354f778e89fe7392c8cb839a876",
+      "caller_config_sha256": "e57b86c1036f7edd76c68167c4bf20ffa075f41e525751fbe4a6ffe029138c04"
+    },
+    {
+      "run_id": "bench-vapi-20260730-183425",
+      "vendor": "vapi",
+      "calls": 10,
+      "turns_usable": 37,
+      "turn_attempts": 40,
+      "vendor_config_sha256": "4b8a525c1f804d6a7ea1c1c86784c7bcad0cb253c151a039a7301c5135c18595",
+      "caller_config_sha256": "e57b86c1036f7edd76c68167c4bf20ffa075f41e525751fbe4a6ffe029138c04"
+    }
+  ],
+  "calls": [
+    {
+      "run_id": "bench-bland-20260730-180615",
+      "call_id": "call-000",
+      "artifact": "data/voice-runs/bench-bland-20260730-180615/call-000.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-bland-20260730-180615/call-000.wav",
+      "recording_sha256": "a583e4a4fbe0ee41c4e7dd1d545cb8811f7b29636d39fbe5a6b065b8a98042c0",
+      "cost": 0.11,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-bland-20260730-180615",
+      "call_id": "call-001",
+      "artifact": "data/voice-runs/bench-bland-20260730-180615/call-001.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-bland-20260730-180615/call-001.wav",
+      "recording_sha256": "5b099086f3859afeed56e8bbd076401e978c4b1cb861d1f16d3b571f0cc85513",
+      "cost": 0.11,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-bland-20260730-180615",
+      "call_id": "call-002",
+      "artifact": "data/voice-runs/bench-bland-20260730-180615/call-002.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-bland-20260730-180615/call-002.wav",
+      "recording_sha256": "72277c7f1a1b4606c7d5e83c6e606256bf184f9e1f69aef75df624ceed73552d",
+      "cost": 0.101,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-bland-20260730-180615",
+      "call_id": "call-003",
+      "artifact": "data/voice-runs/bench-bland-20260730-180615/call-003.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-bland-20260730-180615/call-003.wav",
+      "recording_sha256": "f23bd79a73a96a83e25bc3c3dadc7bee3405f8df75585b6469146c8f36971d0b",
+      "cost": 0.103,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-bland-20260730-180615",
+      "call_id": "call-004",
+      "artifact": "data/voice-runs/bench-bland-20260730-180615/call-004.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-bland-20260730-180615/call-004.wav",
+      "recording_sha256": "50f860aac98c8546706b75f90c8fb2455eb5182844cf5592beecd23da9a89c23",
+      "cost": 0.106,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-bland-20260730-180615",
+      "call_id": "call-005",
+      "artifact": "data/voice-runs/bench-bland-20260730-180615/call-005.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-bland-20260730-180615/call-005.wav",
+      "recording_sha256": "7c6e7be037a4f03b0cd84253bcb924679cb462e8fd1e0e071025ffef78e91230",
+      "cost": 0.103,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-bland-20260730-180615",
+      "call_id": "call-006",
+      "artifact": "data/voice-runs/bench-bland-20260730-180615/call-006.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-bland-20260730-180615/call-006.wav",
+      "recording_sha256": "2347cbf7a214703d0d979cf1c87a1cf17d64716144f68ba0a4a16ee4ebe2d756",
+      "cost": 0.11,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-bland-20260730-180615",
+      "call_id": "call-007",
+      "artifact": "data/voice-runs/bench-bland-20260730-180615/call-007.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-bland-20260730-180615/call-007.wav",
+      "recording_sha256": "09375250f811e05a9f55989e04b992410f16472a09e82f5ca1a375820b87c59d",
+      "cost": 0.108,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-bland-20260730-180615",
+      "call_id": "call-008",
+      "artifact": "data/voice-runs/bench-bland-20260730-180615/call-008.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-bland-20260730-180615/call-008.wav",
+      "recording_sha256": "d387059b0f43b563317d01ff238a01f0e59cfa8f99a80eb8811c75b97d1576a7",
+      "cost": 0.11,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-bland-20260730-180615",
+      "call_id": "call-009",
+      "artifact": "data/voice-runs/bench-bland-20260730-180615/call-009.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-bland-20260730-180615/call-009.wav",
+      "recording_sha256": "d1830e8da43ddbb439f34c289f01d362c7c568439f6c089e388cd7e5eb6d4f45",
+      "cost": 0.108,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-elevenlabs-20260730-174606",
+      "call_id": "call-000",
+      "artifact": "data/voice-runs/bench-elevenlabs-20260730-174606/call-000.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-elevenlabs-20260730-174606/call-000.wav",
+      "recording_sha256": "09b1d87c20b6f22878deba82a8cf09dc4ff13d17a15f2290b35da1c720ec46fd",
+      "cost": 0.04735204467456689,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-elevenlabs-20260730-174606",
+      "call_id": "call-001",
+      "artifact": "data/voice-runs/bench-elevenlabs-20260730-174606/call-001.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-elevenlabs-20260730-174606/call-001.wav",
+      "recording_sha256": "ffa7968906c9c34a18dbb39b14164e54a2d55de9edd7d4fcb3ec87aa0cc03b4d",
+      "cost": 0.047195839309704966,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-elevenlabs-20260730-174606",
+      "call_id": "call-002",
+      "artifact": "data/voice-runs/bench-elevenlabs-20260730-174606/call-002.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-elevenlabs-20260730-174606/call-002.wav",
+      "recording_sha256": "8f51a54d7ce3d923d60509e1fd402f764733b122efd04b384f2ea5e252761437",
+      "cost": 0.04814412653745479,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-elevenlabs-20260730-174606",
+      "call_id": "call-003",
+      "artifact": "data/voice-runs/bench-elevenlabs-20260730-174606/call-003.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-elevenlabs-20260730-174606/call-003.wav",
+      "recording_sha256": "d0c0100e78eb6e87fb0e5ebce75c7b58207c0f0ddfbd1857c2d271ed8251c90c",
+      "cost": 0.04525836534991762,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-elevenlabs-20260730-174606",
+      "call_id": "call-004",
+      "artifact": "data/voice-runs/bench-elevenlabs-20260730-174606/call-004.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-elevenlabs-20260730-174606/call-004.wav",
+      "recording_sha256": "b0d469d3b8a3b02660a6369956871a0073dc8edcc5165fd6f14365e1fc0f0c68",
+      "cost": 0.05114121231334921,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-elevenlabs-20260730-174606",
+      "call_id": "call-005",
+      "artifact": "data/voice-runs/bench-elevenlabs-20260730-174606/call-005.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-elevenlabs-20260730-174606/call-005.wav",
+      "recording_sha256": "5ef4fa17bd0b1d7a832b05912fae3cce965322d8ea9f6056bbd5ea00c5c4b198",
+      "cost": 0.04538822921106037,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-elevenlabs-20260730-174606",
+      "call_id": "call-006",
+      "artifact": "data/voice-runs/bench-elevenlabs-20260730-174606/call-006.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-elevenlabs-20260730-174606/call-006.wav",
+      "recording_sha256": "801006eeaeef86c70fec5b0eb0d9658771290157a99836b2ed8d721455b53df2",
+      "cost": 0.051681376426585844,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-elevenlabs-20260730-174606",
+      "call_id": "call-007",
+      "artifact": "data/voice-runs/bench-elevenlabs-20260730-174606/call-007.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-elevenlabs-20260730-174606/call-007.wav",
+      "recording_sha256": "adb0ba8d972398464248f18210278fd6cfaa5cc43658212b4ac68a3473e488c3",
+      "cost": 0.04991305991981824,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-elevenlabs-20260730-174606",
+      "call_id": "call-008",
+      "artifact": "data/voice-runs/bench-elevenlabs-20260730-174606/call-008.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-elevenlabs-20260730-174606/call-008.wav",
+      "recording_sha256": "b1eacfc147daee203abdd2abc733af4eadfd37d7552970dffe6fe9b1d8b9a618",
+      "cost": 0.050257666396730814,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-elevenlabs-20260730-174606",
+      "call_id": "call-009",
+      "artifact": "data/voice-runs/bench-elevenlabs-20260730-174606/call-009.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-elevenlabs-20260730-174606/call-009.wav",
+      "recording_sha256": "fb26ecc226223de5a56e72a0cb6d81bf150c6e844acd302b0ca50149aadd1071",
+      "cost": 0.046467580904457864,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-retell-20260730-181628",
+      "call_id": "call-000",
+      "artifact": "data/voice-runs/bench-retell-20260730-181628/call-000.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-retell-20260730-181628/call-000.wav",
+      "recording_sha256": "ea038856aaa5a326313ff00499fffd1f9b5c9c861271cf2b51532f15d52ef389",
+      "cost": 0.101250015,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-retell-20260730-181628",
+      "call_id": "call-001",
+      "artifact": "data/voice-runs/bench-retell-20260730-181628/call-001.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-retell-20260730-181628/call-001.wav",
+      "recording_sha256": "5a825a89b230c06f4b7088dbaf83c2eb2ede1521b4c5cbe15fc4f8be3c752306",
+      "cost": 0.112750017,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-retell-20260730-181628",
+      "call_id": "call-002",
+      "artifact": "data/voice-runs/bench-retell-20260730-181628/call-002.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-retell-20260730-181628/call-002.wav",
+      "recording_sha256": "2bbbc552c5d1470a908273d244217f3a052c0441c385587e7dcbda2907bda0c3",
+      "cost": 0.093583347,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-retell-20260730-181628",
+      "call_id": "call-003",
+      "artifact": "data/voice-runs/bench-retell-20260730-181628/call-003.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-retell-20260730-181628/call-003.wav",
+      "recording_sha256": "0753f3606405964adbc560dd8eb737df340b3a271133f7935f71f5ba7b7e6ed4",
+      "cost": 0.101250015,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-retell-20260730-181628",
+      "call_id": "call-004",
+      "artifact": "data/voice-runs/bench-retell-20260730-181628/call-004.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-retell-20260730-181628/call-004.wav",
+      "recording_sha256": "c9668d7df525303ba54ffd1a5b835c7a3d249bfc566a77d7fe40eedfa533b625",
+      "cost": 0.107000016,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-retell-20260730-181628",
+      "call_id": "call-005",
+      "artifact": "data/voice-runs/bench-retell-20260730-181628/call-005.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-retell-20260730-181628/call-005.wav",
+      "recording_sha256": "3a26386bde23e7340a420ed316f9dfb7a2854928b51de651f4ccba9bc1b59831",
+      "cost": 0.10316668200000001,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-retell-20260730-181628",
+      "call_id": "call-006",
+      "artifact": "data/voice-runs/bench-retell-20260730-181628/call-006.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-retell-20260730-181628/call-006.wav",
+      "recording_sha256": "9bf699b73f561bdd684a5319b37a5373c1d28ed1c12e1a96f24b365ea37a993c",
+      "cost": 0.11083335,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-retell-20260730-181628",
+      "call_id": "call-007",
+      "artifact": "data/voice-runs/bench-retell-20260730-181628/call-007.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-retell-20260730-181628/call-007.wav",
+      "recording_sha256": "b334a6df8adfdabe1b139abb83ed089944f1dd86388eb38a3b01f960bdf6eb7f",
+      "cost": 0.10891668300000001,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-retell-20260730-181628",
+      "call_id": "call-008",
+      "artifact": "data/voice-runs/bench-retell-20260730-181628/call-008.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-retell-20260730-181628/call-008.wav",
+      "recording_sha256": "bc9d2e5b0cd46de6d2475fc1f61788c44c5457a5eb65ac974fb80e248320426a",
+      "cost": 0.10891668300000001,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-retell-20260730-181628",
+      "call_id": "call-009",
+      "artifact": "data/voice-runs/bench-retell-20260730-181628/call-009.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-retell-20260730-181628/call-009.wav",
+      "recording_sha256": "2d2e111f85ffe2faa72ba2cf4ffd67a448b4d94266ced616c08d0bc537a8438e",
+      "cost": 0.112750017,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-telnyx-20260730-173501",
+      "call_id": "call-000",
+      "artifact": "data/voice-runs/bench-telnyx-20260730-173501/call-000.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-telnyx-20260730-173501/call-000.wav",
+      "recording_sha256": "bc943ad2cffc8e79116fe170ba01fea6384564f0f17fee0df9191f407a17d0ef",
+      "cost": 0.05,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-telnyx-20260730-173501",
+      "call_id": "call-001",
+      "artifact": "data/voice-runs/bench-telnyx-20260730-173501/call-001.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-telnyx-20260730-173213/call-000.wav",
+      "recording_sha256": "713340d28c601123cbee9a44daed032a1c1f4182b2d34c3f5ccefdc546433838",
+      "cost": 0.05,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-telnyx-20260730-173501",
+      "call_id": "call-002",
+      "artifact": "data/voice-runs/bench-telnyx-20260730-173501/call-002.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-telnyx-20260730-173501/call-002.wav",
+      "recording_sha256": "22334c586ff963114e57308641595cd3b1a1bec83edc9e2ebf97b41bd6e36ce4",
+      "cost": 0.05,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-telnyx-20260730-173501",
+      "call_id": "call-003",
+      "artifact": "data/voice-runs/bench-telnyx-20260730-173501/call-003.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-telnyx-20260730-173501/call-003.wav",
+      "recording_sha256": "9b41efbe3d6ae6886ef3aae61fc9a3697ee5247073b281a004725d83b922eab6",
+      "cost": 0.05,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-telnyx-20260730-173501",
+      "call_id": "call-004",
+      "artifact": "data/voice-runs/bench-telnyx-20260730-173501/call-004.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-telnyx-20260730-173501/call-004.wav",
+      "recording_sha256": "10ce2ad901a3fe3a98b49c22176f8d0bc72cdc402fecd73cbdb4eb23c459aafe",
+      "cost": 0.05,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-telnyx-20260730-173501",
+      "call_id": "call-005",
+      "artifact": "data/voice-runs/bench-telnyx-20260730-173501/call-005.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-telnyx-20260730-173501/call-005.wav",
+      "recording_sha256": "e74528ce917068d68611533c9a5686277ad23a40c4a1f4337ec86ff751709efa",
+      "cost": 0.05,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-telnyx-20260730-173501",
+      "call_id": "call-006",
+      "artifact": "data/voice-runs/bench-telnyx-20260730-173501/call-006.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-telnyx-20260730-173501/call-006.wav",
+      "recording_sha256": "691e00ed8ea89cc8585ffea5f7adb0c0b50be22958ebcd39a36c5968b8c73c58",
+      "cost": 0.05,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-telnyx-20260730-173501",
+      "call_id": "call-007",
+      "artifact": "data/voice-runs/bench-telnyx-20260730-173501/call-007.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-telnyx-20260730-173501/call-007.wav",
+      "recording_sha256": "50f9229cc38263452afb503f4cbbe75b37dfec7e5ced85fa8802172e07ba2d29",
+      "cost": 0.05,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-telnyx-20260730-173501",
+      "call_id": "call-008",
+      "artifact": "data/voice-runs/bench-telnyx-20260730-173501/call-008.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-telnyx-20260730-173501/call-008.wav",
+      "recording_sha256": "12991bd6074b471af5891ce90e099cfddd24bbd6a220301cec2e0f738b34b5fd",
+      "cost": 0.05,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-telnyx-20260730-173501",
+      "call_id": "call-009",
+      "artifact": "data/voice-runs/bench-telnyx-20260730-173501/call-009.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-telnyx-20260730-173501/call-009.wav",
+      "recording_sha256": "54eb5361eb121e9874f49c3e154ab56fafa7611874ea33c2710f00b07f91f642",
+      "cost": 0.05,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-vapi-20260730-183425",
+      "call_id": "call-000",
+      "artifact": "data/voice-runs/bench-vapi-20260730-183425/call-000.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-vapi-20260730-183425/call-000.wav",
+      "recording_sha256": "67fb2a2a9ee2ef73d0a754739ab677c3688b4fe71cd9b7e449c2a91573b50862",
+      "cost": 0.0599,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-vapi-20260730-183425",
+      "call_id": "call-001",
+      "artifact": "data/voice-runs/bench-vapi-20260730-183425/call-001.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-vapi-20260730-183425/call-001.wav",
+      "recording_sha256": "67658b66ee03c9311121e1518157648c04f269989fdeb3a1d5479f85855f557b",
+      "cost": 0.0699,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-vapi-20260730-183425",
+      "call_id": "call-002",
+      "artifact": "data/voice-runs/bench-vapi-20260730-183425/call-002.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-vapi-20260730-183425/call-002.wav",
+      "recording_sha256": "0bfa8f796df74807922599645dadfce297ac8482391e277a5a644bfcf54758aa",
+      "cost": 0.0565,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-vapi-20260730-183425",
+      "call_id": "call-003",
+      "artifact": "data/voice-runs/bench-vapi-20260730-183425/call-003.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-vapi-20260730-183425/call-003.wav",
+      "recording_sha256": "d4af76307ddeedcb1cc4acbc27c641eee9addfc033212680054e9416ee96da8a",
+      "cost": 0.0581,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-vapi-20260730-183425",
+      "call_id": "call-004",
+      "artifact": "data/voice-runs/bench-vapi-20260730-183425/call-004.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-vapi-20260730-183425/call-004.wav",
+      "recording_sha256": "131c51ed87aeaf8c443c06464509160cc0e8fdf38f229a52158fb3d0100d14a5",
+      "cost": 0.0614,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-vapi-20260730-183425",
+      "call_id": "call-005",
+      "artifact": "data/voice-runs/bench-vapi-20260730-183425/call-005.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-vapi-20260730-183425/call-005.wav",
+      "recording_sha256": "211348ea32fc27a6250d1716cf9f01f4a60dda16f43d8ec6f19dc3fb227a2eec",
+      "cost": 0.0577,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-vapi-20260730-183425",
+      "call_id": "call-006",
+      "artifact": "data/voice-runs/bench-vapi-20260730-183425/call-006.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-vapi-20260730-183425/call-006.wav",
+      "recording_sha256": "a8d73761b30fc9113eebaea03660aca4c1671ad59c1da47135c84274961ea398",
+      "cost": 0.0693,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-vapi-20260730-183425",
+      "call_id": "call-007",
+      "artifact": "data/voice-runs/bench-vapi-20260730-183425/call-007.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-vapi-20260730-183425/call-007.wav",
+      "recording_sha256": "339d83246c553a532851302945ee0ad589053c83293bbbfc7c7f0485ab7467a1",
+      "cost": 0.0673,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-vapi-20260730-183425",
+      "call_id": "call-008",
+      "artifact": "data/voice-runs/bench-vapi-20260730-183425/call-008.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-vapi-20260730-183425/call-008.wav",
+      "recording_sha256": "beadd64d87e9507e74719c2d2f1500ce3ed2c145d86406aa3a4d853f7c3483ac",
+      "cost": 0.0654,
+      "cost_currency": "USD"
+    },
+    {
+      "run_id": "bench-vapi-20260730-183425",
+      "call_id": "call-009",
+      "artifact": "data/voice-runs/bench-vapi-20260730-183425/call-009.json",
+      "recording_url": "https://benchpublic.blob.core.windows.net/recordings/bench-vapi-20260730-183425/call-009.wav",
+      "recording_sha256": "4e585ba6a8ab6a63103b1a06e214b272d7012bccfe044db3430a683a390e8b92",
+      "cost": 0.0607,
+      "cost_currency": "USD"
+    }
+  ]
+}

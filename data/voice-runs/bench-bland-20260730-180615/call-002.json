@@ -1,0 +1,211 @@
+{
+  "result": {
+    "analyzer_version": "2.3.0",
+    "call_id": "call-002",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "near_utterances=4",
+      "t1_crosscheck=106.0ms"
+    ],
+    "greeting_end_ms": 3152.0,
+    "greeting_onset_ms": 646.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -72.24719895935549,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-bland-20260730-180615",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 5852.0,
+    "t1_ms": 7514.0,
+    "t2_ms": 9054.0,
+    "ttfab_content_ms": 1540.0,
+    "ttfab_onset_ms": 1540.0,
+    "ttfg_ms": 646.0,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=106.0ms",
+          "case=speed-basic",
+          "answer_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 5852.0,
+        "t1_ms": 7514.0,
+        "t2_ms": 9054.0,
+        "ttfab_content_ms": 1540.0,
+        "ttfab_onset_ms": 1540.0,
+        "vad_disagreement_ms": 6.0,
+        "vad_disagreement_signed_ms": -6.0,
+        "vendor_response_duration_ms": 3708.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=82.0ms",
+          "case=free-trial",
+          "answer_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 16252.0,
+        "t1_ms": 17578.0,
+        "t2_ms": 19514.0,
+        "ttfab_content_ms": 1936.0,
+        "ttfab_onset_ms": 1936.0,
+        "vad_disagreement_ms": 6.0,
+        "vad_disagreement_signed_ms": -6.0,
+        "vendor_response_duration_ms": 2476.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=58.0ms",
+          "case=router-rental",
+          "answer_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 24776.0,
+        "t1_ms": 27122.0,
+        "t2_ms": 28604.0,
+        "ttfab_content_ms": 1482.0,
+        "ttfab_onset_ms": 1482.0,
+        "vad_disagreement_ms": 4.0,
+        "vad_disagreement_signed_ms": 4.0,
+        "vendor_response_duration_ms": 2230.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=34.0ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 34052.0,
+        "t1_ms": 35946.0,
+        "t2_ms": 37348.0,
+        "ttfab_content_ms": 1402.0,
+        "ttfab_onset_ms": 1402.0,
+        "vad_disagreement_ms": 8.0,
+        "vad_disagreement_signed_ms": 8.0,
+        "vendor_response_duration_ms": 534.0
+      }
+    ],
+    "vad_disagreement_ms": 6.0,
+    "vendor": "bland",
+    "vendor_response_duration_ms": 3708.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-002",
+    "run_id": "bench-bland-20260730-180615",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "bland",
+    "carrier": "plivo",
+    "vendor_config_sha256": "e82a64ec97b1a8362db4c9d1a59ed73cc9eb1fbfbac8d4736ae7baaf5e9e4451",
+    "caller_config_sha256": "05d1ee64731a522aff4ef470b008429b5c6aded13cedd439efdac5cd691e4c4c",
+    "caller_plan_sha256": "e57b86c1036f7edd76c68167c4bf20ffa075f41e525751fbe4a6ffe029138c04",
+    "call_sid": "b28dea22-c1f8-4b17-94e3-73a00cf35168",
+    "call_control_id": "b28dea22-c1f8-4b17-94e3-73a00cf35168",
+    "verify_skipped": false,
+    "cases": [
+      "speed-basic",
+      "free-trial",
+      "router-rental"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "thanks for calling Northwind internet how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "How fast is the Basic plan?",
+        "case_id": "speed-basic",
+        "expect_keywords": [
+          "300"
+        ],
+        "spoken": true,
+        "transcript": "the basic plan includes download speeds of 300 megabits per second",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "Do you offer a free trial?",
+        "case_id": "free-trial",
+        "expect_keywords": [
+          "14"
+        ],
+        "spoken": true,
+        "transcript": "yes new customers get a 14-day free trial",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "How much does it cost to rent a router from you?",
+        "case_id": "router-rental",
+        "expect_keywords": [
+          "8"
+        ],
+        "spoken": true,
+        "transcript": "router rental cost $8 per month",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "goodbye and thanks for choosing Northwind internet",
+        "answer_verified": null,
+        "reply_timed_out": false
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    }
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-bland-20260730-180615/call-002.wav",
+    "sha256": "72277c7f1a1b4606c7d5e83c6e606256bf184f9e1f69aef75df624ceed73552d",
+    "bytes": 1379244,
+    "source": "recording_raw.wav"
+  },
+  "cost": {
+    "vendor_call_id": "ef11c015-78e0-41a8-9a5a-4b2f7a118889",
+    "cost": 0.101,
+    "currency": "USD",
+    "duration_s": 43.00000000000002,
+    "billed_s": null,
+    "source": "GET /v1/calls .price",
+    "notes": [
+      "call_length is reported in minutes; converted to seconds",
+      "Bland publishes no cost breakdown -- the figure is a single all-in price"
+    ]
+  }
+}

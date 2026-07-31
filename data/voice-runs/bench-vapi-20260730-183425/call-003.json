@@ -1,0 +1,211 @@
+{
+  "result": {
+    "analyzer_version": "2.3.0",
+    "call_id": "call-003",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "recording_started_mid_speech",
+      "near_utterances=4",
+      "t1_crosscheck=86.0ms"
+    ],
+    "greeting_end_ms": 2688.0,
+    "greeting_onset_ms": 102.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -59.37367050189813,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-vapi-20260730-183425",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 5310.0,
+    "t1_ms": 7074.0,
+    "t2_ms": 9008.0,
+    "ttfab_content_ms": 1934.0,
+    "ttfab_onset_ms": 1934.0,
+    "ttfg_ms": null,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=86.0ms",
+          "case=speed-premium",
+          "answer_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 5310.0,
+        "t1_ms": 7074.0,
+        "t2_ms": 9008.0,
+        "ttfab_content_ms": 1934.0,
+        "ttfab_onset_ms": 1934.0,
+        "vad_disagreement_ms": 8.0,
+        "vad_disagreement_signed_ms": 8.0,
+        "vendor_response_duration_ms": 3274.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=2.0ms",
+          "case=cancellation-fee",
+          "answer_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 15452.0,
+        "t1_ms": 17218.0,
+        "t2_ms": 18966.0,
+        "ttfab_content_ms": 1748.0,
+        "ttfab_onset_ms": 1748.0,
+        "vad_disagreement_ms": 6.0,
+        "vad_disagreement_signed_ms": 6.0,
+        "vendor_response_duration_ms": 994.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=48.0ms",
+          "case=static-ip",
+          "answer_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 23310.0,
+        "t1_ms": 25532.0,
+        "t2_ms": 27112.0,
+        "ttfab_content_ms": 1580.0,
+        "ttfab_onset_ms": 1580.0,
+        "vad_disagreement_ms": 32.0,
+        "vad_disagreement_signed_ms": 32.0,
+        "vendor_response_duration_ms": 1418.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=54.0ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 33232.0,
+        "t1_ms": 35126.0,
+        "t2_ms": 36628.0,
+        "ttfab_content_ms": 1502.0,
+        "ttfab_onset_ms": 1502.0,
+        "vad_disagreement_ms": 12.0,
+        "vad_disagreement_signed_ms": -12.0,
+        "vendor_response_duration_ms": 1740.0
+      }
+    ],
+    "vad_disagreement_ms": 8.0,
+    "vendor": "vapi",
+    "vendor_response_duration_ms": 3274.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-003",
+    "run_id": "bench-vapi-20260730-183425",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "vapi",
+    "carrier": "plivo",
+    "vendor_config_sha256": "4b8a525c1f804d6a7ea1c1c86784c7bcad0cb253c151a039a7301c5135c18595",
+    "caller_config_sha256": "dc7d7e91875ed752773ba1b6d6806567f4ac9d8643409b12dd3654ead7ef32ec",
+    "caller_plan_sha256": "e57b86c1036f7edd76c68167c4bf20ffa075f41e525751fbe4a6ffe029138c04",
+    "call_sid": "84f8b544-7c6e-473a-9125-cf419bf9e613",
+    "call_control_id": "84f8b544-7c6e-473a-9125-cf419bf9e613",
+    "verify_skipped": false,
+    "cases": [
+      "speed-premium",
+      "cancellation-fee",
+      "static-ip"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "thanks for calling Northwind internet uh how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "What speeds do I get on Premium?",
+        "case_id": "speed-premium",
+        "expect_keywords": [
+          "2",
+          "gigabit"
+        ],
+        "spoken": true,
+        "transcript": "the Premium plan includes download speeds of 2 gigabits per second",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "Is there a fee if I cancel my service?",
+        "case_id": "cancellation-fee",
+        "expect_keywords": [
+          "no",
+          "cancellation"
+        ],
+        "spoken": true,
+        "transcript": "there is no cancellation fee",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "What does a static IP address cost?",
+        "case_id": "static-ip",
+        "expect_keywords": [
+          "11"
+        ],
+        "spoken": true,
+        "transcript": "a static IP address add-on cost $11 per month",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "goodbye and thanks for choosing Northwind internet",
+        "answer_verified": null,
+        "reply_timed_out": false
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    }
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-vapi-20260730-183425/call-003.wav",
+    "sha256": "d4af76307ddeedcb1cc4acbc27c641eee9addfc033212680054e9416ee96da8a",
+    "bytes": 1317804,
+    "source": "recording_raw.wav"
+  },
+  "cost": {
+    "vendor_call_id": "019fb5d1-8339-7ee6-9a09-f53a2821c5dd",
+    "cost": 0.0581,
+    "currency": "USD",
+    "duration_s": 42.075000047683716,
+    "billed_s": null,
+    "source": "GET /call .cost",
+    "notes": []
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "result": {
+    "analyzer_version": "2.3.0",
+    "call_id": "call-005",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "recording_started_mid_speech",
+      "near_utterances=4",
+      "t1_crosscheck=22.0ms",
+      "vad_onset_conservative=+116ms"
+    ],
+    "greeting_end_ms": 1952.0,
+    "greeting_onset_ms": 22.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -62.03535520895157,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-vapi-20260730-183425",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 5412.0,
+    "t1_ms": 6798.0,
+    "t2_ms": 8356.0,
+    "ttfab_content_ms": 1558.0,
+    "ttfab_onset_ms": 1558.0,
+    "ttfg_ms": null,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=22.0ms",
+          "vad_onset_conservative=+116ms",
+          "case=service-area",
+          "answer_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 5412.0,
+        "t1_ms": 6798.0,
+        "t2_ms": 8356.0,
+        "ttfab_content_ms": 1558.0,
+        "ttfab_onset_ms": 1558.0,
+        "vad_disagreement_ms": 116.0,
+        "vad_disagreement_signed_ms": 116.0,
+        "vendor_response_duration_ms": 2772.0
+      },
+      {
+        "discard_reason": "vad_disagree",
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=78.0ms",
+          "vad_onset_late=+490ms",
+          "case=student-discount",
+          "answer_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 14592.0,
+        "t1_ms": 15882.0,
+        "t2_ms": 17210.0,
+        "ttfab_content_ms": 1328.0,
+        "ttfab_onset_ms": 1328.0,
+        "vad_disagreement_ms": 490.0,
+        "vad_disagreement_signed_ms": 490.0,
+        "vendor_response_duration_ms": 1928.0
+      },
+      {
+        "discard_reason": "vad_disagree",
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=0.0ms",
+          "vad_disagreement=44.0ms",
+          "case=reschedule",
+          "answer_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 23494.0,
+        "t1_ms": 25920.0,
+        "t2_ms": 27396.0,
+        "ttfab_content_ms": 1476.0,
+        "ttfab_onset_ms": 1476.0,
+        "vad_disagreement_ms": 44.0,
+        "vad_disagreement_signed_ms": -44.0,
+        "vendor_response_duration_ms": 4114.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=34.0ms",
+          "vad_crosscheck_unavailable=1474ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 34352.0,
+        "t1_ms": 35286.0,
+        "t2_ms": 36706.0,
+        "ttfab_content_ms": 1420.0,
+        "ttfab_onset_ms": 1420.0,
+        "vad_disagreement_ms": 1474.0,
+        "vad_disagreement_signed_ms": -1474.0,
+        "vendor_response_duration_ms": 2248.0
+      }
+    ],
+    "vad_disagreement_ms": 116.0,
+    "vendor": "vapi",
+    "vendor_response_duration_ms": 2772.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-005",
+    "run_id": "bench-vapi-20260730-183425",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "vapi",
+    "carrier": "plivo",
+    "vendor_config_sha256": "4b8a525c1f804d6a7ea1c1c86784c7bcad0cb253c151a039a7301c5135c18595",
+    "caller_config_sha256": "8bcd9e1b920578d22b66c5b620893bb8751068d19ae2871e5541ceedef65e85f",
+    "caller_plan_sha256": "e57b86c1036f7edd76c68167c4bf20ffa075f41e525751fbe4a6ffe029138c04",
+    "call_sid": "c1bdc254-bf5f-4af9-883d-1ba9bb968f9e",
+    "call_control_id": "c1bdc254-bf5f-4af9-883d-1ba9bb968f9e",
+    "verify_skipped": false,
+    "cases": [
+      "service-area",
+      "student-discount",
+      "reschedule"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "internet uh how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "Which states do you serve?",
+        "case_id": "service-area",
+        "expect_keywords": [
+          "Oregon",
+          "Idaho",
+          "Nevada"
+        ],
+        "spoken": true,
+        "transcript": "we provide service in Oregon Idaho and Nevada",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "Is there a student discount?",
+        "case_id": "student-discount",
+        "expect_keywords": [
+          "20"
+        ],
+        "spoken": true,
+        "transcript": "yes students get a 20% discount with a valid student ID",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "How late can I reschedule a technician appointment?",
+        "case_id": "reschedule",
+        "expect_keywords": [
+          "2 hours"
+        ],
+        "spoken": true,
+        "transcript": "you can reschedule a technician appointment up to 2 hours before the appointment",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "okay goodbye and thanks for choosing Northwind internet",
+        "answer_verified": null,
+        "reply_timed_out": false
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    }
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-vapi-20260730-183425/call-005.wav",
+    "sha256": "211348ea32fc27a6250d1716cf9f01f4a60dda16f43d8ec6f19dc3fb227a2eec",
+    "bytes": 1354284,
+    "source": "recording_raw.wav"
+  },
+  "cost": {
+    "vendor_call_id": "019fb5d3-1719-7aa1-a07e-cf8ff0b5dda4",
+    "cost": 0.0577,
+    "currency": "USD",
+    "duration_s": 43.82100009918213,
+    "billed_s": null,
+    "source": "GET /call .cost",
+    "notes": []
+  }
+}

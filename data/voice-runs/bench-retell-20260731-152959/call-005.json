@@ -1,0 +1,213 @@
+{
+  "result": {
+    "analyzer_version": "2.4.0",
+    "call_id": "call-005",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "near_utterances=4",
+      "t1_crosscheck=22.0ms"
+    ],
+    "greeting_end_ms": 3040.0,
+    "greeting_onset_ms": 442.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -72.24719895935549,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-retell-20260731-152959",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 6432.0,
+    "t1_ms": 7818.0,
+    "t2_ms": 9100.0,
+    "ttfab_content_ms": 1282.0,
+    "ttfab_onset_ms": 1282.0,
+    "ttfg_ms": 442.0,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=22.0ms",
+          "case=service-area",
+          "answer_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 6432.0,
+        "t1_ms": 7818.0,
+        "t2_ms": 9100.0,
+        "ttfab_content_ms": 1282.0,
+        "ttfab_onset_ms": 1282.0,
+        "vad_disagreement_ms": 0.0,
+        "vad_disagreement_signed_ms": 0.0,
+        "vendor_response_duration_ms": 2688.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=78.0ms",
+          "case=student-discount",
+          "answer_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 14272.0,
+        "t1_ms": 15562.0,
+        "t2_ms": 17196.0,
+        "ttfab_content_ms": 2334.0,
+        "ttfab_onset_ms": 1634.0,
+        "vad_disagreement_ms": 4.0,
+        "vad_disagreement_signed_ms": -4.0,
+        "vendor_response_duration_ms": 388.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=0.0ms",
+          "case=reschedule",
+          "answer_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 24174.0,
+        "t1_ms": 26600.0,
+        "t2_ms": 28186.0,
+        "ttfab_content_ms": 1586.0,
+        "ttfab_onset_ms": 1586.0,
+        "vad_disagreement_ms": 6.0,
+        "vad_disagreement_signed_ms": 6.0,
+        "vendor_response_duration_ms": 3534.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=54.0ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 34832.0,
+        "t1_ms": 36726.0,
+        "t2_ms": 37462.0,
+        "ttfab_content_ms": 1606.0,
+        "ttfab_onset_ms": 736.0,
+        "vad_disagreement_ms": 2.0,
+        "vad_disagreement_signed_ms": 2.0,
+        "vendor_response_duration_ms": 90.125
+      }
+    ],
+    "vad_disagreement_ms": 0.0,
+    "vendor": "retell",
+    "vendor_response_duration_ms": 2688.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-005",
+    "run_id": "bench-retell-20260731-152959",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "retell",
+    "carrier": "plivo",
+    "vendor_config_sha256": "3fbe40adfec2aeea3e8100517811faedc8837c2ac17564bfcc995281b1256e0a",
+    "caller_config_sha256": "8bcd9e1b920578d22b66c5b620893bb8751068d19ae2871e5541ceedef65e85f",
+    "caller_plan_sha256": "b286c99a798526802e1fe4905f32cab7d5fa3441f4a34abf682503bbd6a1599c",
+    "call_sid": "7254946f-0bfd-4001-9f0a-5fb5db101235",
+    "call_control_id": "7254946f-0bfd-4001-9f0a-5fb5db101235",
+    "verify_skipped": false,
+    "cases": [
+      "service-area",
+      "student-discount",
+      "reschedule"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "thanks for calling Northwind internet how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "Which states do you serve?",
+        "case_id": "service-area",
+        "expect_keywords": [
+          "Oregon",
+          "Idaho",
+          "Nevada"
+        ],
+        "spoken": true,
+        "transcript": "we provide service in Oregon Idaho and Nevada",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "Is there a student discount?",
+        "case_id": "student-discount",
+        "expect_keywords": [
+          "20"
+        ],
+        "spoken": true,
+        "transcript": "yes students get a 20% discount with a valid student ID",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "How late can I reschedule a technician appointment?",
+        "case_id": "reschedule",
+        "expect_keywords": [
+          "2 hours"
+        ],
+        "spoken": true,
+        "transcript": "you can reschedule a technician appointment up to 2 hours before the appointment",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "good goodbye and thanks for choosing Northwind internet",
+        "answer_verified": null,
+        "reply_timed_out": false
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    },
+    "timing": {
+      "placed_at": "2026-07-31T22:35:35.876+00:00",
+      "answered_at": "2026-07-31T22:35:40.129+00:00",
+      "ended_at": "2026-07-31T22:36:23.880+00:00",
+      "placed_at_epoch": 1785537335.876543,
+      "answered_at_epoch": 1785537340.129175,
+      "ended_at_epoch": 1785537383.880245,
+      "wall_duration_s": 48.004,
+      "answer_delay_s": 4.253
+    },
+    "set_index": 5,
+    "sync_session": "20260731-152959"
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-retell-20260731-152959/call-005.wav",
+    "sha256": "e70ddeba54e6a94ad9ce0a0d91719377e30602e31ad3471ca9be4d109db44298",
+    "bytes": 1390124,
+    "source": "recording_raw.wav"
+  }
+}

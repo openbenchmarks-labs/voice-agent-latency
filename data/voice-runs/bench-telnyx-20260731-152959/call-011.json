@@ -1,0 +1,212 @@
+{
+  "result": {
+    "analyzer_version": "2.4.0",
+    "call_id": "call-011",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "near_utterances=4",
+      "t1_crosscheck=62.0ms"
+    ],
+    "greeting_end_ms": 4160.0,
+    "greeting_onset_ms": 1296.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -72.24719895935549,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-telnyx-20260731-152959",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 7410.0,
+    "t1_ms": 9018.0,
+    "t2_ms": 10512.0,
+    "ttfab_content_ms": 1494.0,
+    "ttfab_onset_ms": 1494.0,
+    "ttfg_ms": 1296.0,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=62.0ms",
+          "case=referral",
+          "answer_not_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 7410.0,
+        "t1_ms": 9018.0,
+        "t2_ms": 10512.0,
+        "ttfab_content_ms": 1494.0,
+        "ttfab_onset_ms": 1494.0,
+        "vad_disagreement_ms": 12.0,
+        "vad_disagreement_signed_ms": 12.0,
+        "vendor_response_duration_ms": 2292.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=14.0ms",
+          "case=company-history",
+          "answer_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 15634.0,
+        "t1_ms": 18286.0,
+        "t2_ms": 19278.0,
+        "ttfab_content_ms": 992.0,
+        "ttfab_onset_ms": 992.0,
+        "vad_disagreement_ms": 2.0,
+        "vad_disagreement_signed_ms": -2.0,
+        "vendor_response_duration_ms": 3712.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=50.0ms",
+          "case=contract",
+          "answer_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 26584.0,
+        "t1_ms": 28610.0,
+        "t2_ms": 29660.0,
+        "ttfab_content_ms": 1622.0,
+        "ttfab_onset_ms": 1050.0,
+        "vad_disagreement_ms": 0.0,
+        "vad_disagreement_signed_ms": 0.0,
+        "vendor_response_duration_ms": 314.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=54.0ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 35312.0,
+        "t1_ms": 37206.0,
+        "t2_ms": 39064.0,
+        "ttfab_content_ms": 1858.0,
+        "ttfab_onset_ms": 1858.0,
+        "vad_disagreement_ms": 4.0,
+        "vad_disagreement_signed_ms": 4.0,
+        "vendor_response_duration_ms": 568.0
+      }
+    ],
+    "vad_disagreement_ms": 12.0,
+    "vendor": "telnyx",
+    "vendor_response_duration_ms": 2292.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-011",
+    "run_id": "bench-telnyx-20260731-152959",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "telnyx",
+    "carrier": "plivo",
+    "vendor_config_sha256": "5277d96e7b0c2e5c95641a0f276bba058fb43354f778e89fe7392c8cb839a876",
+    "caller_config_sha256": "2dd085cf6faa490c831b6f5c4eefead6357c21a8adcdbce70eba3d31d562b023",
+    "caller_plan_sha256": "b286c99a798526802e1fe4905f32cab7d5fa3441f4a34abf682503bbd6a1599c",
+    "call_sid": "d355638f-8a93-49df-a8f6-8fbab7de92dd",
+    "call_control_id": "d355638f-8a93-49df-a8f6-8fbab7de92dd",
+    "verify_skipped": false,
+    "cases": [
+      "referral",
+      "company-history",
+      "contract"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "thanks for calling Northwind internet how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "What do I get for referring a friend?",
+        "case_id": "referral",
+        "expect_keywords": [
+          "60"
+        ],
+        "spoken": true,
+        "transcript": "referring a friend earns you a sixty dollar bill credit",
+        "answer_verified": false,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "When was Northwind Internet founded and where are you based?",
+        "case_id": "company-history",
+        "expect_keywords": [
+          "2011",
+          "Portland"
+        ],
+        "spoken": true,
+        "transcript": "Northwind internet was founded in 2011 and is headquartered in Portland Oregon",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "Do I have to sign an annual contract?",
+        "case_id": "contract",
+        "expect_keywords": [
+          "month-to-month"
+        ],
+        "spoken": true,
+        "transcript": "no all plans are month-to-month with no annual contracts",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "",
+        "answer_verified": null,
+        "reply_timed_out": null
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    },
+    "timing": {
+      "placed_at": "2026-07-31T22:42:23.790+00:00",
+      "answered_at": "2026-07-31T22:42:28.086+00:00",
+      "ended_at": "2026-07-31T22:43:10.501+00:00",
+      "placed_at_epoch": 1785537743.79059,
+      "answered_at_epoch": 1785537748.086543,
+      "ended_at_epoch": 1785537790.501537,
+      "wall_duration_s": 46.711,
+      "answer_delay_s": 4.296
+    },
+    "set_index": 11,
+    "sync_session": "20260731-152959"
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-telnyx-20260731-152959/call-011.wav",
+    "sha256": "f6292c5dba5b7b3b5af34c337efd3cc3ecaa5dae448af9d06d3ce6e6de95c778",
+    "bytes": 1333804,
+    "source": "recording_raw.wav"
+  }
+}

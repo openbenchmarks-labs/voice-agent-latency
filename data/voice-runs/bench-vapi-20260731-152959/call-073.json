@@ -1,0 +1,222 @@
+{
+  "result": {
+    "analyzer_version": "2.4.0",
+    "call_id": "call-073",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "near_utterances=4",
+      "t1_crosscheck=108.0ms"
+    ],
+    "greeting_end_ms": 1056.0,
+    "greeting_onset_ms": 130.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -61.24867396608138,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-vapi-20260731-152959",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 3934.0,
+    "t1_ms": 6672.0,
+    "t2_ms": 8410.0,
+    "ttfab_content_ms": 1738.0,
+    "ttfab_onset_ms": 1738.0,
+    "ttfg_ms": 130.0,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=108.0ms",
+          "case=equipment-return",
+          "answer_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 3934.0,
+        "t1_ms": 6672.0,
+        "t2_ms": 8410.0,
+        "ttfab_content_ms": 1738.0,
+        "ttfab_onset_ms": 1738.0,
+        "vad_disagreement_ms": 10.0,
+        "vad_disagreement_signed_ms": 10.0,
+        "vendor_response_duration_ms": 2964.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=122.0ms",
+          "vad_crosscheck_unavailable=2320ms",
+          "case=free-trial",
+          "answer_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 14692.0,
+        "t1_ms": 15938.0,
+        "t2_ms": 17500.0,
+        "ttfab_content_ms": 1562.0,
+        "ttfab_onset_ms": 1562.0,
+        "vad_disagreement_ms": 2320.0,
+        "vad_disagreement_signed_ms": -2320.0,
+        "vendor_response_duration_ms": 1988.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=50.0ms",
+          "case=contract",
+          "answer_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 23544.0,
+        "t1_ms": 25570.0,
+        "t2_ms": 27224.0,
+        "ttfab_content_ms": 1654.0,
+        "ttfab_onset_ms": 1654.0,
+        "vad_disagreement_ms": 4.0,
+        "vad_disagreement_signed_ms": 4.0,
+        "vendor_response_duration_ms": 2708.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=34.0ms",
+          "vad_crosscheck_unavailable=1874ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 32672.0,
+        "t1_ms": 33606.0,
+        "t2_ms": 34954.0,
+        "ttfab_content_ms": 1348.0,
+        "ttfab_onset_ms": 1348.0,
+        "vad_disagreement_ms": 1874.0,
+        "vad_disagreement_signed_ms": 1874.0,
+        "vendor_response_duration_ms": 1802.0
+      }
+    ],
+    "vad_disagreement_ms": 10.0,
+    "vendor": "vapi",
+    "vendor_response_duration_ms": 2964.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-073",
+    "run_id": "bench-vapi-20260731-152959",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "vapi",
+    "carrier": "plivo",
+    "vendor_config_sha256": "4b8a525c1f804d6a7ea1c1c86784c7bcad0cb253c151a039a7301c5135c18595",
+    "caller_config_sha256": "df1f38a5032b9c9d5bc21fed8897dee75357c1ce7794a081aa3130fade3c1461",
+    "caller_plan_sha256": "b286c99a798526802e1fe4905f32cab7d5fa3441f4a34abf682503bbd6a1599c",
+    "call_sid": "c2f45075-db60-4be4-81fc-e85e6372f291",
+    "call_control_id": "c2f45075-db60-4be4-81fc-e85e6372f291",
+    "verify_skipped": false,
+    "cases": [
+      "equipment-return",
+      "free-trial",
+      "contract"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "How long do I have to return the router after canceling?",
+        "case_id": "equipment-return",
+        "expect_keywords": [
+          "21"
+        ],
+        "spoken": true,
+        "transcript": "you must return the router within 21 days of cancellation",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "Do you offer a free trial?",
+        "case_id": "free-trial",
+        "expect_keywords": [
+          "14"
+        ],
+        "spoken": true,
+        "transcript": "yes new customers get a 14-day free trial",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "Do I have to sign an annual contract?",
+        "case_id": "contract",
+        "expect_keywords": [
+          "month-to-month"
+        ],
+        "spoken": true,
+        "transcript": "no all plans are month-to-month with no annual contracts",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "okay goodbye and thanks for choosing Northwind internet",
+        "answer_verified": null,
+        "reply_timed_out": false
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    },
+    "timing": {
+      "placed_at": "2026-07-31T23:53:27.040+00:00",
+      "answered_at": "2026-07-31T23:53:32.628+00:00",
+      "ended_at": "2026-07-31T23:54:13.542+00:00",
+      "placed_at_epoch": 1785542007.0403562,
+      "answered_at_epoch": 1785542012.628509,
+      "ended_at_epoch": 1785542053.5422661,
+      "wall_duration_s": 46.502,
+      "answer_delay_s": 5.588
+    },
+    "set_index": 23,
+    "sync_session": "20260731-152959"
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-vapi-20260731-152959/call-073.wav",
+    "sha256": "c5b68c1891e35b1f3b056dce9978740c6e43f65d1e04e165ee417585a30258c6",
+    "bytes": 1291564,
+    "source": "recording_raw.wav"
+  },
+  "cost": {
+    "vendor_call_id": "019fba98-e42b-7000-bed0-4a930110fa6a",
+    "cost": 0.058,
+    "currency": "USD",
+    "duration_s": 43.31699991226196,
+    "billed_s": null,
+    "source": "GET /call .cost",
+    "notes": []
+  }
+}

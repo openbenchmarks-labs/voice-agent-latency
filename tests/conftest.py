@@ -47,10 +47,6 @@ LEAKY_SETTINGS = (
     # against a live account; without one it raises VendorNotReady immediately.
     "telnyx_api_key", "vapi_api_key", "retell_api_key",
     "bland_api_key", "elevenlabs_api_key",
-    # Object storage. A real connection string here would let an incompletely
-    # mocked upload test WRITE to the public container -- the one credential in
-    # this list whose leak is a publish, not just a read.
-    "azure_storage_connection_string", "azure_public_base_url",
 )
 
 from harness.config import settings as _settings  # noqa: E402

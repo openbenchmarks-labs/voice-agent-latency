@@ -1,0 +1,225 @@
+{
+  "result": {
+    "analyzer_version": "2.4.0",
+    "call_id": "call-081",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "near_utterances=4",
+      "t1_crosscheck=46.0ms"
+    ],
+    "greeting_end_ms": 3850.0,
+    "greeting_onset_ms": 976.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -72.24719895935549,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-telnyx-20260731-152959",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 6694.0,
+    "t1_ms": 8406.0,
+    "t2_ms": 9374.0,
+    "ttfab_content_ms": 968.0,
+    "ttfab_onset_ms": 968.0,
+    "ttfg_ms": 976.0,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=46.0ms",
+          "case=support-email",
+          "answer_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 6694.0,
+        "t1_ms": 8406.0,
+        "t2_ms": 9374.0,
+        "ttfab_content_ms": 968.0,
+        "ttfab_onset_ms": 968.0,
+        "vad_disagreement_ms": 14.0,
+        "vad_disagreement_signed_ms": 14.0,
+        "vendor_response_duration_ms": 2640.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=48.0ms",
+          "vad_onset_conservative=+96ms",
+          "case=static-ip",
+          "answer_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 14590.0,
+        "t1_ms": 16812.0,
+        "t2_ms": 18056.0,
+        "ttfab_content_ms": 1244.0,
+        "ttfab_onset_ms": 1244.0,
+        "vad_disagreement_ms": 96.0,
+        "vad_disagreement_signed_ms": 96.0,
+        "vendor_response_duration_ms": 3030.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=106.0ms",
+          "case=speed-premium",
+          "answer_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 23410.0,
+        "t1_ms": 25174.0,
+        "t2_ms": 26536.0,
+        "ttfab_content_ms": 1362.0,
+        "ttfab_onset_ms": 1362.0,
+        "vad_disagreement_ms": 36.0,
+        "vad_disagreement_signed_ms": 36.0,
+        "vendor_response_duration_ms": 3252.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=74.0ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 32512.0,
+        "t1_ms": 34406.0,
+        "t2_ms": 35262.0,
+        "ttfab_content_ms": 856.0,
+        "ttfab_onset_ms": 856.0,
+        "vad_disagreement_ms": 2.0,
+        "vad_disagreement_signed_ms": 2.0,
+        "vendor_response_duration_ms": 2478.0
+      }
+    ],
+    "vad_disagreement_ms": 14.0,
+    "vendor": "telnyx",
+    "vendor_response_duration_ms": 2640.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-081",
+    "run_id": "bench-telnyx-20260731-152959",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "telnyx",
+    "carrier": "plivo",
+    "vendor_config_sha256": "5277d96e7b0c2e5c95641a0f276bba058fb43354f778e89fe7392c8cb839a876",
+    "caller_config_sha256": "e576b1b3fb731b68387bc06a9885dd1b138f814b6681e268e52cfe99a1b600c0",
+    "caller_plan_sha256": "b286c99a798526802e1fe4905f32cab7d5fa3441f4a34abf682503bbd6a1599c",
+    "call_sid": "b94fcc57-2af5-4328-b233-bc381899231d",
+    "call_control_id": "b94fcc57-2af5-4328-b233-bc381899231d",
+    "verify_skipped": false,
+    "cases": [
+      "support-email",
+      "static-ip",
+      "speed-premium"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "thanks for calling Northwind internet how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "What's your support email address?",
+        "case_id": "support-email",
+        "expect_keywords": [
+          "northwind"
+        ],
+        "spoken": true,
+        "transcript": "the support email is help at Northwind internet.com",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "What does a static IP address cost?",
+        "case_id": "static-ip",
+        "expect_keywords": [
+          "11"
+        ],
+        "spoken": true,
+        "transcript": "a static IP address add-on costs $11 per month",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "What speeds do I get on Premium?",
+        "case_id": "speed-premium",
+        "expect_keywords": [
+          "2",
+          "gigabit"
+        ],
+        "spoken": true,
+        "transcript": "the Premium plan includes download speeds of 2 gigabits per second",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "goodbye and thanks for choosing Northwind internet",
+        "answer_verified": null,
+        "reply_timed_out": false
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    },
+    "timing": {
+      "placed_at": "2026-08-01T00:02:50.815+00:00",
+      "answered_at": "2026-08-01T00:02:54.820+00:00",
+      "ended_at": "2026-08-01T00:03:35.867+00:00",
+      "placed_at_epoch": 1785542570.8157609,
+      "answered_at_epoch": 1785542574.8206131,
+      "ended_at_epoch": 1785542615.867808,
+      "wall_duration_s": 45.052,
+      "answer_delay_s": 4.005
+    },
+    "set_index": 31,
+    "sync_session": "20260731-152959"
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-telnyx-20260731-152959/call-081.wav",
+    "sha256": "0937c20f25e0fd0a74107b10ef75e010ae005cf4efbab41348209efa30727cfe",
+    "bytes": 1297964,
+    "source": "recording_raw.wav"
+  },
+  "cost": {
+    "vendor_call_id": "822c0b36-ab48-4d3b-abc3-68576fd53cdd",
+    "cost": 0.05,
+    "currency": "USD",
+    "duration_s": 41.0,
+    "billed_s": 60.0,
+    "source": "GET /v2/detail_records[ai-voice-assistant] .cost",
+    "notes": [
+      "cost is the ai-voice-assistant detail record; a separate PSTN leg may be billed under another record type",
+      "billed 60s for a 41s call (Telnyx bills a 60-second minimum)"
+    ]
+  }
+}

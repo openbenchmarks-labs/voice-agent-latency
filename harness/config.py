@@ -89,20 +89,11 @@ class Settings(BaseSettings):
     elevenlabs_agent_id: str | None = None
     elevenlabs_phone_number: str | None = None
 
-    # Object storage for PUBLISHING recordings, which is a separate step from
-    # measuring and is NOT part of the open runner: the bench never reads from
-    # here and nothing on the measurement path writes to it. Your runs keep
-    # their audio under runs/ regardless, so leaving all three unset is the
-    # normal case and costs nothing. They exist because the published board
-    # links each figure to the tape it came from, and that link has to be
-    # anonymous-read for anyone to check it.
-    azure_storage_connection_string: str | None = None
-    azure_storage_container: str = "recordings"
-    # Set only to publish URLs through a CDN or custom domain in front of the
-    # account; empty means link the account's own primary blob endpoint. Never
-    # point this at the RA-GRS `-secondary` host -- that replica is async and
-    # can serve bytes older than the receipt claims.
-    azure_public_base_url: str | None = None
+    # No object-storage credentials here, on purpose. Publishing recordings is
+    # not something this runner does -- see the README: "upload
+    # recording_raw.wav wherever you like and put the URL and sha256 into each
+    # artifact's `recording` block". Settings for one specific provider would be
+    # knobs no code in this repo reads.
 
     runs_dir: Path = _PKG_ROOT / "runs"
     log_level: str = "INFO"

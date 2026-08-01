@@ -1,0 +1,205 @@
+{
+  "result": {
+    "analyzer_version": "2.4.0",
+    "call_id": "call-040",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "near_utterances=3",
+      "t1_crosscheck=110.0ms"
+    ],
+    "greeting_end_ms": 3314.0,
+    "greeting_onset_ms": 382.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -72.24719895935549,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-retell-20260731-152959",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 6752.0,
+    "t1_ms": 8250.0,
+    "t2_ms": 9840.0,
+    "ttfab_content_ms": 1590.0,
+    "ttfab_onset_ms": 1590.0,
+    "ttfg_ms": 382.0,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=110.0ms",
+          "case=price-business",
+          "answer_not_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 6752.0,
+        "t1_ms": 8250.0,
+        "t2_ms": 9840.0,
+        "ttfab_content_ms": 1590.0,
+        "ttfab_onset_ms": 1590.0,
+        "vad_disagreement_ms": 0.0,
+        "vad_disagreement_signed_ms": 0.0,
+        "vendor_response_duration_ms": 3524.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=42.0ms",
+          "vad_onset_conservative=+76ms",
+          "case=referral",
+          "answer_not_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 16410.0,
+        "t1_ms": 18018.0,
+        "t2_ms": 19816.0,
+        "ttfab_content_ms": 1798.0,
+        "ttfab_onset_ms": 1798.0,
+        "vad_disagreement_ms": 76.0,
+        "vad_disagreement_signed_ms": 76.0,
+        "vendor_response_duration_ms": 2638.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=58.0ms",
+          "case=router-rental"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 25674.0,
+        "t1_ms": 28042.0,
+        "t2_ms": 29698.0,
+        "ttfab_content_ms": 1656.0,
+        "ttfab_onset_ms": 1656.0,
+        "vad_disagreement_ms": 2.0,
+        "vad_disagreement_signed_ms": -2.0,
+        "vendor_response_duration_ms": 2014.0
+      }
+    ],
+    "vad_disagreement_ms": 0.0,
+    "vendor": "retell",
+    "vendor_response_duration_ms": 3524.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-040",
+    "run_id": "bench-retell-20260731-152959",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "retell",
+    "carrier": "plivo",
+    "vendor_config_sha256": "3fbe40adfec2aeea3e8100517811faedc8837c2ac17564bfcc995281b1256e0a",
+    "caller_config_sha256": "d37aa91c1bfbf92f9c80967a4fad96ac0773c7a6fc0923cf7e4502e7a33a2238",
+    "caller_plan_sha256": "b286c99a798526802e1fe4905f32cab7d5fa3441f4a34abf682503bbd6a1599c",
+    "call_sid": "96866663-4535-4e15-9630-1e7ace014c79",
+    "call_control_id": "96866663-4535-4e15-9630-1e7ace014c79",
+    "verify_skipped": false,
+    "cases": [
+      "price-business",
+      "referral",
+      "router-rental"
+    ],
+    "turns_requested": 4,
+    "turns_played": 3,
+    "greeting_transcript": "thanks for calling Northwind internet how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "How much is the Business plan?",
+        "case_id": "price-business",
+        "expect_keywords": [
+          "129"
+        ],
+        "spoken": true,
+        "transcript": "the business plan costs $29 per month",
+        "answer_verified": false,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "What do I get for referring a friend?",
+        "case_id": "referral",
+        "expect_keywords": [
+          "60"
+        ],
+        "spoken": true,
+        "transcript": "referring a friend earns you a sixty dollar bill credit",
+        "answer_verified": false,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "How much does it cost to rent a router from you?",
+        "case_id": "router-rental",
+        "expect_keywords": [
+          "8"
+        ],
+        "spoken": true,
+        "transcript": "",
+        "answer_verified": null,
+        "reply_timed_out": null
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": false,
+        "transcript": "",
+        "answer_verified": null,
+        "reply_timed_out": null
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    },
+    "timing": {
+      "placed_at": "2026-07-31T23:15:51.360+00:00",
+      "answered_at": "2026-07-31T23:15:54.883+00:00",
+      "ended_at": "2026-07-31T23:17:47.210+00:00",
+      "placed_at_epoch": 1785539751.360391,
+      "answered_at_epoch": 1785539754.883709,
+      "ended_at_epoch": 1785539867.210295,
+      "wall_duration_s": 115.85,
+      "answer_delay_s": 3.523
+    },
+    "set_index": 40,
+    "sync_session": "20260731-152959"
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-retell-20260731-152959/call-040.wav",
+    "sha256": "7c1d8548649b99c57e14bf7ef87b5df7caedd8b4dc6391e43422d58f12a9f2fa",
+    "bytes": 1239084,
+    "source": "recording_raw.wav"
+  },
+  "cost": {
+    "vendor_call_id": "call_b79e4e3cf91d8086e6fb9e889c4",
+    "cost": 0.09166668,
+    "currency": "USD",
+    "duration_s": 39.025,
+    "billed_s": 40,
+    "source": "POST /v2/list-calls .call_cost.product_costs (telephony excluded)",
+    "notes": [
+      "combined_cost is reported in cents; divided by 100",
+      "telephony excluded (0.0100 USD): the PSTN leg is the bench's own carrier cost, and no other platform's figure includes one"
+    ]
+  }
+}

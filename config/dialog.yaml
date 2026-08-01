@@ -67,10 +67,24 @@ greeting_timeout: 20
 include_greeting_turn: false
 include_goodbye_turn: true
 
-# What each call asks. Call i takes entry (i mod len), so a 10-call run covers
-# all ten exactly once and an 11th call starts over. Ids from
-# data/voice-bench/ttfab_scenarios.json (33 defined, 30 used here -- autopay,
-# referral and moving are the spare set).
+# What each call asks. Call i takes entry (i mod len), so a 50-call run covers
+# all fifty exactly once and a 100-call run asks each set exactly twice. Ids
+# from data/voice-bench/ttfab_scenarios.json -- all 33 are in play, each
+# appearing in 4 or 5 sets.
+#
+# 50 sets x 3 questions is 150 slots against 33 questions, so questions repeat
+# across sets by necessity. What is balanced is HOW OFTEN: no question carries
+# more than 5/150 of the measurement, and no two sets ask the same three
+# questions. Widening the pool instead would mean extending the agent's fact
+# sheet in ttfab_scenarios.json, which is inlined into every vendor's agent --
+# that changes vendor_config_sha256 on every row and needs all five agents
+# re-provisioned, so it is a deliberate separate step, not a side effect of
+# wanting more variety.
+#
+# Sets 0-9 are the original curated ten and keep their indices. Sets 10-49 are
+# generated: each draws from three different topic families, the least-used
+# questions first, skipping any triple already in the list. Deterministic, so
+# regenerating gives byte-identical output and the caller receipt is stable.
 #
 # ROTATED, NOT SAMPLED. Both give variation across calls; only a rotation gives
 # every vendor the SAME variation. Call 3 asks the same three questions whoever
@@ -84,22 +98,64 @@ include_goodbye_turn: true
 # (bare number, yes/no, number with a unit, a sentence, a list-ish answer) so
 # the figure is a property of the agent rather than of one lucky question.
 #
-# Entry 8 is the negative control: the answer is NOT in the agent's facts, so a
-# correct agent uses its fallback line. It measures how fast a platform says
-# "I don't know", which is a real conversational path and the one most likely
-# to be handled differently.
+# `not-in-facts` is the negative control: the answer is NOT in the agent's
+# facts, so a correct agent uses its fallback line. It measures how fast a
+# platform says "I don't know", which is a real conversational path and the one
+# most likely to be handled differently. Held to 5 of 50 sets -- the same 1-in-10
+# proportion as before -- so it cannot drag the pooled median toward how fast a
+# platform declines to answer.
 #
 # --cases overrides all of this and makes every call identical (debugging).
 # Editing this list changes the caller receipt's sha256, so a run asked
 # different questions is visibly a different instrument.
 case_rotation:
-  - [price-basic, data-cap, installation-fee]        # number / yes-no / number
-  - [price-premium, contract, support-hours]         # number / yes-no / range
-  - [speed-basic, free-trial, router-rental]         # unit / number / number
-  - [speed-premium, cancellation-fee, static-ip]     # unit / negative / number
-  - [price-business, money-back, late-fee]           # number / number / number
-  - [service-area, student-discount, reschedule]     # list / percent / duration
-  - [company-history, payment-methods, gamer-boost]  # sentence / list / number
-  - [not-in-facts, promotion, equipment-return]      # fallback / sentence / number
-  - [installation-time, wifi-extender, phone-line]   # duration / number / yes-no+number
-  - [support-email, outage-credit, senior-discount]  # address / conditional / percent
+  - [price-basic, data-cap, installation-fee]             # number / yes-no / number
+  - [price-premium, contract, support-hours]              # number / yes-no / range
+  - [speed-basic, free-trial, router-rental]              # unit / number / number
+  - [speed-premium, cancellation-fee, static-ip]          # unit / negative / number
+  - [price-business, money-back, late-fee]                # number / number / number
+  - [service-area, student-discount, reschedule]          # list / percent / duration
+  - [company-history, payment-methods, gamer-boost]       # sentence / list / number
+  - [not-in-facts, promotion, equipment-return]           # fallback / sentence / number
+  - [installation-time, wifi-extender, phone-line]        # duration / number / yes-no+number
+  - [support-email, outage-credit, senior-discount]       # address / conditional / percent
+  - [cancellation-fee, autopay, moving]                   # negative / number / sentence
+  - [referral, company-history, contract]                 # number / sentence / yes-no
+  - [autopay, equipment-return, data-cap]                 # number / number / yes-no
+  - [free-trial, gamer-boost, installation-fee]           # number / number / number
+  - [installation-time, late-fee, money-back]             # duration / number / number
+  - [outage-credit, not-in-facts, moving]                 # conditional / fallback / sentence
+  - [payment-methods, price-basic, phone-line]            # list / number / yes-no+number
+  - [price-business, referral, promotion]                 # number / number / sentence
+  - [reschedule, price-premium, router-rental]            # duration / number / number
+  - [service-area, senior-discount, speed-basic]          # list / percent / unit
+  - [static-ip, student-discount, speed-premium]          # number / percent / unit
+  - [support-email, autopay, wifi-extender]               # address / number / number
+  - [cancellation-fee, support-hours, company-history]    # negative / range / sentence
+  - [equipment-return, free-trial, contract]              # number / number / yes-no
+  - [gamer-boost, installation-fee, data-cap]             # number / number / yes-no
+  - [installation-time, late-fee, moving]                 # duration / number / sentence
+  - [outage-credit, not-in-facts, money-back]             # conditional / fallback / number
+  - [payment-methods, price-business, phone-line]         # list / number / yes-no+number
+  - [price-basic, referral, promotion]                    # number / number / sentence
+  - [reschedule, price-premium, senior-discount]          # duration / number / percent
+  - [service-area, router-rental, speed-basic]            # list / number / unit
+  - [support-email, static-ip, speed-premium]             # address / number / unit
+  - [wifi-extender, student-discount, support-hours]      # number / percent / range
+  - [cancellation-fee, autopay, company-history]          # negative / number / sentence
+  - [equipment-return, gamer-boost, contract]             # number / number / yes-no
+  - [free-trial, installation-fee, data-cap]              # number / number / yes-no
+  - [installation-time, not-in-facts, late-fee]           # duration / fallback / number
+  - [outage-credit, money-back, moving]                   # conditional / number / sentence
+  - [payment-methods, price-premium, phone-line]          # list / number / yes-no+number
+  - [reschedule, price-basic, promotion]                  # duration / number / sentence
+  - [price-business, referral, router-rental]             # number / number / number
+  - [service-area, senior-discount, speed-premium]        # list / percent / unit
+  - [static-ip, student-discount, speed-basic]            # number / percent / unit
+  - [autopay, wifi-extender, support-hours]               # number / number / range
+  - [support-email, cancellation-fee, company-history]    # address / negative / sentence
+  - [equipment-return, installation-fee, contract]        # number / number / yes-no
+  - [free-trial, gamer-boost, data-cap]                   # number / number / yes-no
+  - [installation-time, late-fee, phone-line]             # duration / number / yes-no+number
+  - [not-in-facts, money-back, moving]                    # fallback / number / sentence
+  - [outage-credit, price-basic, promotion]               # conditional / number / sentence

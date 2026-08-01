@@ -1,0 +1,224 @@
+{
+  "result": {
+    "analyzer_version": "2.4.0",
+    "call_id": "call-093",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "near_utterances=4",
+      "t1_crosscheck=106.0ms"
+    ],
+    "greeting_end_ms": 1452.0,
+    "greeting_onset_ms": 234.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -72.24719895935549,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-retell-20260731-152959",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 4682.0,
+    "t1_ms": 6934.0,
+    "t2_ms": 8726.0,
+    "ttfab_content_ms": 1792.0,
+    "ttfab_onset_ms": 1792.0,
+    "ttfg_ms": 234.0,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=106.0ms",
+          "case=autopay",
+          "answer_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 4682.0,
+        "t1_ms": 6934.0,
+        "t2_ms": 8726.0,
+        "ttfab_content_ms": 1792.0,
+        "ttfab_onset_ms": 1792.0,
+        "vad_disagreement_ms": 6.0,
+        "vad_disagreement_signed_ms": 6.0,
+        "vendor_response_duration_ms": 482.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=86.0ms",
+          "case=wifi-extender",
+          "answer_not_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 15492.0,
+        "t1_ms": 17174.0,
+        "t2_ms": 18838.0,
+        "ttfab_content_ms": 1664.0,
+        "ttfab_onset_ms": 1664.0,
+        "vad_disagreement_ms": 18.0,
+        "vad_disagreement_signed_ms": 18.0,
+        "vendor_response_duration_ms": 3292.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=8.0ms",
+          "case=support-hours",
+          "answer_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 25310.0,
+        "t1_ms": 27028.0,
+        "t2_ms": 28744.0,
+        "ttfab_content_ms": 1716.0,
+        "ttfab_onset_ms": 1716.0,
+        "vad_disagreement_ms": 24.0,
+        "vad_disagreement_signed_ms": 24.0,
+        "vendor_response_duration_ms": 3692.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=94.0ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 36372.0,
+        "t1_ms": 38266.0,
+        "t2_ms": 38732.0,
+        "ttfab_content_ms": 2016.0,
+        "ttfab_onset_ms": 466.0,
+        "vad_disagreement_ms": 12.0,
+        "vad_disagreement_signed_ms": 12.0,
+        "vendor_response_duration_ms": 326.0
+      }
+    ],
+    "vad_disagreement_ms": 6.0,
+    "vendor": "retell",
+    "vendor_response_duration_ms": 482.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-093",
+    "run_id": "bench-retell-20260731-152959",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "retell",
+    "carrier": "plivo",
+    "vendor_config_sha256": "3fbe40adfec2aeea3e8100517811faedc8837c2ac17564bfcc995281b1256e0a",
+    "caller_config_sha256": "40888c305fd652dcb66592e3a2a7bcb2282d5692712eeddcaa0107aed0311b5b",
+    "caller_plan_sha256": "b286c99a798526802e1fe4905f32cab7d5fa3441f4a34abf682503bbd6a1599c",
+    "call_sid": "22c23161-f1c2-4d87-bcd5-64d2a0276017",
+    "call_control_id": "22c23161-f1c2-4d87-bcd5-64d2a0276017",
+    "verify_skipped": false,
+    "cases": [
+      "autopay",
+      "wifi-extender",
+      "support-hours"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "Do I save anything by enrolling in autopay?",
+        "case_id": "autopay",
+        "expect_keywords": [
+          "4"
+        ],
+        "spoken": true,
+        "transcript": "yes enrolling in autopay saves you $4 per month",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "How much is a Wi-Fi extender?",
+        "case_id": "wifi-extender",
+        "expect_keywords": [
+          "49"
+        ],
+        "spoken": true,
+        "transcript": "a Wi-Fi extender is a 1-time purchase of $9",
+        "answer_verified": false,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "What are your customer support hours?",
+        "case_id": "support-hours",
+        "expect_keywords": [
+          "6",
+          "10"
+        ],
+        "spoken": true,
+        "transcript": "customer support is open from 6:00 a.m. to 10:00 p.m. Pacific Time 7 days a week",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "goodbye goodbye and thanks for choosing Northwind internet",
+        "answer_verified": null,
+        "reply_timed_out": false
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    },
+    "timing": {
+      "placed_at": "2026-08-01T00:15:48.891+00:00",
+      "answered_at": "2026-08-01T00:15:53.918+00:00",
+      "ended_at": "2026-08-01T00:16:39.429+00:00",
+      "placed_at_epoch": 1785543348.8911748,
+      "answered_at_epoch": 1785543353.918665,
+      "ended_at_epoch": 1785543399.429704,
+      "wall_duration_s": 50.539,
+      "answer_delay_s": 5.027
+    },
+    "set_index": 43,
+    "sync_session": "20260731-152959"
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-retell-20260731-152959/call-093.wav",
+    "sha256": "ebd43fa17d12261715963b070ca75fe03a9b264c865ff32a6ad242fdfffb9d9a",
+    "bytes": 1450284,
+    "source": "recording_raw.wav"
+  },
+  "cost": {
+    "vendor_call_id": "call_7f8f57cd2dba5adf2b8c3022611",
+    "cost": 0.107000016,
+    "currency": "USD",
+    "duration_s": 47.78,
+    "billed_s": 48,
+    "source": "POST /v2/list-calls .call_cost.product_costs (telephony excluded)",
+    "notes": [
+      "combined_cost is reported in cents; divided by 100",
+      "telephony excluded (0.0120 USD): the PSTN leg is the bench's own carrier cost, and no other platform's figure includes one"
+    ]
+  }
+}

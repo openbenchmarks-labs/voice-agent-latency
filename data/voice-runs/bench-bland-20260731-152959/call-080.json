@@ -1,0 +1,167 @@
+{
+  "result": {
+    "analyzer_version": "2.4.0",
+    "call_id": "call-080",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "recording_started_mid_speech",
+      "near_utterances=1",
+      "t1_crosscheck=22.0ms"
+    ],
+    "greeting_end_ms": 928.0,
+    "greeting_onset_ms": 8.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -72.24719895935549,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-bland-20260731-152959",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 3512.0,
+    "t1_ms": 4898.0,
+    "t2_ms": 6252.0,
+    "ttfab_content_ms": 1354.0,
+    "ttfab_onset_ms": 1354.0,
+    "ttfg_ms": null,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=22.0ms",
+          "case=service-area"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 3512.0,
+        "t1_ms": 4898.0,
+        "t2_ms": 6252.0,
+        "ttfab_content_ms": 1354.0,
+        "ttfab_onset_ms": 1354.0,
+        "vad_disagreement_ms": 28.0,
+        "vad_disagreement_signed_ms": -28.0,
+        "vendor_response_duration_ms": 2654.0
+      }
+    ],
+    "vad_disagreement_ms": 28.0,
+    "vendor": "bland",
+    "vendor_response_duration_ms": 2654.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-080",
+    "run_id": "bench-bland-20260731-152959",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "bland",
+    "carrier": "plivo",
+    "vendor_config_sha256": "e82a64ec97b1a8362db4c9d1a59ed73cc9eb1fbfbac8d4736ae7baaf5e9e4451",
+    "caller_config_sha256": "a9e351811eb96ab1c57b713d3d809794e8948d3556d14bf743eac3f190f5452d",
+    "caller_plan_sha256": "b286c99a798526802e1fe4905f32cab7d5fa3441f4a34abf682503bbd6a1599c",
+    "call_sid": "0f9439ab-ce81-4df0-8fb9-07f12c1c3372",
+    "call_control_id": "0f9439ab-ce81-4df0-8fb9-07f12c1c3372",
+    "verify_skipped": false,
+    "cases": [
+      "service-area",
+      "router-rental",
+      "speed-basic"
+    ],
+    "turns_requested": 4,
+    "turns_played": 1,
+    "greeting_transcript": "how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "Which states do you serve?",
+        "case_id": "service-area",
+        "expect_keywords": [
+          "Oregon",
+          "Idaho",
+          "Nevada"
+        ],
+        "spoken": true,
+        "transcript": "",
+        "answer_verified": null,
+        "reply_timed_out": null
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "How much does it cost to rent a router from you?",
+        "case_id": "router-rental",
+        "expect_keywords": [
+          "8"
+        ],
+        "spoken": false,
+        "transcript": "",
+        "answer_verified": null,
+        "reply_timed_out": null
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "How fast is the Basic plan?",
+        "case_id": "speed-basic",
+        "expect_keywords": [
+          "300"
+        ],
+        "spoken": false,
+        "transcript": "",
+        "answer_verified": null,
+        "reply_timed_out": null
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": false,
+        "transcript": "",
+        "answer_verified": null,
+        "reply_timed_out": null
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    },
+    "timing": {
+      "placed_at": "2026-08-01T00:01:08.638+00:00",
+      "answered_at": "2026-08-01T00:01:12.804+00:00",
+      "ended_at": "2026-08-01T00:02:43.323+00:00",
+      "placed_at_epoch": 1785542468.638606,
+      "answered_at_epoch": 1785542472.804916,
+      "ended_at_epoch": 1785542563.323919,
+      "wall_duration_s": 94.685,
+      "answer_delay_s": 4.166
+    },
+    "set_index": 30,
+    "sync_session": "20260731-152959"
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-bland-20260731-152959/call-080.wav",
+    "sha256": "b93e1617d9fa9aa692e3ce5cf9f551db721edce6032fa17df2440aeeabd0278d",
+    "bytes": 517804,
+    "source": "recording_raw.wav"
+  },
+  "cost": {
+    "vendor_call_id": "bba0c982-9215-4536-a06f-d57676519ed4",
+    "cost": 0.045,
+    "currency": "USD",
+    "duration_s": 19.000000000000018,
+    "billed_s": null,
+    "source": "GET /v1/calls .price",
+    "notes": [
+      "call_length is reported in minutes; converted to seconds",
+      "Bland publishes no cost breakdown -- the figure is a single all-in price"
+    ]
+  }
+}

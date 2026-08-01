@@ -1,0 +1,224 @@
+{
+  "result": {
+    "analyzer_version": "2.4.0",
+    "call_id": "call-082",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "near_utterances=4",
+      "t1_crosscheck=106.0ms"
+    ],
+    "greeting_end_ms": 4446.0,
+    "greeting_onset_ms": 1792.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -72.24719895935549,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-telnyx-20260731-152959",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 7432.0,
+    "t1_ms": 9114.0,
+    "t2_ms": 10830.0,
+    "ttfab_content_ms": 1716.0,
+    "ttfab_onset_ms": 1716.0,
+    "ttfg_ms": 1792.0,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=106.0ms",
+          "case=wifi-extender",
+          "answer_not_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 7432.0,
+        "t1_ms": 9114.0,
+        "t2_ms": 10830.0,
+        "ttfab_content_ms": 1716.0,
+        "ttfab_onset_ms": 1716.0,
+        "vad_disagreement_ms": 10.0,
+        "vad_disagreement_signed_ms": 10.0,
+        "vendor_response_duration_ms": 3192.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=78.0ms",
+          "case=student-discount",
+          "answer_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 16652.0,
+        "t1_ms": 17942.0,
+        "t2_ms": 19550.0,
+        "ttfab_content_ms": 1608.0,
+        "ttfab_onset_ms": 1608.0,
+        "vad_disagreement_ms": 10.0,
+        "vad_disagreement_signed_ms": -10.0,
+        "vendor_response_duration_ms": 442.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=8.0ms",
+          "case=support-hours",
+          "answer_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 26510.0,
+        "t1_ms": 28228.0,
+        "t2_ms": 29994.0,
+        "ttfab_content_ms": 1766.0,
+        "ttfab_onset_ms": 1766.0,
+        "vad_disagreement_ms": 14.0,
+        "vad_disagreement_signed_ms": 14.0,
+        "vendor_response_duration_ms": 3684.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=54.0ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 37552.0,
+        "t1_ms": 39446.0,
+        "t2_ms": 40774.0,
+        "ttfab_content_ms": 1328.0,
+        "ttfab_onset_ms": 1328.0,
+        "vad_disagreement_ms": 14.0,
+        "vad_disagreement_signed_ms": 14.0,
+        "vendor_response_duration_ms": 2480.0
+      }
+    ],
+    "vad_disagreement_ms": 10.0,
+    "vendor": "telnyx",
+    "vendor_response_duration_ms": 3192.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-082",
+    "run_id": "bench-telnyx-20260731-152959",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "telnyx",
+    "carrier": "plivo",
+    "vendor_config_sha256": "5277d96e7b0c2e5c95641a0f276bba058fb43354f778e89fe7392c8cb839a876",
+    "caller_config_sha256": "df8bfbb7e97a9a28aa247c64afb5af857cf0ee5d20025e9324d0632112fdd0ff",
+    "caller_plan_sha256": "b286c99a798526802e1fe4905f32cab7d5fa3441f4a34abf682503bbd6a1599c",
+    "call_sid": "d970ed99-a36f-4bfb-ac2f-02d1d233d40a",
+    "call_control_id": "d970ed99-a36f-4bfb-ac2f-02d1d233d40a",
+    "verify_skipped": false,
+    "cases": [
+      "wifi-extender",
+      "student-discount",
+      "support-hours"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "thanks for calling Northwind internet how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "How much is a Wi-Fi extender?",
+        "case_id": "wifi-extender",
+        "expect_keywords": [
+          "49"
+        ],
+        "spoken": true,
+        "transcript": "a Wi-Fi extender is a 1-time purchase of $9",
+        "answer_verified": false,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "Is there a student discount?",
+        "case_id": "student-discount",
+        "expect_keywords": [
+          "20"
+        ],
+        "spoken": true,
+        "transcript": "yes students get a 20% discount with a valid student ID",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "What are your customer support hours?",
+        "case_id": "support-hours",
+        "expect_keywords": [
+          "6",
+          "10"
+        ],
+        "spoken": true,
+        "transcript": "customer support is open from 6:00 a.m. to 10:00 p.m. Pacific Time 7 days a week",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "",
+        "answer_verified": null,
+        "reply_timed_out": null
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    },
+    "timing": {
+      "placed_at": "2026-08-01T00:03:51.891+00:00",
+      "answered_at": "2026-08-01T00:03:54.790+00:00",
+      "ended_at": "2026-08-01T00:04:39.056+00:00",
+      "placed_at_epoch": 1785542631.891689,
+      "answered_at_epoch": 1785542634.7903428,
+      "ended_at_epoch": 1785542679.0567381,
+      "wall_duration_s": 47.165,
+      "answer_delay_s": 2.899
+    },
+    "set_index": 32,
+    "sync_session": "20260731-152959"
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-telnyx-20260731-152959/call-082.wav",
+    "sha256": "1973e9d621491cba73445c22a3a7bc4b89236976363762e2583b369e511ea3af",
+    "bytes": 1390124,
+    "source": "recording_raw.wav"
+  },
+  "cost": {
+    "vendor_call_id": "b6269e8c-bc55-4fb9-ab42-a6eea7007ee8",
+    "cost": 0.05,
+    "currency": "USD",
+    "duration_s": 44.0,
+    "billed_s": 60.0,
+    "source": "GET /v2/detail_records[ai-voice-assistant] .cost",
+    "notes": [
+      "cost is the ai-voice-assistant detail record; a separate PSTN leg may be billed under another record type",
+      "billed 60s for a 44s call (Telnyx bills a 60-second minimum)"
+    ]
+  }
+}

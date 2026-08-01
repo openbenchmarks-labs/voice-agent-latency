@@ -1,0 +1,230 @@
+{
+  "result": {
+    "analyzer_version": "2.4.0",
+    "call_id": "call-069",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "near_utterances=4",
+      "pre_stimulus_utterances=2",
+      "greeting_pause_ms=1268",
+      "t1_crosscheck=22.0ms",
+      "vad_onset_late=+436ms",
+      "vendor_spoke_before_first_turn=1"
+    ],
+    "greeting_end_ms": 1342.0,
+    "greeting_onset_ms": 158.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -62.55137790211507,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-vapi-20260731-152959",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 5952.0,
+    "t1_ms": 7338.0,
+    "t2_ms": 9036.0,
+    "ttfab_content_ms": 1698.0,
+    "ttfab_onset_ms": 1698.0,
+    "ttfg_ms": 158.0,
+    "turns": [
+      {
+        "discard_reason": "vad_disagree",
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=22.0ms",
+          "vad_onset_late=+436ms",
+          "case=service-area",
+          "answer_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 5952.0,
+        "t1_ms": 7338.0,
+        "t2_ms": 9036.0,
+        "ttfab_content_ms": 1698.0,
+        "ttfab_onset_ms": 1698.0,
+        "vad_disagreement_ms": 436.0,
+        "vad_disagreement_signed_ms": 436.0,
+        "vendor_response_duration_ms": 2674.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=34.0ms",
+          "vad_onset_conservative=+156ms",
+          "case=senior-discount",
+          "answer_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 14936.0,
+        "t1_ms": 16326.0,
+        "t2_ms": 17916.0,
+        "ttfab_content_ms": 1590.0,
+        "ttfab_onset_ms": 1590.0,
+        "vad_disagreement_ms": 156.0,
+        "vad_disagreement_signed_ms": 156.0,
+        "vendor_response_duration_ms": 2906.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=86.0ms",
+          "vad_crosscheck_unavailable=1724ms",
+          "case=speed-basic",
+          "answer_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 24032.0,
+        "t1_ms": 25694.0,
+        "t2_ms": 27064.0,
+        "ttfab_content_ms": 1370.0,
+        "ttfab_onset_ms": 1370.0,
+        "vad_disagreement_ms": 1724.0,
+        "vad_disagreement_signed_ms": 1724.0,
+        "vendor_response_duration_ms": 3516.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=54.0ms",
+          "vad_crosscheck_unavailable=1198ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 32932.0,
+        "t1_ms": 34826.0,
+        "t2_ms": 35378.0,
+        "ttfab_content_ms": 1734.0,
+        "ttfab_onset_ms": 552.0,
+        "vad_disagreement_ms": 1198.0,
+        "vad_disagreement_signed_ms": 1198.0,
+        "vendor_response_duration_ms": 94.0
+      }
+    ],
+    "vad_disagreement_ms": 436.0,
+    "vendor": "vapi",
+    "vendor_response_duration_ms": 2674.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-069",
+    "run_id": "bench-vapi-20260731-152959",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "vapi",
+    "carrier": "plivo",
+    "vendor_config_sha256": "4b8a525c1f804d6a7ea1c1c86784c7bcad0cb253c151a039a7301c5135c18595",
+    "caller_config_sha256": "cf2e989ac19a573e70359d0d23215bf8fd982761b5c4f5e239e11df16ad7044f",
+    "caller_plan_sha256": "b286c99a798526802e1fe4905f32cab7d5fa3441f4a34abf682503bbd6a1599c",
+    "call_sid": "3bb847e1-1bbd-4fc9-a068-de7e4d984ac1",
+    "call_control_id": "3bb847e1-1bbd-4fc9-a068-de7e4d984ac1",
+    "verify_skipped": false,
+    "cases": [
+      "service-area",
+      "senior-discount",
+      "speed-basic"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "thanks for calling Northwind internet how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "Which states do you serve?",
+        "case_id": "service-area",
+        "expect_keywords": [
+          "Oregon",
+          "Idaho",
+          "Nevada"
+        ],
+        "spoken": true,
+        "transcript": "we provide service in Oregon Idaho and Nevada",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "Do seniors get a discount?",
+        "case_id": "senior-discount",
+        "expect_keywords": [
+          "12"
+        ],
+        "spoken": true,
+        "transcript": "yes seniors aged 65 and over get a 12% discount",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "How fast is the Basic plan?",
+        "case_id": "speed-basic",
+        "expect_keywords": [
+          "300"
+        ],
+        "spoken": true,
+        "transcript": "the basic plan includes download speeds of 300 megabits per second",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "good goodbye and thanks for choosing Northwind internet",
+        "answer_verified": null,
+        "reply_timed_out": false
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    },
+    "timing": {
+      "placed_at": "2026-07-31T23:49:14.407+00:00",
+      "answered_at": "2026-07-31T23:49:18.386+00:00",
+      "ended_at": "2026-07-31T23:50:01.639+00:00",
+      "placed_at_epoch": 1785541754.407169,
+      "answered_at_epoch": 1785541758.386571,
+      "ended_at_epoch": 1785541801.639489,
+      "wall_duration_s": 47.232,
+      "answer_delay_s": 3.979
+    },
+    "set_index": 19,
+    "sync_session": "20260731-152959"
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-vapi-20260731-152959/call-069.wav",
+    "sha256": "d67138f800c07cdd0a94de63aba02412663dad9865d0c92c77bd80812cc99054",
+    "bytes": 1369004,
+    "source": "recording_raw.wav"
+  },
+  "cost": {
+    "vendor_call_id": "019fba95-0c22-7000-87ce-653fd27b84b6",
+    "cost": 0.06,
+    "currency": "USD",
+    "duration_s": 43.25800013542175,
+    "billed_s": null,
+    "source": "GET /call .cost",
+    "notes": []
+  }
+}

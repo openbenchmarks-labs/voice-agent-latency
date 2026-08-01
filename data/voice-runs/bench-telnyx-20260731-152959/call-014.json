@@ -1,0 +1,214 @@
+{
+  "result": {
+    "analyzer_version": "2.4.0",
+    "call_id": "call-014",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "near_utterances=4",
+      "t1_crosscheck=42.0ms",
+      "vad_disagreement=92.0ms"
+    ],
+    "greeting_end_ms": 3360.0,
+    "greeting_onset_ms": 466.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -72.24719895935549,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-telnyx-20260731-152959",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 6096.0,
+    "t1_ms": 8622.0,
+    "t2_ms": 9768.0,
+    "ttfab_content_ms": 1146.0,
+    "ttfab_onset_ms": 1146.0,
+    "ttfg_ms": 466.0,
+    "turns": [
+      {
+        "discard_reason": "vad_disagree",
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=42.0ms",
+          "vad_disagreement=92.0ms",
+          "case=installation-time",
+          "answer_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 6096.0,
+        "t1_ms": 8622.0,
+        "t2_ms": 9768.0,
+        "ttfab_content_ms": 1146.0,
+        "ttfab_onset_ms": 1146.0,
+        "vad_disagreement_ms": 92.0,
+        "vad_disagreement_signed_ms": -92.0,
+        "vendor_response_duration_ms": 3264.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=8.0ms",
+          "case=late-fee",
+          "answer_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 16152.0,
+        "t1_ms": 17928.0,
+        "t2_ms": 19348.0,
+        "ttfab_content_ms": 1420.0,
+        "ttfab_onset_ms": 1420.0,
+        "vad_disagreement_ms": 8.0,
+        "vad_disagreement_signed_ms": 8.0,
+        "vendor_response_duration_ms": 3496.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=68.0ms",
+          "case=money-back",
+          "answer_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 28306.0,
+        "t1_ms": 29932.0,
+        "t2_ms": 31268.0,
+        "ttfab_content_ms": 1336.0,
+        "ttfab_onset_ms": 1336.0,
+        "vad_disagreement_ms": 8.0,
+        "vad_disagreement_signed_ms": 8.0,
+        "vendor_response_duration_ms": 402.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=54.0ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 37252.0,
+        "t1_ms": 39146.0,
+        "t2_ms": 40212.0,
+        "ttfab_content_ms": 1066.0,
+        "ttfab_onset_ms": 1066.0,
+        "vad_disagreement_ms": 12.0,
+        "vad_disagreement_signed_ms": 12.0,
+        "vendor_response_duration_ms": 2364.0
+      }
+    ],
+    "vad_disagreement_ms": 92.0,
+    "vendor": "telnyx",
+    "vendor_response_duration_ms": 3264.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-014",
+    "run_id": "bench-telnyx-20260731-152959",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "telnyx",
+    "carrier": "plivo",
+    "vendor_config_sha256": "5277d96e7b0c2e5c95641a0f276bba058fb43354f778e89fe7392c8cb839a876",
+    "caller_config_sha256": "7397a13d199a48ba9b76a4b18d5d9e6e2a2dd91dd5ff34d9b1188ec064a59729",
+    "caller_plan_sha256": "b286c99a798526802e1fe4905f32cab7d5fa3441f4a34abf682503bbd6a1599c",
+    "call_sid": "99604498-5067-475e-8a12-31d23d149773",
+    "call_control_id": "99604498-5067-475e-8a12-31d23d149773",
+    "verify_skipped": false,
+    "cases": [
+      "installation-time",
+      "late-fee",
+      "money-back"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "thanks for calling Northwind internet how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "How soon can someone come install my internet?",
+        "case_id": "installation-time",
+        "expect_keywords": [
+          "4",
+          "business days"
+        ],
+        "spoken": true,
+        "transcript": "standard installation appointments are available within 4 business days",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "What happens if I pay my bill late?",
+        "case_id": "late-fee",
+        "expect_keywords": [
+          "9"
+        ],
+        "spoken": true,
+        "transcript": "late payments incur a $9 fee after a 15-day grace period",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "Do you have a money-back guarantee?",
+        "case_id": "money-back",
+        "expect_keywords": [
+          "30"
+        ],
+        "spoken": true,
+        "transcript": "yes new customers have a 30-day money back guarantee",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "",
+        "answer_verified": null,
+        "reply_timed_out": null
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    },
+    "timing": {
+      "placed_at": "2026-07-31T22:45:43.419+00:00",
+      "answered_at": "2026-07-31T22:45:47.419+00:00",
+      "ended_at": "2026-07-31T22:46:30.585+00:00",
+      "placed_at_epoch": 1785537943.4190998,
+      "answered_at_epoch": 1785537947.4195762,
+      "ended_at_epoch": 1785537990.5852318,
+      "wall_duration_s": 47.166,
+      "answer_delay_s": 4.0
+    },
+    "set_index": 14,
+    "sync_session": "20260731-152959"
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-telnyx-20260731-152959/call-014.wav",
+    "sha256": "ccd1dc1a3810fead9b45ff5066a4df8b5f8026825eaa1ba88b0d2686a0ac1b30",
+    "bytes": 1365804,
+    "source": "recording_raw.wav"
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "result": {
+    "analyzer_version": "2.4.0",
+    "call_id": "call-013",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "near_utterances=4",
+      "t1_crosscheck=42.0ms"
+    ],
+    "greeting_end_ms": 2544.0,
+    "greeting_onset_ms": 112.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -72.24719895935549,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-elevenlabs-20260731-152959",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 6132.0,
+    "t1_ms": 7458.0,
+    "t2_ms": 8856.0,
+    "ttfab_content_ms": 1398.0,
+    "ttfab_onset_ms": 1398.0,
+    "ttfg_ms": 112.0,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=42.0ms",
+          "case=free-trial",
+          "answer_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 6132.0,
+        "t1_ms": 7458.0,
+        "t2_ms": 8856.0,
+        "ttfab_content_ms": 1398.0,
+        "ttfab_onset_ms": 1398.0,
+        "vad_disagreement_ms": 4.0,
+        "vad_disagreement_signed_ms": -4.0,
+        "vendor_response_duration_ms": 2300.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=50.0ms",
+          "case=gamer-boost",
+          "answer_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 14232.0,
+        "t1_ms": 16670.0,
+        "t2_ms": 18362.0,
+        "ttfab_content_ms": 1692.0,
+        "ttfab_onset_ms": 1692.0,
+        "vad_disagreement_ms": 2.0,
+        "vad_disagreement_signed_ms": 2.0,
+        "vendor_response_duration_ms": 4184.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=78.0ms",
+          "case=installation-fee",
+          "answer_not_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 25914.0,
+        "t1_ms": 27882.0,
+        "t2_ms": 29186.0,
+        "ttfab_content_ms": 1304.0,
+        "ttfab_onset_ms": 1304.0,
+        "vad_disagreement_ms": 6.0,
+        "vad_disagreement_signed_ms": 6.0,
+        "vendor_response_duration_ms": 2768.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=54.0ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 34892.0,
+        "t1_ms": 36786.0,
+        "t2_ms": 38086.0,
+        "ttfab_content_ms": 1300.0,
+        "ttfab_onset_ms": 1300.0,
+        "vad_disagreement_ms": 6.0,
+        "vad_disagreement_signed_ms": 6.0,
+        "vendor_response_duration_ms": 2236.0
+      }
+    ],
+    "vad_disagreement_ms": 4.0,
+    "vendor": "elevenlabs",
+    "vendor_response_duration_ms": 2300.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-013",
+    "run_id": "bench-elevenlabs-20260731-152959",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "elevenlabs",
+    "carrier": "plivo",
+    "vendor_config_sha256": "f697ccc773d68033c7e35f5ed5d3e3b6ddc6f0b6fefa98c2dcf7cebbc0856976",
+    "caller_config_sha256": "0869f9253eb2e501ae6caa33f581f159f2c2f38f9e15f06c77957a2bfb833ae0",
+    "caller_plan_sha256": "b286c99a798526802e1fe4905f32cab7d5fa3441f4a34abf682503bbd6a1599c",
+    "call_sid": "2d1cb313-6a67-4aa9-b17c-f9e3ac83ab3d",
+    "call_control_id": "2d1cb313-6a67-4aa9-b17c-f9e3ac83ab3d",
+    "verify_skipped": false,
+    "cases": [
+      "free-trial",
+      "gamer-boost",
+      "installation-fee"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "thanks for calling Northwind internet how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "Do you offer a free trial?",
+        "case_id": "free-trial",
+        "expect_keywords": [
+          "14"
+        ],
+        "spoken": true,
+        "transcript": "yes new customers get a 14-day free trial",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "What is Gamer Boost and how much does it cost?",
+        "case_id": "gamer-boost",
+        "expect_keywords": [
+          "13"
+        ],
+        "spoken": true,
+        "transcript": "gamer boost is a low latency routing add-on and it costs $13 per month",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "How much is professional installation?",
+        "case_id": "installation-fee",
+        "expect_keywords": [
+          "85"
+        ],
+        "spoken": true,
+        "transcript": "the 1-time Professional installation fee is $55",
+        "answer_verified": false,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "goodbye and thanks for choosing Northwind internet",
+        "answer_verified": null,
+        "reply_timed_out": false
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    },
+    "timing": {
+      "placed_at": "2026-07-31T22:44:34.261+00:00",
+      "answered_at": "2026-07-31T22:44:36.683+00:00",
+      "ended_at": "2026-07-31T22:45:19.807+00:00",
+      "placed_at_epoch": 1785537874.261208,
+      "answered_at_epoch": 1785537876.683935,
+      "ended_at_epoch": 1785537919.80766,
+      "wall_duration_s": 45.546,
+      "answer_delay_s": 2.423
+    },
+    "set_index": 13,
+    "sync_session": "20260731-152959"
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-elevenlabs-20260731-152959/call-013.wav",
+    "sha256": "01b19b668ca7e665b01b189b0749235f8bf618f0f7295e0f335fad9d10e5f6d4",
+    "bytes": 1364524,
+    "source": "recording_raw.wav"
+  },
+  "cost": {
+    "vendor_call_id": "conv_4501kyx5km63fz9rd2hfxp9b1nx3",
+    "cost": 0.05825844834949284,
+    "currency": "USD",
+    "duration_s": 43,
+    "billed_s": null,
+    "source": "GET /v1/convai/conversations/{id} .metadata.cost_fiat",
+    "notes": [
+      "cost_fiat is the USD figure; `cost` is in credits",
+      "account tier is 'creator' -- cost_fiat is the list-price equivalent, not an amount billed"
+    ]
+  }
+}

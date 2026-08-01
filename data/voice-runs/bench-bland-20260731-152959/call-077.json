@@ -1,0 +1,223 @@
+{
+  "result": {
+    "analyzer_version": "2.4.0",
+    "call_id": "call-077",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "near_utterances=4",
+      "t1_crosscheck=24.0ms"
+    ],
+    "greeting_end_ms": 2988.0,
+    "greeting_onset_ms": 508.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -72.24719895935549,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-bland-20260731-152959",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 6034.0,
+    "t1_ms": 7796.0,
+    "t2_ms": 9224.0,
+    "ttfab_content_ms": 1428.0,
+    "ttfab_onset_ms": 1428.0,
+    "ttfg_ms": 508.0,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=24.0ms",
+          "case=payment-methods",
+          "answer_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 6034.0,
+        "t1_ms": 7796.0,
+        "t2_ms": 9224.0,
+        "ttfab_content_ms": 1428.0,
+        "ttfab_onset_ms": 1428.0,
+        "vad_disagreement_ms": 24.0,
+        "vad_disagreement_signed_ms": 24.0,
+        "vendor_response_duration_ms": 2788.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=110.0ms",
+          "case=price-business",
+          "answer_not_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 14984.0,
+        "t1_ms": 16470.0,
+        "t2_ms": 18024.0,
+        "ttfab_content_ms": 1554.0,
+        "ttfab_onset_ms": 1554.0,
+        "vad_disagreement_ms": 24.0,
+        "vad_disagreement_signed_ms": 24.0,
+        "vendor_response_duration_ms": 2976.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=24.0ms",
+          "case=phone-line",
+          "answer_not_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 24144.0,
+        "t1_ms": 26576.0,
+        "t2_ms": 27912.0,
+        "ttfab_content_ms": 1336.0,
+        "ttfab_onset_ms": 1336.0,
+        "vad_disagreement_ms": 12.0,
+        "vad_disagreement_signed_ms": 12.0,
+        "vendor_response_duration_ms": 3678.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=94.0ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 34012.0,
+        "t1_ms": 35906.0,
+        "t2_ms": 37384.0,
+        "ttfab_content_ms": 1478.0,
+        "ttfab_onset_ms": 1478.0,
+        "vad_disagreement_ms": 4.0,
+        "vad_disagreement_signed_ms": 4.0,
+        "vendor_response_duration_ms": 504.0
+      }
+    ],
+    "vad_disagreement_ms": 24.0,
+    "vendor": "bland",
+    "vendor_response_duration_ms": 2788.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-077",
+    "run_id": "bench-bland-20260731-152959",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "bland",
+    "carrier": "plivo",
+    "vendor_config_sha256": "e82a64ec97b1a8362db4c9d1a59ed73cc9eb1fbfbac8d4736ae7baaf5e9e4451",
+    "caller_config_sha256": "5a443533f5d494ff0d66472da10357c05bc894f9e92ca4ae40d383ef8dcfaf8a",
+    "caller_plan_sha256": "b286c99a798526802e1fe4905f32cab7d5fa3441f4a34abf682503bbd6a1599c",
+    "call_sid": "1a088fe9-6d20-478d-b4ee-3a569cf27f97",
+    "call_control_id": "1a088fe9-6d20-478d-b4ee-3a569cf27f97",
+    "verify_skipped": false,
+    "cases": [
+      "payment-methods",
+      "price-business",
+      "phone-line"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "thanks for calling Northwind internet how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "What payment methods do you accept?",
+        "case_id": "payment-methods",
+        "expect_keywords": [
+          "PayPal"
+        ],
+        "spoken": true,
+        "transcript": "we accept credit card bank transfer and PayPal",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "How much is the Business plan?",
+        "case_id": "price-business",
+        "expect_keywords": [
+          "129"
+        ],
+        "spoken": true,
+        "transcript": "the business plan costs $29 per month",
+        "answer_verified": false,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "Can I add a home phone line, and how much is it?",
+        "case_id": "phone-line",
+        "expect_keywords": [
+          "17"
+        ],
+        "spoken": true,
+        "transcript": "yes a home phone mine add-on costs per month",
+        "answer_verified": false,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "goodbye and thanks for choosing Northwind internet",
+        "answer_verified": null,
+        "reply_timed_out": false
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    },
+    "timing": {
+      "placed_at": "2026-07-31T23:57:59.288+00:00",
+      "answered_at": "2026-07-31T23:58:01.213+00:00",
+      "ended_at": "2026-07-31T23:58:44.088+00:00",
+      "placed_at_epoch": 1785542279.2884312,
+      "answered_at_epoch": 1785542281.213096,
+      "ended_at_epoch": 1785542324.0881312,
+      "wall_duration_s": 44.8,
+      "answer_delay_s": 1.925
+    },
+    "set_index": 27,
+    "sync_session": "20260731-152959"
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-bland-20260731-152959/call-077.wav",
+    "sha256": "5c67fc233448d96bd712f9dbfc54dc2338d3a979af8ac7f1e70895ad8281aa5c",
+    "bytes": 1356844,
+    "source": "recording_raw.wav"
+  },
+  "cost": {
+    "vendor_call_id": "5c3aacb4-7d3b-49ab-956d-17db809e38dd",
+    "cost": 0.098,
+    "currency": "USD",
+    "duration_s": 42.0,
+    "billed_s": null,
+    "source": "GET /v1/calls .price",
+    "notes": [
+      "call_length is reported in minutes; converted to seconds",
+      "Bland publishes no cost breakdown -- the figure is a single all-in price"
+    ]
+  }
+}

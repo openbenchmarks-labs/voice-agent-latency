@@ -1,0 +1,223 @@
+{
+  "result": {
+    "analyzer_version": "2.4.0",
+    "call_id": "call-063",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "near_utterances=4",
+      "t1_crosscheck=42.0ms"
+    ],
+    "greeting_end_ms": 3730.0,
+    "greeting_onset_ms": 856.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -72.24719895935549,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-telnyx-20260731-152959",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 7232.0,
+    "t1_ms": 8558.0,
+    "t2_ms": 9850.0,
+    "ttfab_content_ms": 1900.0,
+    "ttfab_onset_ms": 1292.0,
+    "ttfg_ms": 856.0,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=42.0ms",
+          "case=free-trial",
+          "answer_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 7232.0,
+        "t1_ms": 8558.0,
+        "t2_ms": 9850.0,
+        "ttfab_content_ms": 1900.0,
+        "ttfab_onset_ms": 1292.0,
+        "vad_disagreement_ms": 10.0,
+        "vad_disagreement_signed_ms": 10.0,
+        "vendor_response_duration_ms": 390.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=50.0ms",
+          "case=gamer-boost",
+          "answer_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 16012.0,
+        "t1_ms": 18450.0,
+        "t2_ms": 19754.0,
+        "ttfab_content_ms": 1304.0,
+        "ttfab_onset_ms": 1304.0,
+        "vad_disagreement_ms": 14.0,
+        "vad_disagreement_signed_ms": 14.0,
+        "vendor_response_duration_ms": 3762.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=78.0ms",
+          "case=installation-fee",
+          "answer_not_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 25994.0,
+        "t1_ms": 27962.0,
+        "t2_ms": 29040.0,
+        "ttfab_content_ms": 1078.0,
+        "ttfab_onset_ms": 1078.0,
+        "vad_disagreement_ms": 0.0,
+        "vad_disagreement_signed_ms": 0.0,
+        "vendor_response_duration_ms": 3038.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=54.0ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 34952.0,
+        "t1_ms": 36846.0,
+        "t2_ms": 37784.0,
+        "ttfab_content_ms": 938.0,
+        "ttfab_onset_ms": 938.0,
+        "vad_disagreement_ms": 4.0,
+        "vad_disagreement_signed_ms": 4.0,
+        "vendor_response_duration_ms": 2510.0
+      }
+    ],
+    "vad_disagreement_ms": 10.0,
+    "vendor": "telnyx",
+    "vendor_response_duration_ms": 390.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-063",
+    "run_id": "bench-telnyx-20260731-152959",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "telnyx",
+    "carrier": "plivo",
+    "vendor_config_sha256": "5277d96e7b0c2e5c95641a0f276bba058fb43354f778e89fe7392c8cb839a876",
+    "caller_config_sha256": "0869f9253eb2e501ae6caa33f581f159f2c2f38f9e15f06c77957a2bfb833ae0",
+    "caller_plan_sha256": "b286c99a798526802e1fe4905f32cab7d5fa3441f4a34abf682503bbd6a1599c",
+    "call_sid": "a444eb35-91bf-4d16-8a26-08c8484c80ba",
+    "call_control_id": "a444eb35-91bf-4d16-8a26-08c8484c80ba",
+    "verify_skipped": false,
+    "cases": [
+      "free-trial",
+      "gamer-boost",
+      "installation-fee"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "thanks for calling Northwind internet how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "Do you offer a free trial?",
+        "case_id": "free-trial",
+        "expect_keywords": [
+          "14"
+        ],
+        "spoken": true,
+        "transcript": "yes new customers get a 14-day free trial",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "What is Gamer Boost and how much does it cost?",
+        "case_id": "gamer-boost",
+        "expect_keywords": [
+          "13"
+        ],
+        "spoken": true,
+        "transcript": "gamer boost is a low latency routing add-on that costs $13 per month",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "How much is professional installation?",
+        "case_id": "installation-fee",
+        "expect_keywords": [
+          "85"
+        ],
+        "spoken": true,
+        "transcript": "the 1 Time Professional installation fee is $5",
+        "answer_verified": false,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "",
+        "answer_verified": null,
+        "reply_timed_out": null
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    },
+    "timing": {
+      "placed_at": "2026-07-31T23:42:54.388+00:00",
+      "answered_at": "2026-07-31T23:42:58.364+00:00",
+      "ended_at": "2026-07-31T23:43:39.409+00:00",
+      "placed_at_epoch": 1785541374.388782,
+      "answered_at_epoch": 1785541378.364942,
+      "ended_at_epoch": 1785541419.4095628,
+      "wall_duration_s": 45.021,
+      "answer_delay_s": 3.976
+    },
+    "set_index": 13,
+    "sync_session": "20260731-152959"
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-telnyx-20260731-152959/call-063.wav",
+    "sha256": "7a6e14005104bc293d1efd3af3f1d33250196d22155e052d821fb0df538bedfc",
+    "bytes": 1296044,
+    "source": "recording_raw.wav"
+  },
+  "cost": {
+    "vendor_call_id": "e5b77c7a-f77e-421f-82b4-03aee0dadb54",
+    "cost": 0.05,
+    "currency": "USD",
+    "duration_s": 41.0,
+    "billed_s": 60.0,
+    "source": "GET /v2/detail_records[ai-voice-assistant] .cost",
+    "notes": [
+      "cost is the ai-voice-assistant detail record; a separate PSTN leg may be billed under another record type",
+      "billed 60s for a 41s call (Telnyx bills a 60-second minimum)"
+    ]
+  }
+}

@@ -80,7 +80,27 @@ from .resample import samples_to_ms
 #   (bench-telnyx-20260730-111843 call-003 turn 3, 100 ms) sits in the affected
 #   band and would be kept rather than discarded if its sign is positive. Its
 #   audio is not committed, so re-deriving it needs the run directory.
-ANALYZER_VERSION = "2.3.0"
+# 2.4.0 (2026-07-31): in DIALOG mode `idle_filler` records a flag instead of
+#   discarding the call, and barge detection measures against the LAST
+#   pre-stimulus utterance rather than the first. Both follow from one fact: a
+#   vendor may pause mid-greeting for longer than GREETING_MERGE_GAP_MS, and the
+#   pre-stimulus region is then a split greeting rather than an idle re-prompt.
+#   Measured on bench-vapi-20260731-152959: Vapi greets in two phrases with a
+#   960-1224 ms pause (86 of 98 calls; no other vendor ever splits, 0/392), so
+#   22 calls were discarded whole -- and WHICH 22 was decided by whether the
+#   carrier's recorder happened to catch the greeting's first ~100 ms loudly
+#   enough to trip CLIPPED_START_RMS and earn the 2.1.0 exemption. Recovering
+#   the 78 turns in them moves that run's p50 by 1 ms (1563 -> 1564) and its p95
+#   by 12 ms (2008.4 -> 2020.8): the discard was costing n, not protecting the
+#   number. The other four vendors are untouched -- 0 calls, 0 turns, 0 ms.
+#   Safe because dialog mode searches for a reply with first_after(our turn
+#   START), so nothing before our first word can be selected as any turn's
+#   reply -- the rule was guarding a path that cannot be reached. Deliberately
+#   introduces NO new threshold: a millisecond value chosen against Vapi's pause
+#   would simply relocate the failure to the next vendor. Reference mode is
+#   UNCHANGED, so Gate A's `idle_filler` fixture and every archived
+#   reference-mode result are unaffected; dialog-mode runs must be re-derived.
+ANALYZER_VERSION = "2.4.0"
 
 # Discard thresholds. These are the frozen discard rules; they belong
 # in METHODOLOGY.md with a commit date before the first measurement call.
@@ -633,6 +653,14 @@ def measure_dialog(near: np.ndarray, far: np.ndarray, expected_turns: int,
                      else ms(greeting.start))
     if len(pre_stimulus) > 1:
         r.flags.append(f"pre_stimulus_utterances={len(pre_stimulus)}")
+        # The measured pauses, so a reader can tell a split greeting from an idle
+        # re-prompt without re-opening the WAV. Descriptive only -- nothing
+        # compares against it, because a threshold here would be fitted to
+        # whichever vendor was measured last.
+        pauses = [ms(b.start - a.end)
+                  for a, b in zip(pre_stimulus, pre_stimulus[1:])]
+        r.flags.append("greeting_pause_ms="
+                       + ",".join(f"{p:.0f}" for p in pauses))
 
     # --- one measurement per thing we said ----------------------------------- #
     turns: list[TurnResult] = []
@@ -698,7 +726,9 @@ def measure_dialog(near: np.ndarray, far: np.ndarray, expected_turns: int,
 
     r.turns = turns
     _mirror_first_turn(r)
-    _apply_discard_rules(r, far_analysis, pre_stimulus)
+    _apply_discard_rules(
+        r, far_analysis, pre_stimulus, dialog=True,
+        greeting_span_end_ms=(ms(pre_stimulus[-1].end) if pre_stimulus else None))
     return r
 
 
@@ -850,7 +880,9 @@ def _mirror_first_turn(r: Result) -> None:
 
 
 def _apply_discard_rules(r: Result, far: O.OnsetAnalysis,
-                         pre_stimulus: list[O.Segment]) -> None:
+                         pre_stimulus: list[O.Segment], *,
+                         dialog: bool = False,
+                         greeting_span_end_ms: float | None = None) -> None:
     """Apply the frozen discard rules, most structural first.
 
     Order matters: a call with no locatable stimulus has no meaningful t1, so
@@ -858,15 +890,20 @@ def _apply_discard_rules(r: Result, far: O.OnsetAnalysis,
 
     Which rules live here vs on the turn:
 
-      * genuinely call-level -- no greeting at all, we talked over the greeting,
-        an idle prompt before our first turn. These invalidate the whole
-        conversation, so every turn in it is suspect.
+      * genuinely call-level -- no greeting at all, we talked over the greeting.
+        These invalidate the whole conversation, so every turn in it is suspect.
       * turn-level (unlocatable / drift / no_response / vad_disagree) are recorded
         on the turn by _apply_turn_discard_rules. On a MULTI-turn call the call
         survives them, so one bad turn does not waste the others.
       * on a SINGLE-turn call they are mirrored up to the call, in the original
         rule order, so results recorded before multi-turn existed re-analyze
         identically.
+
+    `dialog` and `greeting_span_end_ms` are supplied only by measure_dialog.
+    Reference mode calls this with neither, and gets 2.3.0 behaviour exactly --
+    which is what keeps archived reference-mode runs re-derivable and Gate A's
+    `idle_filler` fixture meaningful. See the 2.4.0 note at the top of the file
+    for why the two paths are allowed to differ here.
     """
     single_turn = len(r.turns) == 1
     turn = r.turns[0] if r.turns else None
@@ -885,10 +922,22 @@ def _apply_discard_rules(r: Result, far: O.OnsetAnalysis,
 
     # Did we talk over the greeting? Live VAD fired early, so whatever came back
     # is a reaction to an interruption rather than to a complete turn.
+    #
+    # Measured against the END of the pre-stimulus region when the caller supplies
+    # it, not against `greeting_end_ms` (the first utterance's end). A vendor that
+    # pauses mid-greeting for longer than the merge gap has a greeting_end_ms that
+    # stops at phrase one, which understates the extent we could have talked over
+    # -- so the vendor most likely to be barged is the one this rule would have
+    # protected least. Conservative in the safe direction: it can only make the
+    # rule fire more. Verified on bench-*-20260731-152959: the tightest margin
+    # across 489 calls is 2192 ms against a 50 ms threshold, so no real call
+    # changes verdict.
+    barge_extent_ms = (greeting_span_end_ms if greeting_span_end_ms is not None
+                       else r.greeting_end_ms)
     if (
-        r.greeting_end_ms is not None
+        barge_extent_ms is not None
         and r.stimulus_start_ms is not None
-        and r.stimulus_start_ms < r.greeting_end_ms - BARGE_GREETING_MARGIN_MS
+        and r.stimulus_start_ms < barge_extent_ms - BARGE_GREETING_MARGIN_MS
     ):
         r.discard_reason = "barged_greeting"
         return
@@ -911,10 +960,25 @@ def _apply_discard_rules(r: Result, far: O.OnsetAnalysis,
     # depends on the greeting's extent is reported either way; TTFAB does not,
     # and is kept.
     if len(pre_stimulus) > 1:
-        if "recording_started_mid_speech" not in r.flags:
+        if dialog:
+            # Dialog mode cannot be corrupted by this, so it is recorded rather
+            # than judged. The reply search for turn i is
+            # first_after(our turn i START) -- see measure_dialog -- so every
+            # candidate reply lies after our first word, and the whole
+            # pre-stimulus region is outside every search window. Discarding the
+            # call therefore protected no measurement while throwing away the
+            # turns that WERE measured.
+            #
+            # It stays a flag rather than becoming nothing, because "the vendor
+            # spoke before we did" is real information: it is either a split
+            # greeting or a genuine 'are you still there?', and the count plus
+            # greeting_pause_ms let a reader tell which without the audio.
+            r.flags.append(f"vendor_spoke_before_first_turn={len(pre_stimulus) - 1}")
+        elif "recording_started_mid_speech" not in r.flags:
             r.discard_reason = "idle_filler"
             return
-        r.flags.append("idle_filler_unassessable_clipped_greeting")
+        else:
+            r.flags.append("idle_filler_unassessable_clipped_greeting")
 
     if single_turn and turn and turn.discard_reason:
         r.discard_reason = turn.discard_reason

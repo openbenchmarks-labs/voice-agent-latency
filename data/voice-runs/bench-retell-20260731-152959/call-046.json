@@ -1,0 +1,223 @@
+{
+  "result": {
+    "analyzer_version": "2.4.0",
+    "call_id": "call-046",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "near_utterances=4",
+      "t1_crosscheck=42.0ms"
+    ],
+    "greeting_end_ms": 3164.0,
+    "greeting_onset_ms": 446.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -72.24719895935549,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-retell-20260731-152959",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 6312.0,
+    "t1_ms": 7638.0,
+    "t2_ms": 8980.0,
+    "ttfab_content_ms": 2160.0,
+    "ttfab_onset_ms": 1342.0,
+    "ttfg_ms": 446.0,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=42.0ms",
+          "case=free-trial",
+          "answer_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 6312.0,
+        "t1_ms": 7638.0,
+        "t2_ms": 8980.0,
+        "ttfab_content_ms": 2160.0,
+        "ttfab_onset_ms": 1342.0,
+        "vad_disagreement_ms": 0.0,
+        "vad_disagreement_signed_ms": 0.0,
+        "vendor_response_duration_ms": 386.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=50.0ms",
+          "case=gamer-boost",
+          "answer_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 15372.0,
+        "t1_ms": 17810.0,
+        "t2_ms": 19338.0,
+        "ttfab_content_ms": 1528.0,
+        "ttfab_onset_ms": 1528.0,
+        "vad_disagreement_ms": 18.0,
+        "vad_disagreement_signed_ms": 18.0,
+        "vendor_response_duration_ms": 4640.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=4.0ms",
+          "case=data-cap",
+          "answer_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 27152.0,
+        "t1_ms": 28824.0,
+        "t2_ms": 30650.0,
+        "ttfab_content_ms": 1826.0,
+        "ttfab_onset_ms": 1826.0,
+        "vad_disagreement_ms": 10.0,
+        "vad_disagreement_signed_ms": 10.0,
+        "vendor_response_duration_ms": 3074.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=54.0ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 36492.0,
+        "t1_ms": 38386.0,
+        "t2_ms": 39072.0,
+        "ttfab_content_ms": 1704.0,
+        "ttfab_onset_ms": 686.0,
+        "vad_disagreement_ms": 12.0,
+        "vad_disagreement_signed_ms": 12.0,
+        "vendor_response_duration_ms": 120.125
+      }
+    ],
+    "vad_disagreement_ms": 0.0,
+    "vendor": "retell",
+    "vendor_response_duration_ms": 386.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-046",
+    "run_id": "bench-retell-20260731-152959",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "retell",
+    "carrier": "plivo",
+    "vendor_config_sha256": "3fbe40adfec2aeea3e8100517811faedc8837c2ac17564bfcc995281b1256e0a",
+    "caller_config_sha256": "b20bda2f6e76c008793053e13c9766e1fb44ea08d1e4ef7742f39ff8e2af510f",
+    "caller_plan_sha256": "b286c99a798526802e1fe4905f32cab7d5fa3441f4a34abf682503bbd6a1599c",
+    "call_sid": "48bf54d5-8e25-4e06-8d61-f91ad461f0eb",
+    "call_control_id": "48bf54d5-8e25-4e06-8d61-f91ad461f0eb",
+    "verify_skipped": false,
+    "cases": [
+      "free-trial",
+      "gamer-boost",
+      "data-cap"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "thanks for calling Northwind internet how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "Do you offer a free trial?",
+        "case_id": "free-trial",
+        "expect_keywords": [
+          "14"
+        ],
+        "spoken": true,
+        "transcript": "yes new customers get a 14-day free trial",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "What is Gamer Boost and how much does it cost?",
+        "case_id": "gamer-boost",
+        "expect_keywords": [
+          "13"
+        ],
+        "spoken": true,
+        "transcript": "gamer boost is a low latency routing add-on and it costs $13 per month",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "Is there a data cap on your plans?",
+        "case_id": "data-cap",
+        "expect_keywords": [
+          "unlimited"
+        ],
+        "spoken": true,
+        "transcript": "no all our plans have unlimited data with no data caps",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "good goodbye and thanks for choosing Northwind internet",
+        "answer_verified": null,
+        "reply_timed_out": false
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    },
+    "timing": {
+      "placed_at": "2026-07-31T23:23:28.724+00:00",
+      "answered_at": "2026-07-31T23:23:31.173+00:00",
+      "ended_at": "2026-07-31T23:24:18.050+00:00",
+      "placed_at_epoch": 1785540208.72444,
+      "answered_at_epoch": 1785540211.1737978,
+      "ended_at_epoch": 1785540258.0502799,
+      "wall_duration_s": 49.326,
+      "answer_delay_s": 2.449
+    },
+    "set_index": 46,
+    "sync_session": "20260731-152959"
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-retell-20260731-152959/call-046.wav",
+    "sha256": "c5ddbcc7c7262259f0cf8274b028ec06b30fd77af3922689403d063e095f095e",
+    "bytes": 1485484,
+    "source": "recording_raw.wav"
+  },
+  "cost": {
+    "vendor_call_id": "call_3e19d3ec34ecb23d32af09fdb45",
+    "cost": 0.10508334899999999,
+    "currency": "USD",
+    "duration_s": 46.73,
+    "billed_s": 47,
+    "source": "POST /v2/list-calls .call_cost.product_costs (telephony excluded)",
+    "notes": [
+      "combined_cost is reported in cents; divided by 100",
+      "telephony excluded (0.0118 USD): the PSTN leg is the bench's own carrier cost, and no other platform's figure includes one"
+    ]
+  }
+}

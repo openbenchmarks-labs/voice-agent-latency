@@ -1,0 +1,211 @@
+{
+  "result": {
+    "analyzer_version": "2.4.0",
+    "call_id": "call-038",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "near_utterances=4",
+      "t1_crosscheck=24.0ms"
+    ],
+    "greeting_end_ms": 5210.0,
+    "greeting_onset_ms": 2336.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -72.24719895935549,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-telnyx-20260731-152959",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 8534.0,
+    "t1_ms": 10296.0,
+    "t2_ms": 11956.0,
+    "ttfab_content_ms": 1660.0,
+    "ttfab_onset_ms": 1660.0,
+    "ttfg_ms": 2336.0,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=24.0ms",
+          "case=payment-methods",
+          "answer_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 8534.0,
+        "t1_ms": 10296.0,
+        "t2_ms": 11956.0,
+        "ttfab_content_ms": 1660.0,
+        "ttfab_onset_ms": 1660.0,
+        "vad_disagreement_ms": 4.0,
+        "vad_disagreement_signed_ms": -4.0,
+        "vendor_response_duration_ms": 1068.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=42.0ms",
+          "case=price-premium",
+          "answer_not_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 17992.0,
+        "t1_ms": 19638.0,
+        "t2_ms": 20776.0,
+        "ttfab_content_ms": 1138.0,
+        "ttfab_onset_ms": 1138.0,
+        "vad_disagreement_ms": 36.0,
+        "vad_disagreement_signed_ms": 36.0,
+        "vendor_response_duration_ms": 2570.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=24.0ms",
+          "case=phone-line",
+          "answer_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 27424.0,
+        "t1_ms": 29856.0,
+        "t2_ms": 31016.0,
+        "ttfab_content_ms": 1926.0,
+        "ttfab_onset_ms": 1160.0,
+        "vad_disagreement_ms": 4.0,
+        "vad_disagreement_signed_ms": -4.0,
+        "vendor_response_duration_ms": 392.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=94.0ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 37792.0,
+        "t1_ms": 39686.0,
+        "t2_ms": 41000.0,
+        "ttfab_content_ms": 1314.0,
+        "ttfab_onset_ms": 1314.0,
+        "vad_disagreement_ms": 0.0,
+        "vad_disagreement_signed_ms": 0.0,
+        "vendor_response_duration_ms": 2504.0
+      }
+    ],
+    "vad_disagreement_ms": 4.0,
+    "vendor": "telnyx",
+    "vendor_response_duration_ms": 1068.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-038",
+    "run_id": "bench-telnyx-20260731-152959",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "telnyx",
+    "carrier": "plivo",
+    "vendor_config_sha256": "5277d96e7b0c2e5c95641a0f276bba058fb43354f778e89fe7392c8cb839a876",
+    "caller_config_sha256": "5303e852bc614c5ab1688d6ba9d47946022d718c0969b716fd7bf9b01876f1bc",
+    "caller_plan_sha256": "b286c99a798526802e1fe4905f32cab7d5fa3441f4a34abf682503bbd6a1599c",
+    "call_sid": "8773a857-8bdf-47b5-b03b-7b9ce41c269b",
+    "call_control_id": "8773a857-8bdf-47b5-b03b-7b9ce41c269b",
+    "verify_skipped": false,
+    "cases": [
+      "payment-methods",
+      "price-premium",
+      "phone-line"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "thanks for calling Northwind internet how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "What payment methods do you accept?",
+        "case_id": "payment-methods",
+        "expect_keywords": [
+          "PayPal"
+        ],
+        "spoken": true,
+        "transcript": "we accept credit card bank transfer and PayPal",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "What does the Premium plan cost?",
+        "case_id": "price-premium",
+        "expect_keywords": [
+          "74"
+        ],
+        "spoken": true,
+        "transcript": "the Premium plan costs $44 per month",
+        "answer_verified": false,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "Can I add a home phone line, and how much is it?",
+        "case_id": "phone-line",
+        "expect_keywords": [
+          "17"
+        ],
+        "spoken": true,
+        "transcript": "yes a home phone line add-on costs $17 per month",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "go seek the",
+        "answer_verified": null,
+        "reply_timed_out": false
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    },
+    "timing": {
+      "placed_at": "2026-07-31T23:13:43.497+00:00",
+      "answered_at": "2026-07-31T23:13:46.878+00:00",
+      "ended_at": "2026-07-31T23:14:34.147+00:00",
+      "placed_at_epoch": 1785539623.497935,
+      "answered_at_epoch": 1785539626.878311,
+      "ended_at_epoch": 1785539674.1476212,
+      "wall_duration_s": 50.65,
+      "answer_delay_s": 3.38
+    },
+    "set_index": 38,
+    "sync_session": "20260731-152959"
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-telnyx-20260731-152959/call-038.wav",
+    "sha256": "21e791dad4bfb2e0e735586cba82276c26c7676ce41490c817baed135a779a08",
+    "bytes": 1497644,
+    "source": "recording_raw.wav"
+  }
+}

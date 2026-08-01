@@ -1,0 +1,225 @@
+{
+  "result": {
+    "analyzer_version": "2.4.0",
+    "call_id": "call-056",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "recording_started_mid_speech",
+      "near_utterances=4",
+      "t1_crosscheck=14.0ms"
+    ],
+    "greeting_end_ms": 2780.0,
+    "greeting_onset_ms": 8.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -72.24719895935549,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-telnyx-20260731-152959",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 5794.0,
+    "t1_ms": 8446.0,
+    "t2_ms": 9468.0,
+    "ttfab_content_ms": 1022.0,
+    "ttfab_onset_ms": 1022.0,
+    "ttfg_ms": null,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=14.0ms",
+          "case=company-history",
+          "answer_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 5794.0,
+        "t1_ms": 8446.0,
+        "t2_ms": 9468.0,
+        "ttfab_content_ms": 1022.0,
+        "ttfab_onset_ms": 1022.0,
+        "vad_disagreement_ms": 8.0,
+        "vad_disagreement_signed_ms": 8.0,
+        "vendor_response_duration_ms": 3774.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=64.0ms",
+          "case=payment-methods",
+          "answer_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 16774.0,
+        "t1_ms": 18536.0,
+        "t2_ms": 20200.0,
+        "ttfab_content_ms": 1664.0,
+        "ttfab_onset_ms": 1664.0,
+        "vad_disagreement_ms": 0.0,
+        "vad_disagreement_signed_ms": 0.0,
+        "vendor_response_duration_ms": 1068.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=50.0ms",
+          "case=gamer-boost",
+          "answer_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 25772.0,
+        "t1_ms": 28210.0,
+        "t2_ms": 29466.0,
+        "ttfab_content_ms": 1256.0,
+        "ttfab_onset_ms": 1256.0,
+        "vad_disagreement_ms": 6.0,
+        "vad_disagreement_signed_ms": 6.0,
+        "vendor_response_duration_ms": 3900.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=54.0ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 35772.0,
+        "t1_ms": 37666.0,
+        "t2_ms": 38642.0,
+        "ttfab_content_ms": 976.0,
+        "ttfab_onset_ms": 976.0,
+        "vad_disagreement_ms": 2.0,
+        "vad_disagreement_signed_ms": 2.0,
+        "vendor_response_duration_ms": 2364.0
+      }
+    ],
+    "vad_disagreement_ms": 8.0,
+    "vendor": "telnyx",
+    "vendor_response_duration_ms": 3774.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-056",
+    "run_id": "bench-telnyx-20260731-152959",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "telnyx",
+    "carrier": "plivo",
+    "vendor_config_sha256": "5277d96e7b0c2e5c95641a0f276bba058fb43354f778e89fe7392c8cb839a876",
+    "caller_config_sha256": "81c954a5d0bd88131d104de6a3876efe3a249106f402488ad237eb2b983976c9",
+    "caller_plan_sha256": "b286c99a798526802e1fe4905f32cab7d5fa3441f4a34abf682503bbd6a1599c",
+    "call_sid": "60fc9c72-1ccc-4e8b-91a3-430b2233227f",
+    "call_control_id": "60fc9c72-1ccc-4e8b-91a3-430b2233227f",
+    "verify_skipped": false,
+    "cases": [
+      "company-history",
+      "payment-methods",
+      "gamer-boost"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "for calling Northwind internet how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "When was Northwind Internet founded and where are you based?",
+        "case_id": "company-history",
+        "expect_keywords": [
+          "2011",
+          "Portland"
+        ],
+        "spoken": true,
+        "transcript": "Northwind internet was founded in 2011 and is headquartered in Portland Oregon",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "What payment methods do you accept?",
+        "case_id": "payment-methods",
+        "expect_keywords": [
+          "PayPal"
+        ],
+        "spoken": true,
+        "transcript": "we accept credit card bank transfer and PayPal",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "What is Gamer Boost and how much does it cost?",
+        "case_id": "gamer-boost",
+        "expect_keywords": [
+          "13"
+        ],
+        "spoken": true,
+        "transcript": "gamer boost is a low latency routing add-on that costs $13 per month",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "",
+        "answer_verified": null,
+        "reply_timed_out": null
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    },
+    "timing": {
+      "placed_at": "2026-07-31T23:35:17.564+00:00",
+      "answered_at": "2026-07-31T23:35:22.496+00:00",
+      "ended_at": "2026-07-31T23:36:04.436+00:00",
+      "placed_at_epoch": 1785540917.564529,
+      "answered_at_epoch": 1785540922.496418,
+      "ended_at_epoch": 1785540964.436634,
+      "wall_duration_s": 46.872,
+      "answer_delay_s": 4.932
+    },
+    "set_index": 6,
+    "sync_session": "20260731-152959"
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-telnyx-20260731-152959/call-056.wav",
+    "sha256": "5159b8b6782b4b723b2216f13633171eb128918fb8846b1fc0eb43ad345c0e5f",
+    "bytes": 1314604,
+    "source": "recording_raw.wav"
+  },
+  "cost": {
+    "vendor_call_id": "183debac-144c-447c-8495-f5d009174a2b",
+    "cost": 0.05,
+    "currency": "USD",
+    "duration_s": 42.0,
+    "billed_s": 60.0,
+    "source": "GET /v2/detail_records[ai-voice-assistant] .cost",
+    "notes": [
+      "cost is the ai-voice-assistant detail record; a separate PSTN leg may be billed under another record type",
+      "billed 60s for a 42s call (Telnyx bills a 60-second minimum)"
+    ]
+  }
+}

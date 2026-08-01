@@ -75,10 +75,51 @@ PUBLISHABLE_N = 100
 
 
 class Registry:
-    """One active call at a time (sequential bench)."""
+    """The calls currently in flight, keyed by their per-call token.
+
+    Sequential mode has at most one, but the synchronised mode places one call
+    per vendor at the same instant, so "the current call" stops being a thing
+    that exists. Every webhook URL carries the token of the call it belongs to
+    (`DialogSession.token`), which is both the routing key and the auth -- an
+    unguessable path is what stops an unauthenticated POST putting words in our
+    mouth mid-measurement.
+    """
 
     def __init__(self):
-        self.current: DialogSession | None = None
+        self._by_token: dict[str, DialogSession] = {}
+        self._lock = threading.Lock()
+
+    def add(self, call: DialogSession) -> None:
+        with self._lock:
+            self._by_token[call.token] = call
+
+    def drop(self, call: DialogSession) -> None:
+        with self._lock:
+            self._by_token.pop(call.token, None)
+
+    def get(self, token: str) -> DialogSession | None:
+        with self._lock:
+            return self._by_token.get(token)
+
+    @property
+    def current(self) -> DialogSession | None:
+        """The only call in flight, or None.
+
+        Kept for the untokenised webhook routes, which exist because
+        probe_dialog and the older answer URL do not carry a token. Returns None
+        rather than guessing when several calls are live -- picking one would
+        drive the wrong conversation, and a 409 is recoverable where that is not.
+        """
+        with self._lock:
+            live = list(self._by_token.values())
+        return live[0] if len(live) == 1 else None
+
+    @current.setter
+    def current(self, call: DialogSession | None) -> None:
+        with self._lock:
+            self._by_token.clear()
+            if call is not None:
+                self._by_token[call.token] = call
 
 
 def build_bench_app(registry: Registry) -> FastAPI:
@@ -91,8 +132,18 @@ def build_bench_app(registry: Registry) -> FastAPI:
     carrier = get_carrier()
     app = FastAPI(title="bench")
 
+    @app.post("/webhooks/answer/{token}")
+    async def answer_for(token: str, request: Request) -> Response:
+        params = await carrier.verify_webhook(request)
+        call = registry.get(token)
+        if call is None:
+            return Response(status_code=409)
+        return Response(content=call.answer_xml(params),
+                        media_type="application/xml")
+
     @app.post("/webhooks/answer")
     async def answer(request: Request) -> Response:
+        """Untokenised fallback: only resolvable when one call is in flight."""
         params = await carrier.verify_webhook(request)
         call = registry.current
         if call is None:
@@ -103,11 +154,27 @@ def build_bench_app(registry: Registry) -> FastAPI:
     @app.post("/webhooks/dialog/{token}/{step}")
     async def dialog(token: str, step: str, request: Request) -> Response:
         params = await carrier.verify_webhook(request)
-        call = registry.current
-        if call is None or token != call.token:
+        call = registry.get(token)
+        if call is None:
             return Response(status_code=409)
         return Response(content=call.handle_action(step, params),
                         media_type="application/xml")
+
+    @app.post("/webhooks/hangup/{token}")
+    async def hangup_for(token: str, request: Request) -> dict:
+        params = await carrier.verify_webhook(request)
+        call = registry.get(token)
+        if call is not None:
+            call.note_hangup(params)
+        return {"ok": True}
+
+    @app.post("/webhooks/recording/{token}")
+    async def recording_for(token: str, request: Request) -> dict:
+        params = await carrier.verify_webhook(request)
+        call = registry.get(token)
+        if call is not None:
+            call.note_recording_callback(params)
+        return {"ok": True}
 
     @app.post("/webhooks/hangup")
     async def hangup(request: Request) -> dict:

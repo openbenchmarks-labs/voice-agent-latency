@@ -1,0 +1,224 @@
+{
+  "result": {
+    "analyzer_version": "2.4.0",
+    "call_id": "call-048",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "near_utterances=4",
+      "t1_crosscheck=10.0ms"
+    ],
+    "greeting_end_ms": 2908.0,
+    "greeting_onset_ms": 388.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -72.24719895935549,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-bland-20260731-152959",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 5712.0,
+    "t1_ms": 7810.0,
+    "t2_ms": 9248.0,
+    "ttfab_content_ms": 1438.0,
+    "ttfab_onset_ms": 1438.0,
+    "ttfg_ms": 388.0,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=10.0ms",
+          "case=not-in-facts",
+          "answer_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 5712.0,
+        "t1_ms": 7810.0,
+        "t2_ms": 9248.0,
+        "ttfab_content_ms": 1438.0,
+        "ttfab_onset_ms": 1438.0,
+        "vad_disagreement_ms": 8.0,
+        "vad_disagreement_signed_ms": 8.0,
+        "vendor_response_duration_ms": 2990.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=68.0ms",
+          "case=money-back",
+          "answer_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 15026.0,
+        "t1_ms": 16652.0,
+        "t2_ms": 18096.0,
+        "ttfab_content_ms": 2178.0,
+        "ttfab_onset_ms": 1444.0,
+        "vad_disagreement_ms": 16.0,
+        "vad_disagreement_signed_ms": 16.0,
+        "vendor_response_duration_ms": 392.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=112.0ms",
+          "case=moving",
+          "answer_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 24790.0,
+        "t1_ms": 27328.0,
+        "t2_ms": 28846.0,
+        "ttfab_content_ms": 1518.0,
+        "ttfab_onset_ms": 1518.0,
+        "vad_disagreement_ms": 6.0,
+        "vad_disagreement_signed_ms": 6.0,
+        "vendor_response_duration_ms": 4442.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=54.0ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 35692.0,
+        "t1_ms": 37586.0,
+        "t2_ms": 39084.0,
+        "ttfab_content_ms": 1498.0,
+        "ttfab_onset_ms": 1498.0,
+        "vad_disagreement_ms": 4.0,
+        "vad_disagreement_signed_ms": 4.0,
+        "vendor_response_duration_ms": 504.0
+      }
+    ],
+    "vad_disagreement_ms": 8.0,
+    "vendor": "bland",
+    "vendor_response_duration_ms": 2990.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-048",
+    "run_id": "bench-bland-20260731-152959",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "bland",
+    "carrier": "plivo",
+    "vendor_config_sha256": "e82a64ec97b1a8362db4c9d1a59ed73cc9eb1fbfbac8d4736ae7baaf5e9e4451",
+    "caller_config_sha256": "ae28252c498ccbeba3152539550ef938dfdc5585a5cca46a7f728fa811fcd53d",
+    "caller_plan_sha256": "b286c99a798526802e1fe4905f32cab7d5fa3441f4a34abf682503bbd6a1599c",
+    "call_sid": "aa076d2f-b78a-4d47-978d-2b41f7a8280c",
+    "call_control_id": "aa076d2f-b78a-4d47-978d-2b41f7a8280c",
+    "verify_skipped": false,
+    "cases": [
+      "not-in-facts",
+      "money-back",
+      "moving"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "thanks for calling Northwind internet how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "Do you offer satellite TV packages?",
+        "case_id": "not-in-facts",
+        "expect_keywords": [
+          "specialist"
+        ],
+        "spoken": true,
+        "transcript": "I don't have that information but I can connect you to a specialist",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "Do you have a money-back guarantee?",
+        "case_id": "money-back",
+        "expect_keywords": [
+          "30"
+        ],
+        "spoken": true,
+        "transcript": "yes new customers have a 30-day money back guarantee",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "I'm moving. Can I take my service with me?",
+        "case_id": "moving",
+        "expect_keywords": [
+          "free",
+          "10"
+        ],
+        "spoken": true,
+        "transcript": "yes moving your service to a new address is free with 10 business days notice",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "goodbye and thanks for choosing Northwind internet",
+        "answer_verified": null,
+        "reply_timed_out": false
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    },
+    "timing": {
+      "placed_at": "2026-07-31T23:25:42.886+00:00",
+      "answered_at": "2026-07-31T23:25:45.553+00:00",
+      "ended_at": "2026-07-31T23:26:30.209+00:00",
+      "placed_at_epoch": 1785540342.8865778,
+      "answered_at_epoch": 1785540345.553507,
+      "ended_at_epoch": 1785540390.209206,
+      "wall_duration_s": 47.323,
+      "answer_delay_s": 2.667
+    },
+    "set_index": 48,
+    "sync_session": "20260731-152959"
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-bland-20260731-152959/call-048.wav",
+    "sha256": "6f845b6bb745847108a380ee7c4cba9315c0ad47ab7453070574c561863ad46a",
+    "bytes": 1408684,
+    "source": "recording_raw.wav"
+  },
+  "cost": {
+    "vendor_call_id": "8ce156ba-17bd-49c1-8869-ed1679a6feb6",
+    "cost": 0.103,
+    "currency": "USD",
+    "duration_s": 43.99999999999998,
+    "billed_s": null,
+    "source": "GET /v1/calls .price",
+    "notes": [
+      "call_length is reported in minutes; converted to seconds",
+      "Bland publishes no cost breakdown -- the figure is a single all-in price"
+    ]
+  }
+}

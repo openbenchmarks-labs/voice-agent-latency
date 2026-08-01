@@ -1,0 +1,213 @@
+{
+  "result": {
+    "analyzer_version": "2.4.0",
+    "call_id": "call-005",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "near_utterances=4",
+      "t1_crosscheck=22.0ms"
+    ],
+    "greeting_end_ms": 11616.0,
+    "greeting_onset_ms": 9974.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -72.24719895935549,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-telnyx-20260731-152959",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 14932.0,
+    "t1_ms": 16318.0,
+    "t2_ms": 17376.0,
+    "ttfab_content_ms": 1058.0,
+    "ttfab_onset_ms": 1058.0,
+    "ttfg_ms": 9974.0,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=22.0ms",
+          "case=service-area",
+          "answer_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 14932.0,
+        "t1_ms": 16318.0,
+        "t2_ms": 17376.0,
+        "ttfab_content_ms": 1058.0,
+        "ttfab_onset_ms": 1058.0,
+        "vad_disagreement_ms": 4.0,
+        "vad_disagreement_signed_ms": -4.0,
+        "vendor_response_duration_ms": 3116.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=78.0ms",
+          "case=student-discount",
+          "answer_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 25812.0,
+        "t1_ms": 27102.0,
+        "t2_ms": 28420.0,
+        "ttfab_content_ms": 1318.0,
+        "ttfab_onset_ms": 1318.0,
+        "vad_disagreement_ms": 0.0,
+        "vad_disagreement_signed_ms": 0.0,
+        "vendor_response_duration_ms": 414.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=0.0ms",
+          "case=reschedule",
+          "answer_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 34854.0,
+        "t1_ms": 37280.0,
+        "t2_ms": 39112.0,
+        "ttfab_content_ms": 1832.0,
+        "ttfab_onset_ms": 1832.0,
+        "vad_disagreement_ms": 8.0,
+        "vad_disagreement_signed_ms": -8.0,
+        "vendor_response_duration_ms": 2560.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=54.0ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 45072.0,
+        "t1_ms": 46966.0,
+        "t2_ms": 47978.0,
+        "ttfab_content_ms": 1012.0,
+        "ttfab_onset_ms": 1012.0,
+        "vad_disagreement_ms": 18.0,
+        "vad_disagreement_signed_ms": 18.0,
+        "vendor_response_duration_ms": 2530.0
+      }
+    ],
+    "vad_disagreement_ms": 4.0,
+    "vendor": "telnyx",
+    "vendor_response_duration_ms": 3116.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-005",
+    "run_id": "bench-telnyx-20260731-152959",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "telnyx",
+    "carrier": "plivo",
+    "vendor_config_sha256": "5277d96e7b0c2e5c95641a0f276bba058fb43354f778e89fe7392c8cb839a876",
+    "caller_config_sha256": "8bcd9e1b920578d22b66c5b620893bb8751068d19ae2871e5541ceedef65e85f",
+    "caller_plan_sha256": "b286c99a798526802e1fe4905f32cab7d5fa3441f4a34abf682503bbd6a1599c",
+    "call_sid": "99f85914-85c0-48e2-9355-0e42d722d649",
+    "call_control_id": "99f85914-85c0-48e2-9355-0e42d722d649",
+    "verify_skipped": false,
+    "cases": [
+      "service-area",
+      "student-discount",
+      "reschedule"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "is there anything I can help you with today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "Which states do you serve?",
+        "case_id": "service-area",
+        "expect_keywords": [
+          "Oregon",
+          "Idaho",
+          "Nevada"
+        ],
+        "spoken": true,
+        "transcript": "we provide service in Oregon Idaho and Nevada",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "Is there a student discount?",
+        "case_id": "student-discount",
+        "expect_keywords": [
+          "20"
+        ],
+        "spoken": true,
+        "transcript": "yes students get a 20% discount with a valid student ID",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "How late can I reschedule a technician appointment?",
+        "case_id": "reschedule",
+        "expect_keywords": [
+          "2 hours"
+        ],
+        "spoken": true,
+        "transcript": "you can reschedule up to 2 hours before the appointment",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "",
+        "answer_verified": null,
+        "reply_timed_out": null
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    },
+    "timing": {
+      "placed_at": "2026-07-31T22:35:35.867+00:00",
+      "answered_at": "2026-07-31T22:35:45.546+00:00",
+      "ended_at": "2026-07-31T22:36:36.607+00:00",
+      "placed_at_epoch": 1785537335.867667,
+      "answered_at_epoch": 1785537345.546224,
+      "ended_at_epoch": 1785537396.6077309,
+      "wall_duration_s": 60.74,
+      "answer_delay_s": 9.679
+    },
+    "set_index": 5,
+    "sync_session": "20260731-152959"
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-telnyx-20260731-152959/call-005.wav",
+    "sha256": "eafd83b24ca3091b15914797db99e62c3ed58ed5eb158a8a06b10556cacd1665",
+    "bytes": 1621804,
+    "source": "recording_raw.wav"
+  }
+}

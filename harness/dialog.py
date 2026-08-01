@@ -33,6 +33,7 @@ import secrets
 import threading
 import time
 from dataclasses import dataclass, field
+from datetime import datetime, timezone
 from pathlib import Path
 
 import httpx
@@ -58,7 +59,7 @@ SCENARIOS_PATH = data_root() / "data" / "voice-bench" / "ttfab_scenarios.json"
 DIALOG_CONFIG_PATH = _PKG_ROOT / "config" / "dialog.yaml"
 
 ANALYZER_RATE = 8000
-RECORDING_POLL_S = 90.0
+RECORDING_POLL_S = 30.0
 RECORDING_POLL_INTERVAL_S = 3.0
 
 # Wall-clock backstop for one call: greeting listen + n turns, each bounded by
@@ -380,6 +381,20 @@ class DialogSession:
     replies: dict[int, dict] = field(default_factory=dict)
     recording_url: str | None = None
 
+    # Wall-clock bounds of the call, for the synchronised multi-vendor mode:
+    # proving the calls really were simultaneous needs the timestamps written
+    # down, not inferred from event ordering. Also useful on a sequential run --
+    # `ended_at - placed_at` is the wall cost of a call, which the report never
+    # otherwise records.
+    #: When anything last happened on this call. A healthy call emits an event
+    #: every few seconds; long silence means the carrier has stopped talking to
+    #: us and no amount of further waiting will change that.
+    last_event_at: float = field(default_factory=time.time)
+
+    placed_at: float | None = None
+    answered_at: float | None = None
+    ended_at: float | None = None
+
     answered: threading.Event = field(default_factory=threading.Event)
     hangup_seen: threading.Event = field(default_factory=threading.Event)
     dialog_done: threading.Event = field(default_factory=threading.Event)
@@ -389,7 +404,33 @@ class DialogSession:
 
     # ----------------------------------------------------------------- events
 
+    def timing(self) -> dict:
+        """The call's wall-clock bounds, as ISO-8601 UTC plus raw epoch.
+
+        Both forms on purpose: the ISO string is what a human compares across
+        vendors, the epoch is what arithmetic uses without reparsing.
+        """
+        def iso(t: float | None) -> str | None:
+            if t is None:
+                return None
+            return datetime.fromtimestamp(t, tz=timezone.utc).isoformat(
+                timespec="milliseconds")
+        out = {
+            "placed_at": iso(self.placed_at),
+            "answered_at": iso(self.answered_at),
+            "ended_at": iso(self.ended_at),
+            "placed_at_epoch": self.placed_at,
+            "answered_at_epoch": self.answered_at,
+            "ended_at_epoch": self.ended_at,
+        }
+        if self.placed_at and self.ended_at:
+            out["wall_duration_s"] = round(self.ended_at - self.placed_at, 3)
+        if self.placed_at and self.answered_at:
+            out["answer_delay_s"] = round(self.answered_at - self.placed_at, 3)
+        return out
+
     def event(self, name: str, **kw) -> None:
+        self.last_event_at = time.time()
         with self._lock:
             with (self.out_dir / "events.jsonl").open("a") as fh:
                 fh.write(json.dumps({
@@ -429,8 +470,10 @@ class DialogSession:
         self.event("answered", call_uuid=self.call_control_id,
                    from_=params.get("From"), to=params.get("To"))
         self.answered.set()
+        self.answered_at = self.answered_at or time.time()
         xml = build_response(
-            build_record_element(callback_url=self._base() + "/webhooks/recording",
+            build_record_element(callback_url=self._base()
+                                 + f"/webhooks/recording/{self.token}",
                                  max_seconds=int(CALL_DEADLINE_S)),
             self._listen("greeting", None,
                          execution_timeout=int(self.script.greeting_timeout_s)),
@@ -555,6 +598,7 @@ class DialogSession:
         self.event("hangup_webhook", **(params or {}))
         self.hangup_seen.set()
         self.dialog_done.set()
+        self.ended_at = self.ended_at or time.time()
 
     def note_recording_callback(self, params: dict) -> None:
         # Plivo sends the same URL under both RecordUrl and RecordFile

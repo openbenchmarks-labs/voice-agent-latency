@@ -1,0 +1,227 @@
+{
+  "result": {
+    "analyzer_version": "2.4.0",
+    "call_id": "call-074",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "recording_started_mid_speech",
+      "near_utterances=4",
+      "pre_stimulus_utterances=2",
+      "greeting_pause_ms=1260",
+      "t1_crosscheck=50.0ms",
+      "vendor_spoke_before_first_turn=1"
+    ],
+    "greeting_end_ms": 1046.0,
+    "greeting_onset_ms": 8.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -64.51018837650331,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-vapi-20260731-152959",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 5972.0,
+    "t1_ms": 8410.0,
+    "t2_ms": 9834.0,
+    "ttfab_content_ms": 1424.0,
+    "ttfab_onset_ms": 1424.0,
+    "ttfg_ms": null,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=50.0ms",
+          "case=gamer-boost",
+          "answer_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 5972.0,
+        "t1_ms": 8410.0,
+        "t2_ms": 9834.0,
+        "ttfab_content_ms": 1424.0,
+        "ttfab_onset_ms": 1424.0,
+        "vad_disagreement_ms": 6.0,
+        "vad_disagreement_signed_ms": -6.0,
+        "vendor_response_duration_ms": 2766.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=78.0ms",
+          "vad_crosscheck_unavailable=1508ms",
+          "case=installation-fee",
+          "answer_not_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 18934.0,
+        "t1_ms": 20902.0,
+        "t2_ms": 22408.0,
+        "ttfab_content_ms": 1506.0,
+        "ttfab_onset_ms": 1506.0,
+        "vad_disagreement_ms": 1508.0,
+        "vad_disagreement_signed_ms": 1508.0,
+        "vendor_response_duration_ms": 2628.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=24.0ms",
+          "vad_crosscheck_unavailable=1930ms",
+          "case=data-cap",
+          "answer_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 29112.0,
+        "t1_ms": 30784.0,
+        "t2_ms": 31990.0,
+        "ttfab_content_ms": 1206.0,
+        "ttfab_onset_ms": 1206.0,
+        "vad_disagreement_ms": 1930.0,
+        "vad_disagreement_signed_ms": -1930.0,
+        "vendor_response_duration_ms": 2876.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=54.0ms",
+          "vad_onset_conservative=+168ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 37852.0,
+        "t1_ms": 39746.0,
+        "t2_ms": 41568.0,
+        "ttfab_content_ms": 1822.0,
+        "ttfab_onset_ms": 1822.0,
+        "vad_disagreement_ms": 168.0,
+        "vad_disagreement_signed_ms": 168.0,
+        "vendor_response_duration_ms": 2986.0
+      }
+    ],
+    "vad_disagreement_ms": 6.0,
+    "vendor": "vapi",
+    "vendor_response_duration_ms": 2766.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-074",
+    "run_id": "bench-vapi-20260731-152959",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "vapi",
+    "carrier": "plivo",
+    "vendor_config_sha256": "4b8a525c1f804d6a7ea1c1c86784c7bcad0cb253c151a039a7301c5135c18595",
+    "caller_config_sha256": "8e0d56b5d3aaa0a9993638df81dea9dd6858d9c9b715670f2346bc4023785c98",
+    "caller_plan_sha256": "b286c99a798526802e1fe4905f32cab7d5fa3441f4a34abf682503bbd6a1599c",
+    "call_sid": "710de28f-9f09-4bac-9a32-a41d62a021ff",
+    "call_control_id": "710de28f-9f09-4bac-9a32-a41d62a021ff",
+    "verify_skipped": false,
+    "cases": [
+      "gamer-boost",
+      "installation-fee",
+      "data-cap"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "for calling Northwind internet how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "What is Gamer Boost and how much does it cost?",
+        "case_id": "gamer-boost",
+        "expect_keywords": [
+          "13"
+        ],
+        "spoken": true,
+        "transcript": "gamer boost is a low latency routing add-on that cost $13 per month",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "How much is professional installation?",
+        "case_id": "installation-fee",
+        "expect_keywords": [
+          "85"
+        ],
+        "spoken": true,
+        "transcript": "Professional installation is a 1-time fee of $5",
+        "answer_verified": false,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "Is there a data cap on your plans?",
+        "case_id": "data-cap",
+        "expect_keywords": [
+          "unlimited"
+        ],
+        "spoken": true,
+        "transcript": "no all our plans have unlimited data with no data caps",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "goodbye and uh thanks for choosing Northwind internet",
+        "answer_verified": null,
+        "reply_timed_out": false
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    },
+    "timing": {
+      "placed_at": "2026-07-31T23:54:27.408+00:00",
+      "answered_at": "2026-07-31T23:54:29.383+00:00",
+      "ended_at": "2026-07-31T23:55:16.748+00:00",
+      "placed_at_epoch": 1785542067.408192,
+      "answered_at_epoch": 1785542069.3833768,
+      "ended_at_epoch": 1785542116.748663,
+      "wall_duration_s": 49.34,
+      "answer_delay_s": 1.975
+    },
+    "set_index": 24,
+    "sync_session": "20260731-152959"
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-vapi-20260731-152959/call-074.wav",
+    "sha256": "41ea8d5076b802174734e39160f993f2c2790d6b6da970f871f4519c81808bd4",
+    "bytes": 1500844,
+    "source": "recording_raw.wav"
+  },
+  "cost": {
+    "vendor_call_id": "019fba99-cac4-7000-ab2c-ddb531e240a4",
+    "cost": 0.0637,
+    "currency": "USD",
+    "duration_s": 47.5939998626709,
+    "billed_s": null,
+    "source": "GET /call .cost",
+    "notes": []
+  }
+}

@@ -257,6 +257,17 @@ def _gate_a_dialog() -> int:
                         f"expected {truth['expect_call_discard'] or 'a measurement'}")
                 continue
 
+            # Flags a fixture must carry. Checked by prefix so the measured value
+            # (a pause in ms, a count) stays free to differ. Without this a
+            # fixture whose point is "kept, but recorded" would pass on the
+            # verdict alone, and the recording half could silently disappear.
+            for prefix in truth.get("expect_flags", ()):
+                if not any(f.startswith(prefix) for f in result.flags):
+                    failures.append(f"{name}: missing flag {prefix!r} "
+                                    f"(flags: {', '.join(result.flags) or 'none'})")
+                    print(f"{name:<24} {'-':>5} {'-':>10} {'-':>10} {'-':>8} "
+                          f"{'-':>8}  FAIL: missing flag {prefix!r}")
+
             for turn, row in zip(result.turns, truth["turns"]):
                 wanted = row["expect_discard"]
                 t1_err = (turn.t1_ms - samples_to_ms(row["t1"], rate)

@@ -8,7 +8,7 @@ There is no audio in this folder and there never will be. The carrier's stereo t
 
 ```
 data/voice-runs/
-└── <run_id>/                    # e.g. bench-telnyx-20260730-173501
+└── <run_id>/                    # e.g. bench-telnyx-20260731-152959
     ├── bench.json               # the run's report — aggregates, receipts, honesty block
     └── call-NNN.json            # one per call — every turn, with the tape it was measured from
 ```
@@ -24,7 +24,7 @@ Four blocks. `result` is the measurement, `metadata` is what was said and how, `
   "result": {
     "call_id": "call-003",
     "run_id": "bench-vapi-20260730-183425",
-    "analyzer_version": "2.3.0",      // pins what "the same number" means
+    "analyzer_version": "2.4.0",      // pins what "the same number" means
     "mode": "scripted_dialog",
     "rate": 8000,                      // the analyzer's working rate, after resample
     "noise_floor_dbfs": -61.5,
@@ -155,7 +155,7 @@ Or by hand, for one call:
 3. **Re-measure.** Put the resampled file as `recording.wav` in a directory with `metadata` written out as `metadata.json`, then run the analyzer over it. `metadata.json` is required: without `channel_map` the analyzer cannot tell the two sides apart.
 4. **Diff** your per-turn `ttfab_onset_ms` against `result.turns[].ttfab_onset_ms`.
 
-The analyzer is deterministic and reads no clock, so a matching input gives a matching number. At the time of publishing, all 195 turns re-derive exactly.
+The analyzer is deterministic and reads no clock, so a matching input gives a matching number. At the time of publishing, all 2,078 turns on the board re-derive exactly — both the 2026-07-31 generation and the 2026-07-30 runs pooled with it, the latter measured by an analyzer one version newer than the one that first published them.
 
 ## Pointers
 

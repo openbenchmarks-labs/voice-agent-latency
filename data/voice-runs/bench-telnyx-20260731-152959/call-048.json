@@ -1,0 +1,212 @@
+{
+  "result": {
+    "analyzer_version": "2.4.0",
+    "call_id": "call-048",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "near_utterances=4",
+      "t1_crosscheck=10.0ms"
+    ],
+    "greeting_end_ms": 4064.0,
+    "greeting_onset_ms": 1290.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -72.24719895935549,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-telnyx-20260731-152959",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 7692.0,
+    "t1_ms": 9790.0,
+    "t2_ms": 11204.0,
+    "ttfab_content_ms": 1414.0,
+    "ttfab_onset_ms": 1414.0,
+    "ttfg_ms": 1290.0,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=10.0ms",
+          "case=not-in-facts",
+          "answer_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 7692.0,
+        "t1_ms": 9790.0,
+        "t2_ms": 11204.0,
+        "ttfab_content_ms": 1414.0,
+        "ttfab_onset_ms": 1414.0,
+        "vad_disagreement_ms": 4.0,
+        "vad_disagreement_signed_ms": 4.0,
+        "vendor_response_duration_ms": 1440.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=68.0ms",
+          "case=money-back",
+          "answer_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 17266.0,
+        "t1_ms": 18892.0,
+        "t2_ms": 20498.0,
+        "ttfab_content_ms": 2236.0,
+        "ttfab_onset_ms": 1606.0,
+        "vad_disagreement_ms": 2.0,
+        "vad_disagreement_signed_ms": -2.0,
+        "vendor_response_duration_ms": 344.0
+      },
+      {
+        "discard_reason": "no_response",
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=112.0ms",
+          "case=moving",
+          "answer_not_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 26390.0,
+        "t1_ms": 28928.0,
+        "t2_ms": null,
+        "ttfab_content_ms": null,
+        "ttfab_onset_ms": null,
+        "vad_disagreement_ms": null,
+        "vad_disagreement_signed_ms": null,
+        "vendor_response_duration_ms": null
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=54.0ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 59312.0,
+        "t1_ms": 61206.0,
+        "t2_ms": 62248.0,
+        "ttfab_content_ms": 1042.0,
+        "ttfab_onset_ms": 1042.0,
+        "vad_disagreement_ms": 8.0,
+        "vad_disagreement_signed_ms": 8.0,
+        "vendor_response_duration_ms": 6162.0
+      }
+    ],
+    "vad_disagreement_ms": 4.0,
+    "vendor": "telnyx",
+    "vendor_response_duration_ms": 1440.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-048",
+    "run_id": "bench-telnyx-20260731-152959",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "telnyx",
+    "carrier": "plivo",
+    "vendor_config_sha256": "5277d96e7b0c2e5c95641a0f276bba058fb43354f778e89fe7392c8cb839a876",
+    "caller_config_sha256": "ae28252c498ccbeba3152539550ef938dfdc5585a5cca46a7f728fa811fcd53d",
+    "caller_plan_sha256": "b286c99a798526802e1fe4905f32cab7d5fa3441f4a34abf682503bbd6a1599c",
+    "call_sid": "695b92ef-f90c-4be6-88f0-17bc190bb194",
+    "call_control_id": "695b92ef-f90c-4be6-88f0-17bc190bb194",
+    "verify_skipped": false,
+    "cases": [
+      "not-in-facts",
+      "money-back",
+      "moving"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "thanks for calling Northwind internet how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "Do you offer satellite TV packages?",
+        "case_id": "not-in-facts",
+        "expect_keywords": [
+          "specialist"
+        ],
+        "spoken": true,
+        "transcript": "I don't have that information but I can connect you to a specialist",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "Do you have a money-back guarantee?",
+        "case_id": "money-back",
+        "expect_keywords": [
+          "30"
+        ],
+        "spoken": true,
+        "transcript": "yes new customers have a 30-day money back guarantee",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "I'm moving. Can I take my service with me?",
+        "case_id": "moving",
+        "expect_keywords": [
+          "free",
+          "10"
+        ],
+        "spoken": true,
+        "transcript": "",
+        "answer_verified": false,
+        "reply_timed_out": true
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "",
+        "answer_verified": null,
+        "reply_timed_out": null
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    },
+    "timing": {
+      "placed_at": "2026-07-31T23:25:42.889+00:00",
+      "answered_at": "2026-07-31T23:25:47.000+00:00",
+      "ended_at": "2026-07-31T23:26:55.896+00:00",
+      "placed_at_epoch": 1785540342.889312,
+      "answered_at_epoch": 1785540347.0005739,
+      "ended_at_epoch": 1785540415.896325,
+      "wall_duration_s": 73.007,
+      "answer_delay_s": 4.111
+    },
+    "set_index": 48,
+    "sync_session": "20260731-152959"
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-telnyx-20260731-152959/call-048.wav",
+    "sha256": "b618f97b6636173884e6980a36d41fd21baae5ccdbb179a687cd4fc7b801bf08",
+    "bytes": 2196524,
+    "source": "recording_raw.wav"
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "result": {
+    "analyzer_version": "2.4.0",
+    "call_id": "call-064",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "near_utterances=4",
+      "t1_crosscheck=42.0ms"
+    ],
+    "greeting_end_ms": 2906.0,
+    "greeting_onset_ms": 374.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -72.24719895935549,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-elevenlabs-20260731-152959",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 5936.0,
+    "t1_ms": 8462.0,
+    "t2_ms": 9896.0,
+    "ttfab_content_ms": 1434.0,
+    "ttfab_onset_ms": 1434.0,
+    "ttfg_ms": 374.0,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=42.0ms",
+          "case=installation-time",
+          "answer_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 5936.0,
+        "t1_ms": 8462.0,
+        "t2_ms": 9896.0,
+        "ttfab_content_ms": 1434.0,
+        "ttfab_onset_ms": 1434.0,
+        "vad_disagreement_ms": 16.0,
+        "vad_disagreement_signed_ms": 16.0,
+        "vendor_response_duration_ms": 3352.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=8.0ms",
+          "case=late-fee",
+          "answer_not_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 16072.0,
+        "t1_ms": 17848.0,
+        "t2_ms": 19236.0,
+        "ttfab_content_ms": 1388.0,
+        "ttfab_onset_ms": 1388.0,
+        "vad_disagreement_ms": 4.0,
+        "vad_disagreement_signed_ms": -4.0,
+        "vendor_response_duration_ms": 3234.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=68.0ms",
+          "case=money-back",
+          "answer_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 26026.0,
+        "t1_ms": 27652.0,
+        "t2_ms": 28692.0,
+        "ttfab_content_ms": 1040.0,
+        "ttfab_onset_ms": 1040.0,
+        "vad_disagreement_ms": 12.0,
+        "vad_disagreement_signed_ms": 12.0,
+        "vendor_response_duration_ms": 2304.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=54.0ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 34052.0,
+        "t1_ms": 35946.0,
+        "t2_ms": 37216.0,
+        "ttfab_content_ms": 1270.0,
+        "ttfab_onset_ms": 1270.0,
+        "vad_disagreement_ms": 16.0,
+        "vad_disagreement_signed_ms": 16.0,
+        "vendor_response_duration_ms": 1972.0
+      }
+    ],
+    "vad_disagreement_ms": 16.0,
+    "vendor": "elevenlabs",
+    "vendor_response_duration_ms": 3352.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-064",
+    "run_id": "bench-elevenlabs-20260731-152959",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "elevenlabs",
+    "carrier": "plivo",
+    "vendor_config_sha256": "f697ccc773d68033c7e35f5ed5d3e3b6ddc6f0b6fefa98c2dcf7cebbc0856976",
+    "caller_config_sha256": "7397a13d199a48ba9b76a4b18d5d9e6e2a2dd91dd5ff34d9b1188ec064a59729",
+    "caller_plan_sha256": "b286c99a798526802e1fe4905f32cab7d5fa3441f4a34abf682503bbd6a1599c",
+    "call_sid": "2477d786-6db1-4b80-adf5-c429d893aaef",
+    "call_control_id": "2477d786-6db1-4b80-adf5-c429d893aaef",
+    "verify_skipped": false,
+    "cases": [
+      "installation-time",
+      "late-fee",
+      "money-back"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "thanks for calling Northwind internet how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "How soon can someone come install my internet?",
+        "case_id": "installation-time",
+        "expect_keywords": [
+          "4",
+          "business days"
+        ],
+        "spoken": true,
+        "transcript": "standard installation appointments are available within 4 business days",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "What happens if I pay my bill late?",
+        "case_id": "late-fee",
+        "expect_keywords": [
+          "9"
+        ],
+        "spoken": true,
+        "transcript": "late payments in current dollar fee after 15-day grace period",
+        "answer_verified": false,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "Do you have a money-back guarantee?",
+        "case_id": "money-back",
+        "expect_keywords": [
+          "30"
+        ],
+        "spoken": true,
+        "transcript": "new customers have a 30-day money back guarantee",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "goodbye and thanks for choosing Northwind internet",
+        "answer_verified": null,
+        "reply_timed_out": false
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    },
+    "timing": {
+      "placed_at": "2026-07-31T23:43:53.178+00:00",
+      "answered_at": "2026-07-31T23:43:55.599+00:00",
+      "ended_at": "2026-07-31T23:44:37.978+00:00",
+      "placed_at_epoch": 1785541433.1789088,
+      "answered_at_epoch": 1785541435.5996108,
+      "ended_at_epoch": 1785541477.978865,
+      "wall_duration_s": 44.8,
+      "answer_delay_s": 2.421
+    },
+    "set_index": 14,
+    "sync_session": "20260731-152959"
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-elevenlabs-20260731-152959/call-064.wav",
+    "sha256": "17010f861e081c77d7f0cddbe3aac056b31206ee87259d1e909461534bb49e95",
+    "bytes": 1338284,
+    "source": "recording_raw.wav"
+  },
+  "cost": {
+    "vendor_call_id": "conv_7801kyx907y6f1kb8r9695bmce1p",
+    "cost": 0.05648556173141355,
+    "currency": "USD",
+    "duration_s": 42,
+    "billed_s": null,
+    "source": "GET /v1/convai/conversations/{id} .metadata.cost_fiat",
+    "notes": [
+      "cost_fiat is the USD figure; `cost` is in credits",
+      "account tier is 'creator' -- cost_fiat is the list-price equivalent, not an amount billed"
+    ]
+  }
+}

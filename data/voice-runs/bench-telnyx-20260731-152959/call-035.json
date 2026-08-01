@@ -1,0 +1,211 @@
+{
+  "result": {
+    "analyzer_version": "2.4.0",
+    "call_id": "call-035",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "near_utterances=4",
+      "t1_crosscheck=42.0ms"
+    ],
+    "greeting_end_ms": 3930.0,
+    "greeting_onset_ms": 1066.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -72.24719895935549,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-telnyx-20260731-152959",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 6492.0,
+    "t1_ms": 7818.0,
+    "t2_ms": 8870.0,
+    "ttfab_content_ms": 1660.0,
+    "ttfab_onset_ms": 1052.0,
+    "ttfg_ms": 1066.0,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=42.0ms",
+          "case=free-trial",
+          "answer_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 6492.0,
+        "t1_ms": 7818.0,
+        "t2_ms": 8870.0,
+        "ttfab_content_ms": 1660.0,
+        "ttfab_onset_ms": 1052.0,
+        "vad_disagreement_ms": 10.0,
+        "vad_disagreement_signed_ms": 10.0,
+        "vendor_response_duration_ms": 390.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=78.0ms",
+          "case=installation-fee",
+          "answer_not_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 14334.0,
+        "t1_ms": 16302.0,
+        "t2_ms": 17266.0,
+        "ttfab_content_ms": 964.0,
+        "ttfab_onset_ms": 964.0,
+        "vad_disagreement_ms": 6.0,
+        "vad_disagreement_signed_ms": 6.0,
+        "vendor_response_duration_ms": 3078.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=24.0ms",
+          "case=data-cap",
+          "answer_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 23528.0,
+        "t1_ms": 25164.0,
+        "t2_ms": 26228.0,
+        "ttfab_content_ms": 1064.0,
+        "ttfab_onset_ms": 1064.0,
+        "vad_disagreement_ms": 8.0,
+        "vad_disagreement_signed_ms": 8.0,
+        "vendor_response_duration_ms": 2274.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=54.0ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 32072.0,
+        "t1_ms": 33966.0,
+        "t2_ms": 34982.0,
+        "ttfab_content_ms": 1016.0,
+        "ttfab_onset_ms": 1016.0,
+        "vad_disagreement_ms": 2.0,
+        "vad_disagreement_signed_ms": 2.0,
+        "vendor_response_duration_ms": 656.0
+      }
+    ],
+    "vad_disagreement_ms": 10.0,
+    "vendor": "telnyx",
+    "vendor_response_duration_ms": 390.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-035",
+    "run_id": "bench-telnyx-20260731-152959",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "telnyx",
+    "carrier": "plivo",
+    "vendor_config_sha256": "5277d96e7b0c2e5c95641a0f276bba058fb43354f778e89fe7392c8cb839a876",
+    "caller_config_sha256": "6ad169cb233e235d8ed4e0bbc13857880d55107725ce13ab58f7ac728effbc42",
+    "caller_plan_sha256": "b286c99a798526802e1fe4905f32cab7d5fa3441f4a34abf682503bbd6a1599c",
+    "call_sid": "72300643-7921-4e2f-ada2-06ea5fa4b4d8",
+    "call_control_id": "72300643-7921-4e2f-ada2-06ea5fa4b4d8",
+    "verify_skipped": false,
+    "cases": [
+      "free-trial",
+      "installation-fee",
+      "data-cap"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "thanks for calling Northwind internet how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "Do you offer a free trial?",
+        "case_id": "free-trial",
+        "expect_keywords": [
+          "14"
+        ],
+        "spoken": true,
+        "transcript": "yes new customers get a 14-day free trial",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "How much is professional installation?",
+        "case_id": "installation-fee",
+        "expect_keywords": [
+          "85"
+        ],
+        "spoken": true,
+        "transcript": "the 1-time Professional installation fee is $55",
+        "answer_verified": false,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "Is there a data cap on your plans?",
+        "case_id": "data-cap",
+        "expect_keywords": [
+          "unlimited"
+        ],
+        "spoken": true,
+        "transcript": "all plans have unlimited data with no data caps",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "",
+        "answer_verified": null,
+        "reply_timed_out": null
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    },
+    "timing": {
+      "placed_at": "2026-07-31T23:10:38.718+00:00",
+      "answered_at": "2026-07-31T23:10:42.007+00:00",
+      "ended_at": "2026-07-31T23:11:20.359+00:00",
+      "placed_at_epoch": 1785539438.718009,
+      "answered_at_epoch": 1785539442.007637,
+      "ended_at_epoch": 1785539480.3594491,
+      "wall_duration_s": 41.641,
+      "answer_delay_s": 3.29
+    },
+    "set_index": 35,
+    "sync_session": "20260731-152959"
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-telnyx-20260731-152959/call-035.wav",
+    "sha256": "c898017b16379dc56880278d16b52e8dc983e4746a31fb06ff6fc4d3dcbc3568",
+    "bytes": 1205164,
+    "source": "recording_raw.wav"
+  }
+}

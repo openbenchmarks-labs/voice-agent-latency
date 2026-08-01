@@ -1,0 +1,211 @@
+{
+  "result": {
+    "analyzer_version": "2.4.0",
+    "call_id": "call-012",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "near_utterances=4",
+      "t1_crosscheck=106.0ms"
+    ],
+    "greeting_end_ms": 3414.0,
+    "greeting_onset_ms": 620.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -72.24719895935549,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-telnyx-20260731-152959",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 6642.0,
+    "t1_ms": 8894.0,
+    "t2_ms": 10196.0,
+    "ttfab_content_ms": 1978.0,
+    "ttfab_onset_ms": 1302.0,
+    "ttfg_ms": 620.0,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=106.0ms",
+          "case=autopay",
+          "answer_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 6642.0,
+        "t1_ms": 8894.0,
+        "t2_ms": 10196.0,
+        "ttfab_content_ms": 1978.0,
+        "ttfab_onset_ms": 1302.0,
+        "vad_disagreement_ms": 4.0,
+        "vad_disagreement_signed_ms": -4.0,
+        "vendor_response_duration_ms": 398.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=68.0ms",
+          "case=equipment-return",
+          "answer_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 16554.0,
+        "t1_ms": 19292.0,
+        "t2_ms": 20290.0,
+        "ttfab_content_ms": 998.0,
+        "ttfab_onset_ms": 998.0,
+        "vad_disagreement_ms": 10.0,
+        "vad_disagreement_signed_ms": 10.0,
+        "vendor_response_duration_ms": 3128.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=4.0ms",
+          "case=data-cap",
+          "answer_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 26312.0,
+        "t1_ms": 27984.0,
+        "t2_ms": 29162.0,
+        "ttfab_content_ms": 1178.0,
+        "ttfab_onset_ms": 1178.0,
+        "vad_disagreement_ms": 2.0,
+        "vad_disagreement_signed_ms": 2.0,
+        "vendor_response_duration_ms": 2550.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=54.0ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 34852.0,
+        "t1_ms": 36746.0,
+        "t2_ms": 38470.0,
+        "ttfab_content_ms": 1724.0,
+        "ttfab_onset_ms": 1724.0,
+        "vad_disagreement_ms": 10.0,
+        "vad_disagreement_signed_ms": 10.0,
+        "vendor_response_duration_ms": 638.0
+      }
+    ],
+    "vad_disagreement_ms": 4.0,
+    "vendor": "telnyx",
+    "vendor_response_duration_ms": 398.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-012",
+    "run_id": "bench-telnyx-20260731-152959",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "telnyx",
+    "carrier": "plivo",
+    "vendor_config_sha256": "5277d96e7b0c2e5c95641a0f276bba058fb43354f778e89fe7392c8cb839a876",
+    "caller_config_sha256": "9637cc4677baeb93f43ef60978f44f16b8474e04e0e2a0b9ffb7e30cb0258ecb",
+    "caller_plan_sha256": "b286c99a798526802e1fe4905f32cab7d5fa3441f4a34abf682503bbd6a1599c",
+    "call_sid": "f02df779-754b-4a5d-8db2-69f9f82d5042",
+    "call_control_id": "f02df779-754b-4a5d-8db2-69f9f82d5042",
+    "verify_skipped": false,
+    "cases": [
+      "autopay",
+      "equipment-return",
+      "data-cap"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "thanks for calling Northwind internet how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "Do I save anything by enrolling in autopay?",
+        "case_id": "autopay",
+        "expect_keywords": [
+          "4"
+        ],
+        "spoken": true,
+        "transcript": "yes enrolling in autopay saves you $4 per month",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "How long do I have to return the router after canceling?",
+        "case_id": "equipment-return",
+        "expect_keywords": [
+          "21"
+        ],
+        "spoken": true,
+        "transcript": "rental equipment must be returned within 21 days of cancellation",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "Is there a data cap on your plans?",
+        "case_id": "data-cap",
+        "expect_keywords": [
+          "unlimited"
+        ],
+        "spoken": true,
+        "transcript": "all plans have unlimited data with no data caps",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "goodbye and thanks for choosing Northwind internet",
+        "answer_verified": null,
+        "reply_timed_out": false
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    },
+    "timing": {
+      "placed_at": "2026-07-31T22:43:29.027+00:00",
+      "answered_at": "2026-07-31T22:43:31.928+00:00",
+      "ended_at": "2026-07-31T22:44:15.773+00:00",
+      "placed_at_epoch": 1785537809.027807,
+      "answered_at_epoch": 1785537811.928006,
+      "ended_at_epoch": 1785537855.773524,
+      "wall_duration_s": 46.746,
+      "answer_delay_s": 2.9
+    },
+    "set_index": 12,
+    "sync_session": "20260731-152959"
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-telnyx-20260731-152959/call-012.wav",
+    "sha256": "7dddeedaf9222e81b1e663e26834cc8bdff2d3ed610a8d63747fb62ce8d31c5d",
+    "bytes": 1383084,
+    "source": "recording_raw.wav"
+  }
+}

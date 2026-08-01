@@ -1,0 +1,213 @@
+{
+  "result": {
+    "analyzer_version": "2.4.0",
+    "call_id": "call-003",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "near_utterances=4",
+      "t1_crosscheck=86.0ms"
+    ],
+    "greeting_end_ms": 3386.0,
+    "greeting_onset_ms": 268.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -72.24719895935549,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-retell-20260731-152959",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 6130.0,
+    "t1_ms": 7894.0,
+    "t2_ms": 9862.0,
+    "ttfab_content_ms": 1968.0,
+    "ttfab_onset_ms": 1968.0,
+    "ttfg_ms": 268.0,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=86.0ms",
+          "case=speed-premium",
+          "answer_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 6130.0,
+        "t1_ms": 7894.0,
+        "t2_ms": 9862.0,
+        "ttfab_content_ms": 1968.0,
+        "ttfab_onset_ms": 1968.0,
+        "vad_disagreement_ms": 2.0,
+        "vad_disagreement_signed_ms": 2.0,
+        "vendor_response_duration_ms": 3592.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=2.0ms",
+          "case=cancellation-fee",
+          "answer_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 16452.0,
+        "t1_ms": 18218.0,
+        "t2_ms": 19952.0,
+        "ttfab_content_ms": 1734.0,
+        "ttfab_onset_ms": 1734.0,
+        "vad_disagreement_ms": 12.0,
+        "vad_disagreement_signed_ms": 12.0,
+        "vendor_response_duration_ms": 1466.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=48.0ms",
+          "case=static-ip",
+          "answer_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 24010.0,
+        "t1_ms": 26232.0,
+        "t2_ms": 28072.0,
+        "ttfab_content_ms": 1840.0,
+        "ttfab_onset_ms": 1840.0,
+        "vad_disagreement_ms": 12.0,
+        "vad_disagreement_signed_ms": 12.0,
+        "vendor_response_duration_ms": 2848.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=54.0ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 34312.0,
+        "t1_ms": 36206.0,
+        "t2_ms": 38028.0,
+        "ttfab_content_ms": 1822.0,
+        "ttfab_onset_ms": 1822.0,
+        "vad_disagreement_ms": 8.0,
+        "vad_disagreement_signed_ms": 8.0,
+        "vendor_response_duration_ms": 2150.0
+      }
+    ],
+    "vad_disagreement_ms": 2.0,
+    "vendor": "retell",
+    "vendor_response_duration_ms": 3592.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-003",
+    "run_id": "bench-retell-20260731-152959",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "retell",
+    "carrier": "plivo",
+    "vendor_config_sha256": "3fbe40adfec2aeea3e8100517811faedc8837c2ac17564bfcc995281b1256e0a",
+    "caller_config_sha256": "dc7d7e91875ed752773ba1b6d6806567f4ac9d8643409b12dd3654ead7ef32ec",
+    "caller_plan_sha256": "b286c99a798526802e1fe4905f32cab7d5fa3441f4a34abf682503bbd6a1599c",
+    "call_sid": "4642646b-41ee-4917-a81d-733481652bce",
+    "call_control_id": "4642646b-41ee-4917-a81d-733481652bce",
+    "verify_skipped": false,
+    "cases": [
+      "speed-premium",
+      "cancellation-fee",
+      "static-ip"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "thanks for calling Northwind internet how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "What speeds do I get on Premium?",
+        "case_id": "speed-premium",
+        "expect_keywords": [
+          "2",
+          "gigabit"
+        ],
+        "spoken": true,
+        "transcript": "the Premium plan includes download speeds of 2 gigabits per second",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "Is there a fee if I cancel my service?",
+        "case_id": "cancellation-fee",
+        "expect_keywords": [
+          "no",
+          "cancellation"
+        ],
+        "spoken": true,
+        "transcript": "there is no cancellation fee",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "What does a static IP address cost?",
+        "case_id": "static-ip",
+        "expect_keywords": [
+          "11"
+        ],
+        "spoken": true,
+        "transcript": "a static IP address add-on costs $11 per month",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "goodbye and thanks for choosing Northwind internet",
+        "answer_verified": null,
+        "reply_timed_out": false
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    },
+    "timing": {
+      "placed_at": "2026-07-31T22:33:16.101+00:00",
+      "answered_at": "2026-07-31T22:33:20.281+00:00",
+      "ended_at": "2026-07-31T22:34:04.064+00:00",
+      "placed_at_epoch": 1785537196.1018739,
+      "answered_at_epoch": 1785537200.2815611,
+      "ended_at_epoch": 1785537244.064492,
+      "wall_duration_s": 47.963,
+      "answer_delay_s": 4.18
+    },
+    "set_index": 3,
+    "sync_session": "20260731-152959"
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-retell-20260731-152959/call-003.wav",
+    "sha256": "fc06cc4d0036c62d7126e41059fc393bbe42ba1942ba6f9709d614c01a1700f5",
+    "bytes": 1383724,
+    "source": "recording_raw.wav"
+  }
+}

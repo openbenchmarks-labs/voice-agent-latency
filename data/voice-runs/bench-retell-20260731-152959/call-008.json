@@ -1,0 +1,224 @@
+{
+  "result": {
+    "analyzer_version": "2.4.0",
+    "call_id": "call-008",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "near_utterances=4",
+      "t1_crosscheck=42.0ms"
+    ],
+    "greeting_end_ms": 3334.0,
+    "greeting_onset_ms": 200.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -72.24719895935549,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-retell-20260731-152959",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 7096.0,
+    "t1_ms": 9622.0,
+    "t2_ms": 11112.0,
+    "ttfab_content_ms": 1490.0,
+    "ttfab_onset_ms": 1490.0,
+    "ttfg_ms": 200.0,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=42.0ms",
+          "case=installation-time",
+          "answer_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 7096.0,
+        "t1_ms": 9622.0,
+        "t2_ms": 11112.0,
+        "ttfab_content_ms": 1490.0,
+        "ttfab_onset_ms": 1490.0,
+        "vad_disagreement_ms": 8.0,
+        "vad_disagreement_signed_ms": -8.0,
+        "vendor_response_duration_ms": 3824.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=86.0ms",
+          "case=wifi-extender",
+          "answer_not_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 17732.0,
+        "t1_ms": 19414.0,
+        "t2_ms": 21304.0,
+        "ttfab_content_ms": 1890.0,
+        "ttfab_onset_ms": 1890.0,
+        "vad_disagreement_ms": 4.0,
+        "vad_disagreement_signed_ms": 4.0,
+        "vendor_response_duration_ms": 2986.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=24.0ms",
+          "case=phone-line",
+          "answer_not_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 26952.0,
+        "t1_ms": 29336.0,
+        "t2_ms": 31168.0,
+        "ttfab_content_ms": 1832.0,
+        "ttfab_onset_ms": 1832.0,
+        "vad_disagreement_ms": 8.0,
+        "vad_disagreement_signed_ms": 8.0,
+        "vendor_response_duration_ms": 3284.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=94.0ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 37772.0,
+        "t1_ms": 39666.0,
+        "t2_ms": 40148.0,
+        "ttfab_content_ms": 2018.0,
+        "ttfab_onset_ms": 482.0,
+        "vad_disagreement_ms": 8.0,
+        "vad_disagreement_signed_ms": 8.0,
+        "vendor_response_duration_ms": 350.0
+      }
+    ],
+    "vad_disagreement_ms": 8.0,
+    "vendor": "retell",
+    "vendor_response_duration_ms": 3824.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-008",
+    "run_id": "bench-retell-20260731-152959",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "retell",
+    "carrier": "plivo",
+    "vendor_config_sha256": "3fbe40adfec2aeea3e8100517811faedc8837c2ac17564bfcc995281b1256e0a",
+    "caller_config_sha256": "f5f92eddf44fde7c307728b95e8778ffd4daac1c84800cae2c80353017eac897",
+    "caller_plan_sha256": "b286c99a798526802e1fe4905f32cab7d5fa3441f4a34abf682503bbd6a1599c",
+    "call_sid": "6f30aec0-7b28-49e9-ada4-3d67b7271e0a",
+    "call_control_id": "6f30aec0-7b28-49e9-ada4-3d67b7271e0a",
+    "verify_skipped": false,
+    "cases": [
+      "installation-time",
+      "wifi-extender",
+      "phone-line"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "thanks for calling Northwind internet how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "How soon can someone come install my internet?",
+        "case_id": "installation-time",
+        "expect_keywords": [
+          "4",
+          "business days"
+        ],
+        "spoken": true,
+        "transcript": "standard installation appointments are available within 4 business days",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "How much is a Wi-Fi extender?",
+        "case_id": "wifi-extender",
+        "expect_keywords": [
+          "49"
+        ],
+        "spoken": true,
+        "transcript": "a Wi-Fi extender is a 1-time purchase of $9",
+        "answer_verified": false,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "Can I add a home phone line, and how much is it?",
+        "case_id": "phone-line",
+        "expect_keywords": [
+          "17"
+        ],
+        "spoken": true,
+        "transcript": "yes you can add a home phone line for 1 7 per month",
+        "answer_verified": false,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "goodbye goodbye and thanks for choosing Northwind internet",
+        "answer_verified": null,
+        "reply_timed_out": false
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    },
+    "timing": {
+      "placed_at": "2026-07-31T22:39:08.524+00:00",
+      "answered_at": "2026-07-31T22:39:10.550+00:00",
+      "ended_at": "2026-07-31T22:39:59.467+00:00",
+      "placed_at_epoch": 1785537548.524385,
+      "answered_at_epoch": 1785537550.550155,
+      "ended_at_epoch": 1785537599.46767,
+      "wall_duration_s": 50.943,
+      "answer_delay_s": 2.026
+    },
+    "set_index": 8,
+    "sync_session": "20260731-152959"
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-retell-20260731-152959/call-008.wav",
+    "sha256": "ea54465098b3389032298e0c25352a890d9f2eb664117f2e416b65a98735ab05",
+    "bytes": 1543724,
+    "source": "recording_raw.wav"
+  },
+  "cost": {
+    "vendor_call_id": "call_0962a91958349aa915841697fa8",
+    "cost": 0.10891668300000001,
+    "currency": "USD",
+    "duration_s": 48.789,
+    "billed_s": 49,
+    "source": "POST /v2/list-calls .call_cost.product_costs (telephony excluded)",
+    "notes": [
+      "combined_cost is reported in cents; divided by 100",
+      "telephony excluded (0.0123 USD): the PSTN leg is the bench's own carrier cost, and no other platform's figure includes one"
+    ]
+  }
+}

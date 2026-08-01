@@ -1,0 +1,227 @@
+{
+  "result": {
+    "analyzer_version": "2.4.0",
+    "call_id": "call-022",
+    "discard_reason": null,
+    "drift_ms": null,
+    "flags": [
+      "recording_started_mid_speech",
+      "near_utterances=4",
+      "t1_crosscheck=2.0ms"
+    ],
+    "greeting_end_ms": 2488.0,
+    "greeting_onset_ms": 104.0,
+    "kind": "measure",
+    "known_delay_ms": null,
+    "noise_floor_dbfs": -72.24719895935549,
+    "psr": null,
+    "psr_global": null,
+    "rate": 8000,
+    "run_id": "bench-bland-20260731-152959",
+    "source": "recording",
+    "stimulus_id": null,
+    "stimulus_start_ms": 6532.0,
+    "t1_ms": 8298.0,
+    "t2_ms": 9874.0,
+    "ttfab_content_ms": 1576.0,
+    "ttfab_onset_ms": 1576.0,
+    "ttfg_ms": null,
+    "turns": [
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=2.0ms",
+          "case=cancellation-fee",
+          "answer_verified"
+        ],
+        "index": 1,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 6532.0,
+        "t1_ms": 8298.0,
+        "t2_ms": 9874.0,
+        "ttfab_content_ms": 1576.0,
+        "ttfab_onset_ms": 1576.0,
+        "vad_disagreement_ms": 14.0,
+        "vad_disagreement_signed_ms": 14.0,
+        "vendor_response_duration_ms": 1756.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=28.0ms",
+          "case=support-hours",
+          "answer_verified"
+        ],
+        "index": 2,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 14270.0,
+        "t1_ms": 15988.0,
+        "t2_ms": 17512.0,
+        "ttfab_content_ms": 1524.0,
+        "ttfab_onset_ms": 1524.0,
+        "vad_disagreement_ms": 12.0,
+        "vad_disagreement_signed_ms": 12.0,
+        "vendor_response_duration_ms": 4050.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=14.0ms",
+          "case=company-history",
+          "answer_verified"
+        ],
+        "index": 3,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 24194.0,
+        "t1_ms": 26846.0,
+        "t2_ms": 28162.0,
+        "ttfab_content_ms": 1316.0,
+        "ttfab_onset_ms": 1316.0,
+        "vad_disagreement_ms": 2.0,
+        "vad_disagreement_signed_ms": 2.0,
+        "vendor_response_duration_ms": 3948.0
+      },
+      {
+        "discard_reason": null,
+        "drift_ms": null,
+        "flags": [
+          "t1_crosscheck=54.0ms"
+        ],
+        "index": 4,
+        "psr": null,
+        "psr_global": null,
+        "stimulus_start_ms": 35172.0,
+        "t1_ms": 37066.0,
+        "t2_ms": 39026.0,
+        "ttfab_content_ms": 1960.0,
+        "ttfab_onset_ms": 1960.0,
+        "vad_disagreement_ms": 6.0,
+        "vad_disagreement_signed_ms": 6.0,
+        "vendor_response_duration_ms": 2296.0
+      }
+    ],
+    "vad_disagreement_ms": 14.0,
+    "vendor": "bland",
+    "vendor_response_duration_ms": 1756.0
+  },
+  "recording_available": true,
+  "metadata": {
+    "call_id": "call-022",
+    "run_id": "bench-bland-20260731-152959",
+    "kind": "measure",
+    "mode": "scripted_dialog",
+    "vendor": "bland",
+    "carrier": "plivo",
+    "vendor_config_sha256": "e82a64ec97b1a8362db4c9d1a59ed73cc9eb1fbfbac8d4736ae7baaf5e9e4451",
+    "caller_config_sha256": "00acf6d087fdea0a76a30639b685fa4db5372ff6581a1d266b4604c6c48a26a4",
+    "caller_plan_sha256": "b286c99a798526802e1fe4905f32cab7d5fa3441f4a34abf682503bbd6a1599c",
+    "call_sid": "f0844009-e104-40f3-bd1c-0afbe209f034",
+    "call_control_id": "f0844009-e104-40f3-bd1c-0afbe209f034",
+    "verify_skipped": false,
+    "cases": [
+      "cancellation-fee",
+      "support-hours",
+      "company-history"
+    ],
+    "turns_requested": 4,
+    "turns_played": 4,
+    "greeting_transcript": "thanks for calling Northwind internet how can I help you today",
+    "greeting_timed_out": false,
+    "turns": [
+      {
+        "index": 1,
+        "kind": "case",
+        "text": "Is there a fee if I cancel my service?",
+        "case_id": "cancellation-fee",
+        "expect_keywords": [
+          "no",
+          "cancellation"
+        ],
+        "spoken": true,
+        "transcript": "no there is no cancellation fee",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 2,
+        "kind": "case",
+        "text": "What are your customer support hours?",
+        "case_id": "support-hours",
+        "expect_keywords": [
+          "6",
+          "10"
+        ],
+        "spoken": true,
+        "transcript": "we are open from 6:00 a.m. to 10:00 p.m. Pacific Time 7 days a week",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 3,
+        "kind": "case",
+        "text": "When was Northwind Internet founded and where are you based?",
+        "case_id": "company-history",
+        "expect_keywords": [
+          "2011",
+          "Portland"
+        ],
+        "spoken": true,
+        "transcript": "Northwind internet was founded in 2011 and is headquartered in Portland Oregon",
+        "answer_verified": true,
+        "reply_timed_out": false
+      },
+      {
+        "index": 4,
+        "kind": "t3_goodbye",
+        "text": "That's all I needed. Goodbye.",
+        "case_id": null,
+        "expect_keywords": [],
+        "spoken": true,
+        "transcript": "goodbye and thanks for choosing Northwind internet",
+        "answer_verified": null,
+        "reply_timed_out": false
+      }
+    ],
+    "channel_map": {
+      "near": 1,
+      "far": 0,
+      "source": "probe-dialog-20260729-214809 (2026-07-30)"
+    },
+    "timing": {
+      "placed_at": "2026-07-31T22:55:41.443+00:00",
+      "answered_at": "2026-07-31T22:55:43.073+00:00",
+      "ended_at": "2026-07-31T22:56:28.000+00:00",
+      "placed_at_epoch": 1785538541.44324,
+      "answered_at_epoch": 1785538543.0738199,
+      "ended_at_epoch": 1785538588.00047,
+      "wall_duration_s": 46.557,
+      "answer_delay_s": 1.631
+    },
+    "set_index": 22,
+    "sync_session": "20260731-152959"
+  },
+  "recording": {
+    "url": "https://benchpublic.blob.core.windows.net/recordings/bench-bland-20260731-152959/call-022.wav",
+    "sha256": "7fac56831701d55f3688838a4b923879130932dc0901daad71d759b94d0b8ac1",
+    "bytes": 1420204,
+    "source": "recording_raw.wav"
+  },
+  "cost": {
+    "vendor_call_id": "7b2f75cb-7981-49a4-985a-cd046739bd66",
+    "cost": 0.106,
+    "currency": "USD",
+    "duration_s": 45.0,
+    "billed_s": null,
+    "source": "GET /v1/calls .price",
+    "notes": [
+      "call_length is reported in minutes; converted to seconds",
+      "Bland publishes no cost breakdown -- the figure is a single all-in price"
+    ]
+  }
+}

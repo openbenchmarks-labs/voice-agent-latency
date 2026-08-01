@@ -1,0 +1,1059 @@
+{
+  "run_id": "bench-vapi-20260731-152959",
+  "vendor": "vapi",
+  "attempts": 100,
+  "usable": 99,
+  "turns_per_call": 4,
+  "turn_attempts": 391,
+  "turns_usable": 345,
+  "per_turn": {
+    "1": {
+      "attempts": 99,
+      "usable": 82,
+      "n": 82,
+      "p50": 1634.0,
+      "p90": 1949.2,
+      "p95": 2242.4
+    },
+    "2": {
+      "attempts": 98,
+      "usable": 87,
+      "n": 87,
+      "p50": 1588.0,
+      "p90": 1854.0,
+      "p95": 1979.4
+    },
+    "3": {
+      "attempts": 97,
+      "usable": 87,
+      "n": 87,
+      "p50": 1564.0,
+      "p90": 1764.8,
+      "p95": 1894.6
+    },
+    "4": {
+      "attempts": 97,
+      "usable": 89,
+      "n": 89,
+      "p50": 680.0,
+      "p90": 1800.4,
+      "p95": 1946.4
+    }
+  },
+  "discards": {
+    "vad_disagree": 46,
+    "no_response": 1
+  },
+  "ttfab_onset_ms": {
+    "p50": 1562.0,
+    "p90": 1853.6,
+    "p95": 2014.4,
+    "p99": 2677.1
+  },
+  "ttfab_onset_n": 345,
+  "ttfab_content_ms": {
+    "p50": 1616.0,
+    "p95": 2089.6
+  },
+  "ttfab_content_n": 345,
+  "ttfg_from_recording_start_ms": {
+    "p50": 107.0,
+    "p95": 234.0
+  },
+  "negative_ttfab_count": 4,
+  "vendor_config_sha256": "4b8a525c1f804d6a7ea1c1c86784c7bcad0cb253c151a039a7301c5135c18595",
+  "vendor_defaults_used": {
+    "model": "openai/gpt-4.1",
+    "model_temperature": 0,
+    "voice": "vapi/Elliot",
+    "voice_speed": null,
+    "background_sound": null,
+    "background_speech_denoising": false,
+    "stt_model": "soniox/stt-rt-v5",
+    "stt_language": "en",
+    "endpointing": {
+      "wait_seconds": 0.1,
+      "smart_endpointing_enabled": null,
+      "smart_endpointing_provider": null,
+      "on_punctuation_seconds": 0.1,
+      "on_no_punctuation_seconds": 0.1,
+      "on_number_seconds": 0.5,
+      "custom_endpointing_rules": 0,
+      "stop_num_words": 0,
+      "stop_voice_seconds": 0.2,
+      "stop_backoff_seconds": 1.0
+    },
+    "endpointing_source": {
+      "start_speaking_plan": "api",
+      "stop_speaking_plan": "vapi-documented-default"
+    },
+    "first_message_mode": "assistant-speaks-first",
+    "first_message_interruptions_enabled": null,
+    "user_idle_reply_secs": null,
+    "max_duration_secs": null,
+    "voicemail_detection": false,
+    "tools": [],
+    "version_id": "2026-07-30T23:36:18.688Z",
+    "assistant_id": "9d66d943-e554-42a7-ac08-6327680dade9"
+  },
+  "vendor_unsupported": [
+    "idle_reply_threshold"
+  ],
+  "consistency_p95_over_p50": 1.29,
+  "beyond_2x_median_fraction": 0.006,
+  "buffering_correlation_r": 0.564,
+  "buffering_n": 345,
+  "mode": "scripted_dialog",
+  "caller_config": {
+    "voice": "Polly.Joanna",
+    "language": "en-US",
+    "speech_end_timeout": 2,
+    "execution_timeout": 30,
+    "greeting_timeout_s": 20.0,
+    "scenarios_version": "voice-ttfab",
+    "tts": "plivo-speak",
+    "turn_kinds": [
+      "case",
+      "case",
+      "case",
+      "t3_goodbye"
+    ],
+    "rotation_length": 50,
+    "calls": [
+      {
+        "call_index": 0,
+        "cases": [
+          "price-basic",
+          "data-cap",
+          "installation-fee"
+        ],
+        "sha256": "ac98a217825823fcb9344dfff9811478efbbf55037359c6ad3b3893852b93a0b"
+      },
+      {
+        "call_index": 1,
+        "cases": [
+          "price-premium",
+          "contract",
+          "support-hours"
+        ],
+        "sha256": "2208568220723cd9a30cd53c0b6c27d26d6d539874c368c2a0ed7b2ecf6c14db"
+      },
+      {
+        "call_index": 2,
+        "cases": [
+          "speed-basic",
+          "free-trial",
+          "router-rental"
+        ],
+        "sha256": "05d1ee64731a522aff4ef470b008429b5c6aded13cedd439efdac5cd691e4c4c"
+      },
+      {
+        "call_index": 3,
+        "cases": [
+          "speed-premium",
+          "cancellation-fee",
+          "static-ip"
+        ],
+        "sha256": "dc7d7e91875ed752773ba1b6d6806567f4ac9d8643409b12dd3654ead7ef32ec"
+      },
+      {
+        "call_index": 4,
+        "cases": [
+          "price-business",
+          "money-back",
+          "late-fee"
+        ],
+        "sha256": "0d7cc5157a29fdf85806475b092b36e0b7fb58d01ecc9bdcbf49dff86436bf20"
+      },
+      {
+        "call_index": 5,
+        "cases": [
+          "service-area",
+          "student-discount",
+          "reschedule"
+        ],
+        "sha256": "8bcd9e1b920578d22b66c5b620893bb8751068d19ae2871e5541ceedef65e85f"
+      },
+      {
+        "call_index": 6,
+        "cases": [
+          "company-history",
+          "payment-methods",
+          "gamer-boost"
+        ],
+        "sha256": "81c954a5d0bd88131d104de6a3876efe3a249106f402488ad237eb2b983976c9"
+      },
+      {
+        "call_index": 7,
+        "cases": [
+          "not-in-facts",
+          "promotion",
+          "equipment-return"
+        ],
+        "sha256": "8ed6aedf53937de38e411666d531be5a8b3bbbe5988737e233c55c82acf917d8"
+      },
+      {
+        "call_index": 8,
+        "cases": [
+          "installation-time",
+          "wifi-extender",
+          "phone-line"
+        ],
+        "sha256": "f5f92eddf44fde7c307728b95e8778ffd4daac1c84800cae2c80353017eac897"
+      },
+      {
+        "call_index": 9,
+        "cases": [
+          "support-email",
+          "outage-credit",
+          "senior-discount"
+        ],
+        "sha256": "05d101de4d4ccc92be9a46eb57e2a8719486f0fbe6ee55cbe8bebe3ad154ce4c"
+      },
+      {
+        "call_index": 10,
+        "cases": [
+          "cancellation-fee",
+          "autopay",
+          "moving"
+        ],
+        "sha256": "85e45ff6fc3ea7e39c3994d5109f9031fbdfcda2711f4cc55b49e74616d4d436"
+      },
+      {
+        "call_index": 11,
+        "cases": [
+          "referral",
+          "company-history",
+          "contract"
+        ],
+        "sha256": "2dd085cf6faa490c831b6f5c4eefead6357c21a8adcdbce70eba3d31d562b023"
+      },
+      {
+        "call_index": 12,
+        "cases": [
+          "autopay",
+          "equipment-return",
+          "data-cap"
+        ],
+        "sha256": "9637cc4677baeb93f43ef60978f44f16b8474e04e0e2a0b9ffb7e30cb0258ecb"
+      },
+      {
+        "call_index": 13,
+        "cases": [
+          "free-trial",
+          "gamer-boost",
+          "installation-fee"
+        ],
+        "sha256": "0869f9253eb2e501ae6caa33f581f159f2c2f38f9e15f06c77957a2bfb833ae0"
+      },
+      {
+        "call_index": 14,
+        "cases": [
+          "installation-time",
+          "late-fee",
+          "money-back"
+        ],
+        "sha256": "7397a13d199a48ba9b76a4b18d5d9e6e2a2dd91dd5ff34d9b1188ec064a59729"
+      },
+      {
+        "call_index": 15,
+        "cases": [
+          "outage-credit",
+          "not-in-facts",
+          "moving"
+        ],
+        "sha256": "f4199e4c2db095e6635c7327d1b65911af185ac2bbbb6a97a9ee7e282a59d11a"
+      },
+      {
+        "call_index": 16,
+        "cases": [
+          "payment-methods",
+          "price-basic",
+          "phone-line"
+        ],
+        "sha256": "7823a820179d357d0aeaf7881f20d2a36b60c01f77f6c55acb095c23d3e81a6e"
+      },
+      {
+        "call_index": 17,
+        "cases": [
+          "price-business",
+          "referral",
+          "promotion"
+        ],
+        "sha256": "f4a1e198587eb1df5d830f9c62af6b1024d4ac85e8b8a758ead0cfdee75ed381"
+      },
+      {
+        "call_index": 18,
+        "cases": [
+          "reschedule",
+          "price-premium",
+          "router-rental"
+        ],
+        "sha256": "2e0f78066782b5fb915b33c3833ac23334676432b5c84f7d56d6dc5d0a4770a0"
+      },
+      {
+        "call_index": 19,
+        "cases": [
+          "service-area",
+          "senior-discount",
+          "speed-basic"
+        ],
+        "sha256": "cf2e989ac19a573e70359d0d23215bf8fd982761b5c4f5e239e11df16ad7044f"
+      },
+      {
+        "call_index": 20,
+        "cases": [
+          "static-ip",
+          "student-discount",
+          "speed-premium"
+        ],
+        "sha256": "a037386e92aeb53ccc1c1b6adefe77846176f5f1b8b9403752fac7a8d585e441"
+      },
+      {
+        "call_index": 21,
+        "cases": [
+          "support-email",
+          "autopay",
+          "wifi-extender"
+        ],
+        "sha256": "ede1df89e56c149ea2423dc7880a4c3b86ae598f28b0492bfe5e6557de2e2e84"
+      },
+      {
+        "call_index": 22,
+        "cases": [
+          "cancellation-fee",
+          "support-hours",
+          "company-history"
+        ],
+        "sha256": "00acf6d087fdea0a76a30639b685fa4db5372ff6581a1d266b4604c6c48a26a4"
+      },
+      {
+        "call_index": 23,
+        "cases": [
+          "equipment-return",
+          "free-trial",
+          "contract"
+        ],
+        "sha256": "df1f38a5032b9c9d5bc21fed8897dee75357c1ce7794a081aa3130fade3c1461"
+      },
+      {
+        "call_index": 24,
+        "cases": [
+          "gamer-boost",
+          "installation-fee",
+          "data-cap"
+        ],
+        "sha256": "8e0d56b5d3aaa0a9993638df81dea9dd6858d9c9b715670f2346bc4023785c98"
+      },
+      {
+        "call_index": 25,
+        "cases": [
+          "installation-time",
+          "late-fee",
+          "moving"
+        ],
+        "sha256": "df565187625b0a2fc222931ccc4e718f245151b483b13c625ce651391c798fd3"
+      },
+      {
+        "call_index": 26,
+        "cases": [
+          "outage-credit",
+          "not-in-facts",
+          "money-back"
+        ],
+        "sha256": "abb56bd6fbd160dad6715aa50bd0a0875ce0b9615b1de25b865ab6361637bd94"
+      },
+      {
+        "call_index": 27,
+        "cases": [
+          "payment-methods",
+          "price-business",
+          "phone-line"
+        ],
+        "sha256": "5a443533f5d494ff0d66472da10357c05bc894f9e92ca4ae40d383ef8dcfaf8a"
+      },
+      {
+        "call_index": 28,
+        "cases": [
+          "price-basic",
+          "referral",
+          "promotion"
+        ],
+        "sha256": "2cbe2a5e1a9c41c50b080112f609c1af5a1f82c789e81bdcfb9e38a31d84640c"
+      },
+      {
+        "call_index": 29,
+        "cases": [
+          "reschedule",
+          "price-premium",
+          "senior-discount"
+        ],
+        "sha256": "673fc5590842692e4178180cce4d569280ab39b3138c0de15ed47a50c9fda17b"
+      },
+      {
+        "call_index": 30,
+        "cases": [
+          "service-area",
+          "router-rental",
+          "speed-basic"
+        ],
+        "sha256": "a9e351811eb96ab1c57b713d3d809794e8948d3556d14bf743eac3f190f5452d"
+      },
+      {
+        "call_index": 31,
+        "cases": [
+          "support-email",
+          "static-ip",
+          "speed-premium"
+        ],
+        "sha256": "e576b1b3fb731b68387bc06a9885dd1b138f814b6681e268e52cfe99a1b600c0"
+      },
+      {
+        "call_index": 32,
+        "cases": [
+          "wifi-extender",
+          "student-discount",
+          "support-hours"
+        ],
+        "sha256": "df8bfbb7e97a9a28aa247c64afb5af857cf0ee5d20025e9324d0632112fdd0ff"
+      },
+      {
+        "call_index": 33,
+        "cases": [
+          "cancellation-fee",
+          "autopay",
+          "company-history"
+        ],
+        "sha256": "36aa2edc05eb4d39a56a27d47a8366fcf3639955e4e7564285451dacefdfd979"
+      },
+      {
+        "call_index": 34,
+        "cases": [
+          "equipment-return",
+          "gamer-boost",
+          "contract"
+        ],
+        "sha256": "6ff4d7321ac574755d41f03fe511cbcb3ea07fe41b74c871f508f4598ec2691e"
+      },
+      {
+        "call_index": 35,
+        "cases": [
+          "free-trial",
+          "installation-fee",
+          "data-cap"
+        ],
+        "sha256": "6ad169cb233e235d8ed4e0bbc13857880d55107725ce13ab58f7ac728effbc42"
+      },
+      {
+        "call_index": 36,
+        "cases": [
+          "installation-time",
+          "not-in-facts",
+          "late-fee"
+        ],
+        "sha256": "73519a36f04e4715f9b339081ee050381e61bd7a6e7da0d2c9d5b55397011c82"
+      },
+      {
+        "call_index": 37,
+        "cases": [
+          "outage-credit",
+          "money-back",
+          "moving"
+        ],
+        "sha256": "cdae9e15372b68f75c68c6b5042fcdfa09289819a0191397253e1d019a3763ae"
+      },
+      {
+        "call_index": 38,
+        "cases": [
+          "payment-methods",
+          "price-premium",
+          "phone-line"
+        ],
+        "sha256": "5303e852bc614c5ab1688d6ba9d47946022d718c0969b716fd7bf9b01876f1bc"
+      },
+      {
+        "call_index": 39,
+        "cases": [
+          "reschedule",
+          "price-basic",
+          "promotion"
+        ],
+        "sha256": "217650e35ac6b9fb9117c085a693d91d91961019e386ce3dd87ec6833edddc90"
+      },
+      {
+        "call_index": 40,
+        "cases": [
+          "price-business",
+          "referral",
+          "router-rental"
+        ],
+        "sha256": "d37aa91c1bfbf92f9c80967a4fad96ac0773c7a6fc0923cf7e4502e7a33a2238"
+      },
+      {
+        "call_index": 41,
+        "cases": [
+          "service-area",
+          "senior-discount",
+          "speed-premium"
+        ],
+        "sha256": "6c8dd5d8980fda4f9ce0d7efbf507bbd27b3b19164576204859cd1298436c14c"
+      },
+      {
+        "call_index": 42,
+        "cases": [
+          "static-ip",
+          "student-discount",
+          "speed-basic"
+        ],
+        "sha256": "81e2a31f3f91f9d24aea52080b962160f0754e974d75fe04b0128523f51ebb41"
+      },
+      {
+        "call_index": 43,
+        "cases": [
+          "autopay",
+          "wifi-extender",
+          "support-hours"
+        ],
+        "sha256": "40888c305fd652dcb66592e3a2a7bcb2282d5692712eeddcaa0107aed0311b5b"
+      },
+      {
+        "call_index": 44,
+        "cases": [
+          "support-email",
+          "cancellation-fee",
+          "company-history"
+        ],
+        "sha256": "6af8ad7c0c9657097701cce27c00f5168c2702c4603b4ba458b2aab730277bd1"
+      },
+      {
+        "call_index": 45,
+        "cases": [
+          "equipment-return",
+          "installation-fee",
+          "contract"
+        ],
+        "sha256": "c3396ffd8edf505bece97f9a865405b74ee56b362dbdbf891ccd5926a33da842"
+      },
+      {
+        "call_index": 46,
+        "cases": [
+          "free-trial",
+          "gamer-boost",
+          "data-cap"
+        ],
+        "sha256": "b20bda2f6e76c008793053e13c9766e1fb44ea08d1e4ef7742f39ff8e2af510f"
+      },
+      {
+        "call_index": 47,
+        "cases": [
+          "installation-time",
+          "late-fee",
+          "phone-line"
+        ],
+        "sha256": "99e00c08f55ced315b2b85c302e28b0ec63b4fcf574f65f0ab9b34fa00887854"
+      },
+      {
+        "call_index": 48,
+        "cases": [
+          "not-in-facts",
+          "money-back",
+          "moving"
+        ],
+        "sha256": "ae28252c498ccbeba3152539550ef938dfdc5585a5cca46a7f728fa811fcd53d"
+      },
+      {
+        "call_index": 49,
+        "cases": [
+          "outage-credit",
+          "price-basic",
+          "promotion"
+        ],
+        "sha256": "101af3ca6ef29aa335d546562f29330e41ab75da004c4ddc63c62fc84d3238a9"
+      },
+      {
+        "call_index": 50,
+        "cases": [
+          "price-basic",
+          "data-cap",
+          "installation-fee"
+        ],
+        "sha256": "ac98a217825823fcb9344dfff9811478efbbf55037359c6ad3b3893852b93a0b"
+      },
+      {
+        "call_index": 51,
+        "cases": [
+          "price-premium",
+          "contract",
+          "support-hours"
+        ],
+        "sha256": "2208568220723cd9a30cd53c0b6c27d26d6d539874c368c2a0ed7b2ecf6c14db"
+      },
+      {
+        "call_index": 52,
+        "cases": [
+          "speed-basic",
+          "free-trial",
+          "router-rental"
+        ],
+        "sha256": "05d1ee64731a522aff4ef470b008429b5c6aded13cedd439efdac5cd691e4c4c"
+      },
+      {
+        "call_index": 53,
+        "cases": [
+          "speed-premium",
+          "cancellation-fee",
+          "static-ip"
+        ],
+        "sha256": "dc7d7e91875ed752773ba1b6d6806567f4ac9d8643409b12dd3654ead7ef32ec"
+      },
+      {
+        "call_index": 54,
+        "cases": [
+          "price-business",
+          "money-back",
+          "late-fee"
+        ],
+        "sha256": "0d7cc5157a29fdf85806475b092b36e0b7fb58d01ecc9bdcbf49dff86436bf20"
+      },
+      {
+        "call_index": 55,
+        "cases": [
+          "service-area",
+          "student-discount",
+          "reschedule"
+        ],
+        "sha256": "8bcd9e1b920578d22b66c5b620893bb8751068d19ae2871e5541ceedef65e85f"
+      },
+      {
+        "call_index": 56,
+        "cases": [
+          "company-history",
+          "payment-methods",
+          "gamer-boost"
+        ],
+        "sha256": "81c954a5d0bd88131d104de6a3876efe3a249106f402488ad237eb2b983976c9"
+      },
+      {
+        "call_index": 57,
+        "cases": [
+          "not-in-facts",
+          "promotion",
+          "equipment-return"
+        ],
+        "sha256": "8ed6aedf53937de38e411666d531be5a8b3bbbe5988737e233c55c82acf917d8"
+      },
+      {
+        "call_index": 58,
+        "cases": [
+          "installation-time",
+          "wifi-extender",
+          "phone-line"
+        ],
+        "sha256": "f5f92eddf44fde7c307728b95e8778ffd4daac1c84800cae2c80353017eac897"
+      },
+      {
+        "call_index": 59,
+        "cases": [
+          "support-email",
+          "outage-credit",
+          "senior-discount"
+        ],
+        "sha256": "05d101de4d4ccc92be9a46eb57e2a8719486f0fbe6ee55cbe8bebe3ad154ce4c"
+      },
+      {
+        "call_index": 60,
+        "cases": [
+          "cancellation-fee",
+          "autopay",
+          "moving"
+        ],
+        "sha256": "85e45ff6fc3ea7e39c3994d5109f9031fbdfcda2711f4cc55b49e74616d4d436"
+      },
+      {
+        "call_index": 61,
+        "cases": [
+          "referral",
+          "company-history",
+          "contract"
+        ],
+        "sha256": "2dd085cf6faa490c831b6f5c4eefead6357c21a8adcdbce70eba3d31d562b023"
+      },
+      {
+        "call_index": 62,
+        "cases": [
+          "autopay",
+          "equipment-return",
+          "data-cap"
+        ],
+        "sha256": "9637cc4677baeb93f43ef60978f44f16b8474e04e0e2a0b9ffb7e30cb0258ecb"
+      },
+      {
+        "call_index": 63,
+        "cases": [
+          "free-trial",
+          "gamer-boost",
+          "installation-fee"
+        ],
+        "sha256": "0869f9253eb2e501ae6caa33f581f159f2c2f38f9e15f06c77957a2bfb833ae0"
+      },
+      {
+        "call_index": 64,
+        "cases": [
+          "installation-time",
+          "late-fee",
+          "money-back"
+        ],
+        "sha256": "7397a13d199a48ba9b76a4b18d5d9e6e2a2dd91dd5ff34d9b1188ec064a59729"
+      },
+      {
+        "call_index": 65,
+        "cases": [
+          "outage-credit",
+          "not-in-facts",
+          "moving"
+        ],
+        "sha256": "f4199e4c2db095e6635c7327d1b65911af185ac2bbbb6a97a9ee7e282a59d11a"
+      },
+      {
+        "call_index": 66,
+        "cases": [
+          "payment-methods",
+          "price-basic",
+          "phone-line"
+        ],
+        "sha256": "7823a820179d357d0aeaf7881f20d2a36b60c01f77f6c55acb095c23d3e81a6e"
+      },
+      {
+        "call_index": 67,
+        "cases": [
+          "price-business",
+          "referral",
+          "promotion"
+        ],
+        "sha256": "f4a1e198587eb1df5d830f9c62af6b1024d4ac85e8b8a758ead0cfdee75ed381"
+      },
+      {
+        "call_index": 68,
+        "cases": [
+          "reschedule",
+          "price-premium",
+          "router-rental"
+        ],
+        "sha256": "2e0f78066782b5fb915b33c3833ac23334676432b5c84f7d56d6dc5d0a4770a0"
+      },
+      {
+        "call_index": 69,
+        "cases": [
+          "service-area",
+          "senior-discount",
+          "speed-basic"
+        ],
+        "sha256": "cf2e989ac19a573e70359d0d23215bf8fd982761b5c4f5e239e11df16ad7044f"
+      },
+      {
+        "call_index": 70,
+        "cases": [
+          "static-ip",
+          "student-discount",
+          "speed-premium"
+        ],
+        "sha256": "a037386e92aeb53ccc1c1b6adefe77846176f5f1b8b9403752fac7a8d585e441"
+      },
+      {
+        "call_index": 71,
+        "cases": [
+          "support-email",
+          "autopay",
+          "wifi-extender"
+        ],
+        "sha256": "ede1df89e56c149ea2423dc7880a4c3b86ae598f28b0492bfe5e6557de2e2e84"
+      },
+      {
+        "call_index": 72,
+        "cases": [
+          "cancellation-fee",
+          "support-hours",
+          "company-history"
+        ],
+        "sha256": "00acf6d087fdea0a76a30639b685fa4db5372ff6581a1d266b4604c6c48a26a4"
+      },
+      {
+        "call_index": 73,
+        "cases": [
+          "equipment-return",
+          "free-trial",
+          "contract"
+        ],
+        "sha256": "df1f38a5032b9c9d5bc21fed8897dee75357c1ce7794a081aa3130fade3c1461"
+      },
+      {
+        "call_index": 74,
+        "cases": [
+          "gamer-boost",
+          "installation-fee",
+          "data-cap"
+        ],
+        "sha256": "8e0d56b5d3aaa0a9993638df81dea9dd6858d9c9b715670f2346bc4023785c98"
+      },
+      {
+        "call_index": 75,
+        "cases": [
+          "installation-time",
+          "late-fee",
+          "moving"
+        ],
+        "sha256": "df565187625b0a2fc222931ccc4e718f245151b483b13c625ce651391c798fd3"
+      },
+      {
+        "call_index": 76,
+        "cases": [
+          "outage-credit",
+          "not-in-facts",
+          "money-back"
+        ],
+        "sha256": "abb56bd6fbd160dad6715aa50bd0a0875ce0b9615b1de25b865ab6361637bd94"
+      },
+      {
+        "call_index": 77,
+        "cases": [
+          "payment-methods",
+          "price-business",
+          "phone-line"
+        ],
+        "sha256": "5a443533f5d494ff0d66472da10357c05bc894f9e92ca4ae40d383ef8dcfaf8a"
+      },
+      {
+        "call_index": 78,
+        "cases": [
+          "price-basic",
+          "referral",
+          "promotion"
+        ],
+        "sha256": "2cbe2a5e1a9c41c50b080112f609c1af5a1f82c789e81bdcfb9e38a31d84640c"
+      },
+      {
+        "call_index": 79,
+        "cases": [
+          "reschedule",
+          "price-premium",
+          "senior-discount"
+        ],
+        "sha256": "673fc5590842692e4178180cce4d569280ab39b3138c0de15ed47a50c9fda17b"
+      },
+      {
+        "call_index": 80,
+        "cases": [
+          "service-area",
+          "router-rental",
+          "speed-basic"
+        ],
+        "sha256": "a9e351811eb96ab1c57b713d3d809794e8948d3556d14bf743eac3f190f5452d"
+      },
+      {
+        "call_index": 81,
+        "cases": [
+          "support-email",
+          "static-ip",
+          "speed-premium"
+        ],
+        "sha256": "e576b1b3fb731b68387bc06a9885dd1b138f814b6681e268e52cfe99a1b600c0"
+      },
+      {
+        "call_index": 82,
+        "cases": [
+          "wifi-extender",
+          "student-discount",
+          "support-hours"
+        ],
+        "sha256": "df8bfbb7e97a9a28aa247c64afb5af857cf0ee5d20025e9324d0632112fdd0ff"
+      },
+      {
+        "call_index": 83,
+        "cases": [
+          "cancellation-fee",
+          "autopay",
+          "company-history"
+        ],
+        "sha256": "36aa2edc05eb4d39a56a27d47a8366fcf3639955e4e7564285451dacefdfd979"
+      },
+      {
+        "call_index": 84,
+        "cases": [
+          "equipment-return",
+          "gamer-boost",
+          "contract"
+        ],
+        "sha256": "6ff4d7321ac574755d41f03fe511cbcb3ea07fe41b74c871f508f4598ec2691e"
+      },
+      {
+        "call_index": 85,
+        "cases": [
+          "free-trial",
+          "installation-fee",
+          "data-cap"
+        ],
+        "sha256": "6ad169cb233e235d8ed4e0bbc13857880d55107725ce13ab58f7ac728effbc42"
+      },
+      {
+        "call_index": 86,
+        "cases": [
+          "installation-time",
+          "not-in-facts",
+          "late-fee"
+        ],
+        "sha256": "73519a36f04e4715f9b339081ee050381e61bd7a6e7da0d2c9d5b55397011c82"
+      },
+      {
+        "call_index": 87,
+        "cases": [
+          "outage-credit",
+          "money-back",
+          "moving"
+        ],
+        "sha256": "cdae9e15372b68f75c68c6b5042fcdfa09289819a0191397253e1d019a3763ae"
+      },
+      {
+        "call_index": 88,
+        "cases": [
+          "payment-methods",
+          "price-premium",
+          "phone-line"
+        ],
+        "sha256": "5303e852bc614c5ab1688d6ba9d47946022d718c0969b716fd7bf9b01876f1bc"
+      },
+      {
+        "call_index": 89,
+        "cases": [
+          "reschedule",
+          "price-basic",
+          "promotion"
+        ],
+        "sha256": "217650e35ac6b9fb9117c085a693d91d91961019e386ce3dd87ec6833edddc90"
+      },
+      {
+        "call_index": 90,
+        "cases": [
+          "price-business",
+          "referral",
+          "router-rental"
+        ],
+        "sha256": "d37aa91c1bfbf92f9c80967a4fad96ac0773c7a6fc0923cf7e4502e7a33a2238"
+      },
+      {
+        "call_index": 91,
+        "cases": [
+          "service-area",
+          "senior-discount",
+          "speed-premium"
+        ],
+        "sha256": "6c8dd5d8980fda4f9ce0d7efbf507bbd27b3b19164576204859cd1298436c14c"
+      },
+      {
+        "call_index": 92,
+        "cases": [
+          "static-ip",
+          "student-discount",
+          "speed-basic"
+        ],
+        "sha256": "81e2a31f3f91f9d24aea52080b962160f0754e974d75fe04b0128523f51ebb41"
+      },
+      {
+        "call_index": 93,
+        "cases": [
+          "autopay",
+          "wifi-extender",
+          "support-hours"
+        ],
+        "sha256": "40888c305fd652dcb66592e3a2a7bcb2282d5692712eeddcaa0107aed0311b5b"
+      },
+      {
+        "call_index": 94,
+        "cases": [
+          "support-email",
+          "cancellation-fee",
+          "company-history"
+        ],
+        "sha256": "6af8ad7c0c9657097701cce27c00f5168c2702c4603b4ba458b2aab730277bd1"
+      },
+      {
+        "call_index": 95,
+        "cases": [
+          "equipment-return",
+          "installation-fee",
+          "contract"
+        ],
+        "sha256": "c3396ffd8edf505bece97f9a865405b74ee56b362dbdbf891ccd5926a33da842"
+      },
+      {
+        "call_index": 96,
+        "cases": [
+          "free-trial",
+          "gamer-boost",
+          "data-cap"
+        ],
+        "sha256": "b20bda2f6e76c008793053e13c9766e1fb44ea08d1e4ef7742f39ff8e2af510f"
+      },
+      {
+        "call_index": 97,
+        "cases": [
+          "installation-time",
+          "late-fee",
+          "phone-line"
+        ],
+        "sha256": "99e00c08f55ced315b2b85c302e28b0ec63b4fcf574f65f0ab9b34fa00887854"
+      },
+      {
+        "call_index": 98,
+        "cases": [
+          "not-in-facts",
+          "money-back",
+          "moving"
+        ],
+        "sha256": "ae28252c498ccbeba3152539550ef938dfdc5585a5cca46a7f728fa811fcd53d"
+      },
+      {
+        "call_index": 99,
+        "cases": [
+          "outage-credit",
+          "price-basic",
+          "promotion"
+        ],
+        "sha256": "101af3ca6ef29aa335d546562f29330e41ab75da004c4ddc63c62fc84d3238a9"
+      }
+    ],
+    "sha256": "b286c99a798526802e1fe4905f32cab7d5fa3441f4a34abf682503bbd6a1599c"
+  },
+  "channel_map_provisional": false,
+  "not_yet_publishable": [
+    "The instrument is UNCHARACTERISED for this measurement path. The known-delay reference that produced our overhead and noise figures replied over a carrier media websocket, and that path no longer exists -- a characterisation is only valid for the host, carrier and audio path it was measured on, so no overhead figure is quoted here and none is subtracted (V1.md D4). Recording-path overhead is inside every number below, unmeasured.",
+    "t1 -- the end of our own speech -- is found by a speech detector on the near channel, not by matching a known waveform. It is accurate to roughly a few tens of ms rather than sample-exact, so small differences between vendors are not resolvable; the per-turn error budget is the one Gate A measures on synthetic dialogs.",
+    "Turn-taking is Plivo's speech endpointing, not ours. It decides when the conversation moves on, never when a measurement starts or ends: both endpoints of every TTFAB are read off the recording afterwards. Eager or slow endpointing therefore costs discarded turns, not shifted numbers.",
+    "Our speech is Polly.Joanna text-to-speech reading a fixed script, not the human recording V1.md 11.1 requires (TTS endings trip endpointing differently). It is re-rendered per call rather than played from one committed file, so the stimulus is identical in wording across vendors but not byte-identical across calls; t1 is measured from each call's own tape, so this costs no accuracy.",
+    "Answer accuracy is a keyword match against the carrier's transcript of the vendor's reply -- a coarse check that the agent answered from its prompt, reported alongside latency and never mixed into it.",
+    "Historical, on the DELETED websocket path: a vendor's own recording of the same calls read 547 ms lower than ours (bench-telnyx-20260729-182644, n=12 turns) -- more than that path could account for. Read vendor-reported latency with care. Not re-measured on this path.",
+    "n=99 usable call(s). V1.md wants n>=100 spread over >=5 days and 4 time-of-day buckets; this is a sample, not a distribution.",
+    "The turn curve has as few as n=82 measurements at some turn indices. Pooled figures are the sturdier read; per-turn percentiles (especially p95) are directional until each index has many more.",
+    "Discarded calls are reported above, never silently dropped -- a vendor that fails to respond is worse than one that is slightly slower."
+  ],
+  "instrument": {
+    "mode": "scripted_dialog",
+    "valid": false,
+    "note": "no delay-sweep characterisation exists for this measurement path; recording-path overhead and instrument noise are unmeasured here",
+    "path_overhead_subtracted": false
+  },
+  "cost": {
+    "calls_priced": 93,
+    "calls_matched": 93,
+    "currency": "USD",
+    "currencies": [
+      "USD"
+    ],
+    "total_cost": 5.8287,
+    "total_duration_s": 4184.537,
+    "total_billed_s": 4184.537,
+    "cost_per_minute": 0.083575,
+    "cost_per_billed_minute": 0.083575,
+    "cost_per_call_mean": 0.062674,
+    "notes": []
+  }
+}

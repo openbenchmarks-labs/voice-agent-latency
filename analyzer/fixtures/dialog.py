@@ -88,6 +88,21 @@ class DialogFixture:
     #: The vendor speaks again between two turns (idle re-prompt).
     idle_prompt_before_turn: int | None = None
     idle_after_reply_ms: float = 1200.0
+    #: A pause spliced INSIDE the greeting, before we have said anything. Past the
+    #: merge gap the greeting arrives as two utterances, which is indistinguishable
+    #: by COUNT from an idle re-prompt -- so this is the fixture that pins which
+    #: way dialog mode resolves that ambiguity.
+    split_greeting_pause_ms: float | None = None
+    #: The vendor re-prompts before our FIRST turn, in the window our own TTS
+    #: latency creates. The genuine article, as opposed to a split greeting.
+    idle_prompt_before_first_turn: bool = False
+    idle_before_first_turn_ms: float = 2000.0
+    #: Silence between the greeting ending and our first turn. Widened by the
+    #: fixtures that need room to place something inside that window.
+    greeting_hangover_ms: float = GREETING_HANGOVER_MS
+    #: Flag prefixes the result must carry. A fixture whose whole point is "kept,
+    #: but recorded" passes trivially if only the verdict is checked.
+    expect_flags: tuple[str, ...] = ()
 
     truth: dict = field(default_factory=dict)
 
@@ -112,8 +127,33 @@ def build_dialog(fx: DialogFixture, out_dir: Path) -> dict:
 
     lead = ms_to_samples(LEAD_IN_MS, rate)
     pause = ms_to_samples(fx.inter_turn_pause_ms, rate)
-    cursor = lead + len(greeting) + ms_to_samples(GREETING_HANGOVER_MS, rate)
-    greeting_span = (lead, lead + len(greeting))
+
+    # The greeting, which is not always one utterance on the tape. `extent` spans
+    # from its first speech sample to its last, pause included.
+    greeting_pieces: list[tuple[int, np.ndarray]] = []
+    if fx.split_greeting_pause_ms is not None:
+        cut = len(greeting) // 2
+        gap_n = ms_to_samples(fx.split_greeting_pause_ms, rate)
+        greeting_pieces.append((lead, greeting[:cut]))
+        greeting_pieces.append((lead + cut + gap_n, greeting[cut:]))
+        extent = len(greeting) + gap_n
+    else:
+        greeting_pieces.append((lead, greeting))
+        extent = len(greeting)
+
+    greeting_span = (lead, lead + extent)
+    cursor = lead + extent + ms_to_samples(fx.greeting_hangover_ms, rate)
+
+    # A re-prompt in the pre-stimulus window. Placed relative to the greeting's
+    # END so it reads as a reaction to our silence, which is what makes it the
+    # genuine article rather than a second greeting phrase.
+    pre_idle_start = None
+    if fx.idle_prompt_before_first_turn:
+        pre_idle_start = greeting_span[1] + ms_to_samples(
+            fx.idle_before_first_turn_ms, rate)
+        assert pre_idle_start + ms_to_samples(250.0, rate) < cursor, (
+            "the pre-stimulus idle prompt must finish before our first turn, or "
+            "it is not in the window the rule watches")
 
     plan: list[dict] = []
     for index, spoken in enumerate(turns, start=1):
@@ -167,7 +207,10 @@ def build_dialog(fx: DialogFixture, out_dir: Path) -> dict:
     near = np.zeros(total, dtype=np.int64)
     far = np.zeros(total, dtype=np.int64)
 
-    _place(far, greeting.astype(np.int64), greeting_span[0])
+    for at, chunk in greeting_pieces:
+        _place(far, chunk.astype(np.int64), at)
+    if pre_idle_start is not None:
+        _place(far, filler.astype(np.int64), pre_idle_start)
     for step in plan:
         for at, chunk in step["pieces"]:
             _place(near, chunk.astype(np.int64), at)
@@ -206,6 +249,7 @@ def build_dialog(fx: DialogFixture, out_dir: Path) -> dict:
         "call_dir": str(call_dir),
         # What the CALL should come back as, when a hazard invalidates it whole.
         "expect_call_discard": "turn_count_mismatch" if expected_split else None,
+        "expect_flags": list(fx.expect_flags),
         "turns": [
             {
                 "index": step["index"],
@@ -264,6 +308,15 @@ DIALOG_FIXTURES = [
     DialogFixture(name="dlg_idle_between", idle_prompt_before_turn=3,
                   inter_turn_pause_ms=3000.0),
     DialogFixture(name="dlg_uncompanded", companded=False),
+
+    DialogFixture(name="dlg_split_greeting", split_greeting_pause_ms=1200.0,
+                  expect_flags=("vendor_spoke_before_first_turn=",
+                                "greeting_pause_ms=")),
+
+    DialogFixture(name="dlg_idle_before_first_turn",
+                  idle_prompt_before_first_turn=True,
+                  greeting_hangover_ms=3500.0,
+                  expect_flags=("vendor_spoke_before_first_turn=",)),
 ]
 
 
